@@ -1,0 +1,20 @@
+{
+ "palette": {
+  "teal": "#0E8F80",
+  "brick": "#B03A26",
+  "purple": "#6E5B9E"
+ },
+ "palette_validated": "OKLab CVD separation, chroma floor, lightness band, contrast vs surface",
+ "model_colors": {
+  "M0": "#0E8F80",
+  "M3": "#B03A26",
+  "M0plus": "#6E5B9E"
+ },
+ "figures": [
+  "fig1_delta_auc_forest.png",
+  "fig2_calibration.png",
+  "fig3_decision_curve.png",
+  "fig4_shap_rank_stability.png",
+  "fig5_partial_dependence.png"
+ ]
+}
