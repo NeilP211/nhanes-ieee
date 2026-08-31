@@ -1,0 +1,80 @@
+{
+ "definition": {
+  "tests": [
+   "cerad_immediate",
+   "cerad_delayed",
+   "animal_fluency",
+   "dsst"
+  ],
+  "rule": ">= 3 of 4 z-scored component scores present",
+  "primary_cut": "lowest quartile of the pooled composite",
+  "terminology": "low cognitive performance, never cognitive impairment"
+ },
+ "n": {
+  "cohort": 3472,
+  "eligible_primary_rule": 3124,
+  "eligible_alt_rule_2_of_3_instruments": 3137,
+  "differ_between_rules": 13
+ },
+ "composite": {
+  "mean": -0.008625155329070421,
+  "sd": 0.8012092515630198,
+  "quartile_cut": -0.5428222716319666
+ },
+ "prevalence": {
+  "low_cog_primary": 0.25,
+  "low_cog_p10": 0.1001920614596671,
+  "low_cog_p20": 0.2000640204865557
+ },
+ "internal_consistency": {
+  "cronbach_alpha_4_z_scores": 0.7946221290942629,
+  "pairwise_correlations": {
+   "z_cerad_immediate": {
+    "z_cerad_immediate": 1.0,
+    "z_cerad_delayed": 0.743,
+    "z_animal_fluency": 0.423,
+    "z_dsst": 0.477
+   },
+   "z_cerad_delayed": {
+    "z_cerad_immediate": 0.743,
+    "z_cerad_delayed": 1.0,
+    "z_animal_fluency": 0.396,
+    "z_dsst": 0.466
+   },
+   "z_animal_fluency": {
+    "z_cerad_immediate": 0.423,
+    "z_cerad_delayed": 0.396,
+    "z_animal_fluency": 1.0,
+    "z_dsst": 0.51
+   },
+   "z_dsst": {
+    "z_cerad_immediate": 0.477,
+    "z_cerad_delayed": 0.466,
+    "z_animal_fluency": 0.51,
+    "z_dsst": 1.0
+   }
+  }
+ },
+ "component_missingness_in_cohort": {
+  "cerad_immediate": 341,
+  "cerad_delayed": 346,
+  "animal_fluency": 362,
+  "dsst": 458
+ },
+ "test_language": {
+  "1.0": 2788,
+  "2.0": 333,
+  "NaN": 276,
+  "3.0": 75
+ },
+ "dsst_not_done_reasons": {
+  "NaN": 3403,
+  "5.0": 34,
+  "3.0": 22,
+  "2.0": 11,
+  "7.0": 2
+ },
+ "analytic_n_with_predictors": {
+  "eligible_and_all_metals": 2194
+ }
+}

@@ -1,0 +1,185 @@
+{
+ "n": 1784,
+ "events": 431,
+ "prevalence": 0.24159192825112108,
+ "seed": 20260831,
+ "cv": "10-fold x 5 repeats",
+ "leakage_audit": "pass",
+ "specs": {
+  "M0": [
+   "RIDAGEYR",
+   "RIAGENDR",
+   "RIDRETH3",
+   "DMDEDUC2",
+   "INDFMPIR"
+  ],
+  "M1": [
+   "RIDAGEYR",
+   "RIAGENDR",
+   "RIDRETH3",
+   "DMDEDUC2",
+   "INDFMPIR",
+   "log_LBXBPB",
+   "log_LBXBCD",
+   "log_LBXTHG",
+   "log_LBXBSE",
+   "log_LBXBMN"
+  ],
+  "M2": [
+   "RIDAGEYR",
+   "RIAGENDR",
+   "RIDRETH3",
+   "DMDEDUC2",
+   "INDFMPIR",
+   "log_LBDB12SI",
+   "log_LBXMMASI",
+   "LBDFOT",
+   "LBDRFO",
+   "LBXVIDMS",
+   "LBXGH",
+   "LBDHDD",
+   "LBXTC",
+   "LBXSTR",
+   "LBXSAL",
+   "LBXSIR",
+   "egfr",
+   "nlr",
+   "plr",
+   "log_sii"
+  ],
+  "M3": [
+   "RIDAGEYR",
+   "RIAGENDR",
+   "RIDRETH3",
+   "DMDEDUC2",
+   "INDFMPIR",
+   "log_LBXBPB",
+   "log_LBXBCD",
+   "log_LBXTHG",
+   "log_LBXBSE",
+   "log_LBXBMN",
+   "log_LBDB12SI",
+   "log_LBXMMASI",
+   "LBDFOT",
+   "LBDRFO",
+   "LBXVIDMS",
+   "LBXGH",
+   "LBDHDD",
+   "LBXTC",
+   "LBXSTR",
+   "LBXSAL",
+   "LBXSIR",
+   "egfr",
+   "nlr",
+   "plr",
+   "log_sii"
+  ],
+  "M0plus": [
+   "RIDAGEYR",
+   "RIAGENDR",
+   "RIDRETH3",
+   "DMDEDUC2",
+   "INDFMPIR",
+   "BMXBMI",
+   "smoking",
+   "drinks_per_day",
+   "phq9",
+   "stroke",
+   "diabetes",
+   "hypertension",
+   "high_chol"
+  ]
+ },
+ "mean_auc": [
+  {
+   "spec": "M0",
+   "algo": "logistic",
+   "mean": 0.7888,
+   "std": 0.0312
+  },
+  {
+   "spec": "M0",
+   "algo": "random_forest",
+   "mean": 0.7849,
+   "std": 0.0302
+  },
+  {
+   "spec": "M0",
+   "algo": "xgboost",
+   "mean": 0.7838,
+   "std": 0.0302
+  },
+  {
+   "spec": "M0plus",
+   "algo": "logistic",
+   "mean": 0.8029,
+   "std": 0.0363
+  },
+  {
+   "spec": "M0plus",
+   "algo": "random_forest",
+   "mean": 0.8009,
+   "std": 0.0328
+  },
+  {
+   "spec": "M0plus",
+   "algo": "xgboost",
+   "mean": 0.7998,
+   "std": 0.0336
+  },
+  {
+   "spec": "M1",
+   "algo": "logistic",
+   "mean": 0.7867,
+   "std": 0.0309
+  },
+  {
+   "spec": "M1",
+   "algo": "random_forest",
+   "mean": 0.7785,
+   "std": 0.0326
+  },
+  {
+   "spec": "M1",
+   "algo": "xgboost",
+   "mean": 0.7691,
+   "std": 0.0303
+  },
+  {
+   "spec": "M2",
+   "algo": "logistic",
+   "mean": 0.7889,
+   "std": 0.0328
+  },
+  {
+   "spec": "M2",
+   "algo": "random_forest",
+   "mean": 0.781,
+   "std": 0.0302
+  },
+  {
+   "spec": "M2",
+   "algo": "xgboost",
+   "mean": 0.7798,
+   "std": 0.0298
+  },
+  {
+   "spec": "M3",
+   "algo": "logistic",
+   "mean": 0.7857,
+   "std": 0.0325
+  },
+  {
+   "spec": "M3",
+   "algo": "random_forest",
+   "mean": 0.7794,
+   "std": 0.0314
+  },
+  {
+   "spec": "M3",
+   "algo": "xgboost",
+   "mean": 0.7751,
+   "std": 0.0303
+  }
+ ]
+}

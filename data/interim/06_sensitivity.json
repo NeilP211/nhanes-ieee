@@ -1,0 +1,97 @@
+{
+ "sensitivity": [
+  {
+   "analysis": "primary (reference)",
+   "n": 1784.0,
+   "events": 431.0,
+   "auc_m3": 0.7863,
+   "auc_m0": 0.7883,
+   "delta_auc": -0.002,
+   "ci_low": -0.0103,
+   "ci_high": 0.0066,
+   "excludes_zero": false
+  },
+  {
+   "analysis": "cutoff at 20th percentile",
+   "n": 1784.0,
+   "events": 337.0,
+   "auc_m3": 0.7824,
+   "auc_m0": 0.7843,
+   "delta_auc": -0.0019,
+   "ci_low": -0.013,
+   "ci_high": 0.0092,
+   "excludes_zero": false
+  },
+  {
+   "analysis": "cutoff at 10th percentile",
+   "n": 1784.0,
+   "events": 164.0,
+   "auc_m3": 0.7927,
+   "auc_m0": 0.7951,
+   "delta_auc": -0.0023,
+   "ci_low": -0.02,
+   "ci_high": 0.0153,
+   "excludes_zero": false
+  },
+  {
+   "analysis": "DSST unable coded low (n=25)",
+   "n": 1784.0,
+   "events": 441.0,
+   "auc_m3": 0.7856,
+   "auc_m0": 0.7876,
+   "delta_auc": -0.002,
+   "ci_low": -0.0105,
+   "ci_high": 0.0063,
+   "excludes_zero": false
+  },
+  {
+   "analysis": "English-only administration",
+   "n": 1575.0,
+   "events": 345.0,
+   "auc_m3": 0.7771,
+   "auc_m0": 0.7838,
+   "delta_auc": -0.0066,
+   "ci_low": -0.0159,
+   "ci_high": 0.0028,
+   "excludes_zero": false
+  },
+  {
+   "analysis": "MICE on full labelled sample",
+   "n": 3124.0,
+   "events": 781.0,
+   "auc_m3": 0.7973,
+   "auc_m0": 0.7958,
+   "delta_auc": 0.0015,
+   "ci_low": -0.003,
+   "ci_high": 0.0063,
+   "excludes_zero": false
+  },
+  {
+   "analysis": "leave-one-block-out, without metals",
+   "n": NaN,
+   "events": NaN,
+   "auc_m3": 0.7863,
+   "auc_m0": 0.7892,
+   "delta_auc": -0.0028,
+   "ci_low": -0.0051,
+   "ci_high": -0.0004,
+   "excludes_zero": true
+  },
+  {
+   "analysis": "leave-one-block-out, without nutritional",
+   "n": NaN,
+   "events": NaN,
+   "auc_m3": 0.7863,
+   "auc_m0": 0.7865,
+   "delta_auc": -0.0002,
+   "ci_low": -0.0081,
+   "ci_high": 0.0078,
+   "excludes_zero": false
+  }
+ ],
+ "continuous_outcome_r2": {
+  "M0": 0.3824954717333554,
+  "M3": 0.3908172798177304,
+  "delta_r2": 0.008321808084374993
+ }
+}

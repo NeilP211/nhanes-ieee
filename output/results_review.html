@@ -1,0 +1,440 @@
+<title>Biomarker Prediction Results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F4F7F6; --surface:#FFFFFF; --surface-2:#EDF2F0;
+  --ink:#15201E; --ink-2:#44514E; --ink-3:#6D7A77;
+  --rule:#D9E2DF; --rule-2:#C3D0CC;
+  --accent:#0E6A62; --accent-soft:#E0EEEB; --accent-line:#9CC7C0;
+  --flag:#9A5A0B; --flag-soft:#F7EDDE; --flag-line:#DCBB86;
+  --teal:#0E8F80; --brick:#B03A26;
+  --hl:#EAF3F1;
+  --shadow:0 1px 2px rgba(18,40,36,.05),0 8px 24px -12px rgba(18,40,36,.16);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0E1413; --surface:#151D1B; --surface-2:#1B2523;
+  --ink:#E5ECE9; --ink-2:#A1AEAA; --ink-3:#7A8784;
+  --rule:#26312E; --rule-2:#334240;
+  --accent:#54C1B0; --accent-soft:#123430; --accent-line:#2A5F58;
+  --flag:#D9973F; --flag-soft:#33260F; --flag-line:#5C441C;
+  --teal:#17A392; --brick:#CB6552;
+  --hl:#18302C;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  --ground:#0E1413; --surface:#151D1B; --surface-2:#1B2523;
+  --ink:#E5ECE9; --ink-2:#A1AEAA; --ink-3:#7A8784;
+  --rule:#26312E; --rule-2:#334240;
+  --accent:#54C1B0; --accent-soft:#123430; --accent-line:#2A5F58;
+  --flag:#D9973F; --flag-soft:#33260F; --flag-line:#5C441C;
+  --teal:#17A392; --brick:#CB6552;
+  --hl:#18302C;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Source Sans 3",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1020px;margin:0 auto;padding:0 28px 96px}
+.col{max-width:72ch}
+h1,h2,h3{font-family:"Zilla Slab",Georgia,serif;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.1rem,4.6vw,3rem);font-weight:700;line-height:1.08;letter-spacing:-.015em}
+h2{font-size:1.6rem;font-weight:600;line-height:1.2}
+h3{font-size:1.14rem;font-weight:600}
+p{margin:0}
+code{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.86em;
+  background:var(--surface-2);border:1px solid var(--rule);border-radius:2px;padding:1px 5px}
+header{padding:60px 0 36px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+  display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.eyebrow span:not(:first-child)::before{content:"/";margin-right:14px;color:var(--rule-2)}
+.lede{margin-top:20px;font-size:1.14rem;color:var(--ink-2);max-width:66ch}
+.hero{margin-top:34px;background:var(--surface);border:1px solid var(--rule);
+  border-left:3px solid var(--teal);border-radius:3px;padding:24px 28px;box-shadow:var(--shadow)}
+.hero .k{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3)}
+.hero .n{font-family:"Zilla Slab",serif;font-size:clamp(2.2rem,5vw,3.2rem);font-weight:700;
+  line-height:1;margin-top:10px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.hero .ci{font-family:"IBM Plex Mono",monospace;font-size:1rem;color:var(--ink-2);margin-top:10px}
+.hero .say{margin-top:14px;color:var(--ink-2);font-size:.97rem;max-width:62ch}
+section{margin-top:66px}
+.sec-head{display:flex;gap:16px;align-items:baseline;margin-bottom:10px}
+.sec-num{font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:500;
+  color:var(--accent);border:1px solid var(--accent-line);border-radius:2px;
+  padding:2px 7px;flex:none;background:var(--accent-soft)}
+.sec-sub{color:var(--ink-2);margin-top:8px;max-width:70ch}
+figure{margin:22px 0 0;background:var(--surface);border:1px solid var(--rule);
+  border-radius:3px;padding:20px 16px 12px;box-shadow:var(--shadow);overflow-x:auto}
+figcaption{font-size:.86rem;color:var(--ink-3);margin-top:10px;padding:0 8px;max-width:74ch}
+.legend{display:flex;gap:20px;flex-wrap:wrap;padding:0 8px 12px;font-size:.84rem;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;
+  vertical-align:middle}
+svg{display:block;min-width:660px}
+.grp{font-family:"Zilla Slab",serif;font-size:12.5px;font-weight:600;fill:var(--ink)}
+.lab{font-size:12px;fill:var(--ink-2);font-family:"Source Sans 3",sans-serif}
+.val{font-family:"IBM Plex Mono",monospace;font-size:11.5px;fill:var(--ink-2)}
+.tick{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:var(--ink-3)}
+.axlab{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:var(--ink-3)}
+.axtitle{font-size:12px;fill:var(--ink-3)}
+.zero{stroke:var(--rule-2);stroke-width:1.5}
+.thr{stroke:var(--flag);stroke-width:1.5;stroke-dasharray:4 3}
+.thr-band{fill:var(--flag-soft);opacity:.55}
+.ax{stroke:var(--rule-2);stroke-width:1}
+.ci{stroke-width:2;stroke-linecap:butt}
+.cap{stroke-width:2}
+.r.null .ci,.r.null .cap{stroke:var(--teal)}
+.r.null .pt{fill:var(--teal);stroke:var(--surface);stroke-width:2}
+.r.sig .ci,.r.sig .cap{stroke:var(--brick)}
+.r.sig .pt{fill:var(--brick);stroke:var(--surface);stroke-width:2}
+.r .hl{fill:var(--hl)}
+.r.prim .lab{fill:var(--ink);font-weight:600}
+.r.prim .val{fill:var(--ink);font-weight:500}
+.r:hover .pt{r:7}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;
+  background:var(--surface);margin-top:20px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:520px}
+th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:.68rem;font-weight:500;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);padding:11px 14px;
+  border-bottom:1px solid var(--rule-2);background:var(--surface-2);white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;
+  font-family:"IBM Plex Mono",monospace;font-size:.85rem}
+tbody tr:last-child td{border-bottom:none}
+tr.emph td{background:var(--hl);font-weight:600}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:3px;
+  padding:22px 24px;box-shadow:var(--shadow);margin-top:22px}
+.card.key{border-left:3px solid var(--brick)}
+.card.note{border-left:3px solid var(--flag)}
+.card h3{margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:.96rem}
+.wl{display:flex;flex-direction:column;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+.wl li{display:flex;gap:11px;font-size:.95rem;color:var(--ink-2);line-height:1.55}
+.wl li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;
+  background:var(--rule-2);margin-top:.62em}
+.wl li b{color:var(--ink);font-weight:600}
+.note-txt{font-size:.88rem;color:var(--ink-3);margin-top:14px;max-width:72ch}
+footer{margin-top:76px;padding-top:26px;border-top:1px solid var(--rule);
+  font-size:.86rem;color:var(--ink-3)}
+@media (max-width:640px){body{font-size:16px}.wrap{padding:0 18px 72px}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow"><span>Phases 3 to 6 complete</span><span>Pre-registered</span><span>2026-08-31</span></div>
+  <h1>Biomarker Prediction Results</h1>
+  <p class="lede">
+    Twenty blood metals and nutritional biomarkers add nothing to the prediction of
+    low cognitive performance beyond age, education and income. The result is
+    precise rather than underpowered, it survives every pre-specified sensitivity
+    analysis, and the biomarker panel is significantly worse than eight questions a
+    clinician can ask without drawing blood.
+  </p>
+  <div class="hero">
+    <div class="k">Primary result &middot; delta-AUC (M3 minus M0), L2-penalized logistic</div>
+    <div class="n">&minus;0.0019</div>
+    <div class="ci">bootstrap 95% CI [&minus;0.0108, +0.0071] &nbsp;&middot;&nbsp; n = 1,784 &nbsp;&middot;&nbsp; 431 events</div>
+    <p class="say">
+      The interval includes zero, so H1 is not supported. The informative part is its
+      upper bound: <b>+0.0071 sits well below the 0.02 meaningful-difference threshold
+      fixed in advance</b>. The data rule out an improvement large enough to matter,
+      which is a stronger claim than failing to reach significance, and it is only
+      available because the threshold was pre-specified.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>Every interval, one picture</h2></div>
+  <p class="sec-sub col">
+    Each row is a contrast against its baseline, with the bootstrap 95% interval.
+    The shaded band to the right of the dashed line is the region a result would
+    have to reach to count as meaningful. Nothing gets near it.
+  </p>
+  <figure>
+    <div class="legend">
+      <span><i style="background:var(--teal)"></i>interval includes zero (no difference detected)</span>
+      <span><i style="background:var(--brick)"></i>interval excludes zero (M3 is significantly worse)</span>
+    </div>
+    <svg viewBox="0 0 760 430" width="100%" role="img" aria-label="Forest plot of delta-AUC contrasts with 95% confidence intervals">
+<title>Delta-AUC with bootstrap 95% confidence intervals</title>
+<rect x="659.7" y="34" width="30.3" height="330" class="thr-band"/>
+<line x1="507.9" y1="34" x2="507.9" y2="364" class="zero"/>
+<line x1="659.7" y1="34" x2="659.7" y2="364" class="thr"/>
+<text x="665.7" y="30" class="axlab">0.02 threshold</text>
+<text x="503.9" y="30" class="axlab" text-anchor="end">no difference</text>
+<text x="8" y="58" class="grp">Primary nested contrasts (L2-penalized logistic)</text>
+<g class="r null "><title>M1 - M0    metals block: -0.0015 [-0.0052, +0.0023]</title>
+<text x="18" y="84" class="lab">M1 - M0    metals block</text>
+<line x1="468.5" y1="80" x2="525.4" y2="80" class="ci"/>
+<line x1="468.5" y1="76" x2="468.5" y2="84" class="cap"/>
+<line x1="525.4" y1="76" x2="525.4" y2="84" class="cap"/>
+<circle cx="496.6" cy="80" r="4.5" class="pt"/>
+<text x="706" y="84" class="val">-0.0015</text>
+</g>
+<g class="r null "><title>M2 - M0    nutritional block: +0.0011 [-0.0067, +0.0100]</title>
+<text x="18" y="110" class="lab">M2 - M0    nutritional block</text>
+<line x1="457.1" y1="106" x2="583.8" y2="106" class="ci"/>
+<line x1="457.1" y1="102" x2="457.1" y2="110" class="cap"/>
+<line x1="583.8" y1="102" x2="583.8" y2="110" class="cap"/>
+<circle cx="516.3" cy="106" r="4.5" class="pt"/>
+<text x="706" y="110" class="val">+0.0011</text>
+</g>
+<g class="r null prim"><title>M3 - M0    both blocks: -0.0019 [-0.0108, +0.0071]</title>
+<rect x="4" y="119" width="752" height="26" class="hl"/>
+<text x="18" y="136" class="lab">M3 - M0    both blocks</text>
+<line x1="426.0" y1="132" x2="561.8" y2="132" class="ci"/>
+<line x1="426.0" y1="128" x2="426.0" y2="136" class="cap"/>
+<line x1="561.8" y1="128" x2="561.8" y2="136" class="cap"/>
+<circle cx="493.5" cy="132" r="5.5" class="pt"/>
+<text x="706" y="136" class="val">-0.0019</text>
+</g>
+<g class="r sig "><title>M3 - M0+   vs clinical baseline: -0.0158 [-0.0295, -0.0033]</title>
+<text x="18" y="162" class="lab">M3 - M0+   vs clinical baseline</text>
+<line x1="284.1" y1="158" x2="482.9" y2="158" class="ci"/>
+<line x1="284.1" y1="154" x2="284.1" y2="162" class="cap"/>
+<line x1="482.9" y1="154" x2="482.9" y2="162" class="cap"/>
+<circle cx="388.1" cy="158" r="4.5" class="pt"/>
+<text x="706" y="162" class="val">-0.0158</text>
+</g>
+<text x="8" y="188" class="grp">Pre-specified sensitivity analyses (M3 - M0)</text>
+<g class="r null "><title>Cutoff at 20th percentile: -0.0019 [-0.0130, +0.0092]</title>
+<text x="18" y="214" class="lab">Cutoff at 20th percentile</text>
+<line x1="409.3" y1="210" x2="577.7" y2="210" class="ci"/>
+<line x1="409.3" y1="206" x2="409.3" y2="214" class="cap"/>
+<line x1="577.7" y1="206" x2="577.7" y2="214" class="cap"/>
+<circle cx="493.5" cy="210" r="4.5" class="pt"/>
+<text x="706" y="214" class="val">-0.0019</text>
+</g>
+<g class="r null "><title>Cutoff at 10th percentile: -0.0023 [-0.0200, +0.0153]</title>
+<text x="18" y="240" class="lab">Cutoff at 10th percentile</text>
+<line x1="356.2" y1="236" x2="624.0" y2="236" class="ci"/>
+<line x1="356.2" y1="232" x2="356.2" y2="240" class="cap"/>
+<line x1="624.0" y1="232" x2="624.0" y2="240" class="cap"/>
+<circle cx="490.5" cy="236" r="4.5" class="pt"/>
+<text x="706" y="240" class="val">-0.0023</text>
+</g>
+<g class="r null "><title>DSST unable coded low: -0.0020 [-0.0105, +0.0063]</title>
+<text x="18" y="266" class="lab">DSST unable coded low</text>
+<line x1="428.3" y1="262" x2="555.7" y2="262" class="ci"/>
+<line x1="428.3" y1="258" x2="428.3" y2="266" class="cap"/>
+<line x1="555.7" y1="258" x2="555.7" y2="266" class="cap"/>
+<circle cx="492.8" cy="262" r="4.5" class="pt"/>
+<text x="706" y="266" class="val">-0.0020</text>
+</g>
+<g class="r null "><title>English-only administration: -0.0066 [-0.0159, +0.0028]</title>
+<text x="18" y="292" class="lab">English-only administration</text>
+<line x1="387.3" y1="288" x2="529.2" y2="288" class="ci"/>
+<line x1="387.3" y1="284" x2="387.3" y2="292" class="cap"/>
+<line x1="529.2" y1="284" x2="529.2" y2="292" class="cap"/>
+<circle cx="457.9" cy="288" r="4.5" class="pt"/>
+<text x="706" y="292" class="val">-0.0066</text>
+</g>
+<g class="r null "><title>MICE, full sample n=3,124: +0.0015 [-0.0030, +0.0063]</title>
+<text x="18" y="318" class="lab">MICE, full sample n=3,124</text>
+<line x1="485.2" y1="314" x2="555.7" y2="314" class="ci"/>
+<line x1="485.2" y1="310" x2="485.2" y2="318" class="cap"/>
+<line x1="555.7" y1="310" x2="555.7" y2="318" class="cap"/>
+<circle cx="519.3" cy="314" r="4.5" class="pt"/>
+<text x="706" y="318" class="val">+0.0015</text>
+</g>
+<line x1="250" y1="372" x2="690" y2="372" class="ax"/>
+<line x1="280.3" y1="372" x2="280.3" y2="377" class="ax"/>
+<text x="280.3" y="390" class="tick" text-anchor="middle">-0.03</text>
+<line x1="356.2" y1="372" x2="356.2" y2="377" class="ax"/>
+<text x="356.2" y="390" class="tick" text-anchor="middle">-0.02</text>
+<line x1="432.1" y1="372" x2="432.1" y2="377" class="ax"/>
+<text x="432.1" y="390" class="tick" text-anchor="middle">-0.01</text>
+<line x1="507.9" y1="372" x2="507.9" y2="377" class="ax"/>
+<text x="507.9" y="390" class="tick" text-anchor="middle">+0.00</text>
+<line x1="583.8" y1="372" x2="583.8" y2="377" class="ax"/>
+<text x="583.8" y="390" class="tick" text-anchor="middle">+0.01</text>
+<line x1="659.7" y1="372" x2="659.7" y2="377" class="ax"/>
+<text x="659.7" y="390" class="tick" text-anchor="middle">+0.02</text>
+<text x="470" y="410" class="axtitle" text-anchor="middle">delta-AUC versus baseline (bootstrap 95% CI)</text>
+</svg>
+
+    <figcaption>
+      Hover any row for its exact estimate. The single interval that excludes zero is
+      M3 against the clinical baseline M0+, and it points the wrong way for the
+      biomarkers: the laboratory panel loses to routinely recorded clinical history.
+    </figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">02</span><h2>The sharper finding</h2></div>
+  <div class="card key">
+    <h3>A twenty-analyte lab panel is beaten by eight clinical questions</h3>
+    <p>
+      M0+ is the pre-specified secondary baseline: demographics plus BMI, smoking,
+      alcohol, PHQ-9 depression, stroke, diabetes, hypertension and high cholesterol.
+      It reaches AUC 0.8023 against 0.7884 for demographics alone, while the full
+      biomarker model reaches 0.7865.
+    </p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Algorithm</th><th>delta-AUC (M3 minus M0+)</th><th>95% CI</th></tr></thead>
+        <tbody>
+          <tr><td>Logistic</td><td class="num">&minus;0.0158</td><td class="num">[&minus;0.0295, &minus;0.0033]</td></tr>
+          <tr><td>Random forest</td><td class="num">&minus;0.0197</td><td class="num">[&minus;0.0338, &minus;0.0055]</td></tr>
+          <tr><td>XGBoost</td><td class="num">&minus;0.0230</td><td class="num">[&minus;0.0385, &minus;0.0063]</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-txt">
+      Consistent across all three algorithms, with every interval excluding zero.
+      This is more actionable than the primary null: it is not merely that biomarkers
+      fail to add, it is that a questionnaire outperforms the assay panel.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">03</span><h2>Discrimination and calibration</h2></div>
+  <p class="sec-sub col">
+    Mean out-of-fold across 5 repeats of stratified 10-fold CV. Every model
+    discriminates reasonably, and essentially all of it comes from age, education
+    and income.
+  </p>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Model</th><th>Algorithm</th><th>AUC</th><th>AUPRC</th><th>Brier</th><th>Calib. slope</th></tr></thead>
+      <tbody>
+        <tr><td>M0, demographics</td><td>logistic</td><td class="num">0.7884</td><td class="num">0.5471</td><td class="num">0.1459</td><td class="num">1.088</td></tr>
+        <tr><td>M1, + metals</td><td>logistic</td><td class="num">0.7868</td><td class="num">0.5456</td><td class="num">0.1465</td><td class="num">1.069</td></tr>
+        <tr><td>M2, + nutritional</td><td>logistic</td><td class="num">0.7895</td><td class="num">0.5420</td><td class="num">0.1461</td><td class="num">1.026</td></tr>
+        <tr><td>M3, all biomarkers</td><td>logistic</td><td class="num">0.7865</td><td class="num">0.5392</td><td class="num">0.1470</td><td class="num">1.004</td></tr>
+        <tr><td>M3, all biomarkers</td><td>random forest</td><td class="num">0.7806</td><td class="num">0.5384</td><td class="num">0.1501</td><td class="num">1.410</td></tr>
+        <tr><td>M3, all biomarkers</td><td>xgboost</td><td class="num">0.7779</td><td class="num">0.5201</td><td class="num">0.1497</td><td class="num">0.904</td></tr>
+        <tr class="emph"><td>M0+, clinical baseline</td><td>logistic</td><td class="num">0.8023</td><td class="num">0.5618</td><td class="num">0.1423</td><td class="num">1.042</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note-txt">
+    Penalized logistic is also the best-calibrated model at every specification.
+    Random forest is badly over-dispersed on M3 (slope 1.410) and XGBoost slightly
+    under (0.904). The simplest model wins on discrimination and calibration at once.
+  </p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">04</span><h2>The mixture-method benchmark</h2></div>
+  <p class="sec-sub col">
+    The computational contribution: quantile g-computation, the method this
+    literature relies on, reimplemented in Python with training-fold quantile
+    cutpoints so it fits inside the CV loop without leakage, then scored on
+    predictive rather than inferential criteria.
+  </p>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Model</th><th>Cross-validated AUC</th></tr></thead>
+      <tbody>
+        <tr><td>Demographics only (M0)</td><td class="num">0.7884</td></tr>
+        <tr><td>Quantile g-computation, metals mixture + demographics</td><td class="num">0.7874</td></tr>
+        <tr><td>M1, same metals as ordinary features + demographics</td><td class="num">0.7868</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note-txt">
+    psi = &minus;0.1162 joint log-odds per simultaneous one-quantile increase, with
+    cadmium carrying 0.820 of the positive weight. The mixture method performs no
+    better than demographics alone, and no better than entering the same metals as
+    ordinary features. A technique built for inferential decomposition of a mixture
+    confers no predictive advantage. BKMR was excluded in advance on convergence
+    grounds for binary outcomes; WQS was deferred and now has no basis for inclusion.
+  </p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">05</span><h2>Feature importance is unstable, and that is the point</h2></div>
+  <p class="sec-sub col">
+    SHAP rankings bootstrapped over 200 resamples of the M3 model.
+  </p>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Feature</th><th>Median rank</th><th>95% rank interval</th><th>In top 5</th></tr></thead>
+      <tbody>
+        <tr class="emph"><td>Education</td><td class="num">1</td><td class="num">1 to 2</td><td class="num">100%</td></tr>
+        <tr class="emph"><td>Age</td><td class="num">2</td><td class="num">1 to 2</td><td class="num">100%</td></tr>
+        <tr class="emph"><td>Income to poverty ratio</td><td class="num">3</td><td class="num">3 to 5</td><td class="num">99%</td></tr>
+        <tr><td>NLR, first biomarker</td><td class="num">5</td><td class="num">3 to 19</td><td class="num">51%</td></tr>
+        <tr><td>eGFR</td><td class="num">7</td><td class="num">4 to 19</td><td class="num">34%</td></tr>
+        <tr><td>Vitamin B12</td><td class="num">8</td><td class="num">4 to 19</td><td class="num">25%</td></tr>
+        <tr><td>Cadmium</td><td class="num">14</td><td class="num">5 to 24</td><td class="num">4.5%</td></tr>
+        <tr><td>Selenium</td><td class="num">14</td><td class="num">6 to 23</td><td class="num">2.5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note-txt">
+    The three demographics are rank-stable to the point of determinism. Every
+    biomarker swings across a 15 to 20 rank interval between resamples. That
+    instability is a finding in itself: single-run SHAP rankings over correlated
+    biomarkers are not reproducible, which is a direct caution for a literature that
+    reports them without resampling.
+  </p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">06</span><h2>Robustness</h2></div>
+  <ul class="wl">
+    <li><b>The imputation analysis forecloses the obvious objection.</b> Option B, the full labelled sample of 3,124 with multiple imputation fitted inside each fold, gives delta-AUC +0.0015 with CI [&minus;0.0030, +0.0063]. That is the <b>tightest interval of any analysis</b> and still null, so the complete-case sampling decision did not create the null.</li>
+    <li><b>Decision-curve analysis agrees.</b> M3 exceeds M0 at 21 of 56 thresholds, indistinguishable from chance, with a maximum net-benefit gain of +0.0059. There is no threshold at which the panel would change a decision.</li>
+    <li><b>Removing the metals block slightly improves discrimination</b> (&minus;0.0028, CI [&minus;0.0051, &minus;0.0004]). The metals contribute noise, not signal.</li>
+    <li><b>The U-shape rationale fails on its own terms.</b> Partial dependence for selenium and manganese shows no U, with extrema near the ends of the range and a total swing of about 0.05 in predicted probability.</li>
+    <li><b>One result points marginally positive, reported for completeness.</b> On the continuous composite, cross-validated R-squared rises from 0.3825 to 0.3908, a gain of +0.0083, about 0.8% of additional variance. It does not translate into discrimination for the binary outcome and is far too small to change the conclusion.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">07</span><h2>What this means, and the venue question</h2></div>
+  <p class="sec-sub col">
+    Against the brief's own decision framework this is <b>Scenario C</b> on the
+    primary axis combined with <b>Scenario E</b> on the secondary. Both were
+    pre-written as legitimate publishable outcomes, and Scenario C is described
+    there as the cautionary result and arguably the most interesting one.
+  </p>
+  <div class="card">
+    <h3>The claim</h3>
+    <p>
+      Seven published studies report significant associations between these
+      biomarkers and cognition in this exact population and cycle range. Translating
+      those associations into individual-level prediction adds essentially nothing
+      beyond age, education and income. Three findings carry it past a bare null: the
+      null is precise rather than underpowered, the panel is significantly worse than
+      routine clinical covariates, and the mixture method the literature depends on
+      confers no predictive advantage either.
+    </p>
+  </div>
+  <div class="card note">
+    <h3>A decision for both authors</h3>
+    <p>
+      The brief routes Scenario C to Diagnostic and Prognostic Research, Journal of
+      Clinical Epidemiology or PLOS ONE, and warns that Scenario E weakens an IEEE
+      framing. That tension is now real.
+    </p>
+    <p style="margin-top:12px">
+      The argument for keeping IEEE: the contribution was reframed as a reusable
+      evaluation protocol for testing whether reported epidemiological associations
+      confer predictive utility. A precise null arguably demonstrates that protocol
+      better than a positive result would, and sections 04 and 05 above are genuine
+      computational content rather than a standard classifier comparison.
+    </p>
+  </div>
+  <p class="note-txt">
+    <b>No causal language applies.</b> These data are cross-sectional. Nothing here
+    says any biomarker does or does not affect cognition; the finding is strictly
+    about predictive utility and the gap between association and prediction. The
+    outcome throughout is <b>low cognitive performance</b>, never cognitive impairment.
+  </p>
+</section>
+
+<footer>
+  Full numbers in <code>output/tables/07_results_summary.md</code>. Pre-registration
+  dated 2026-08-31 before any outcome-predictor relationship was examined. Leakage
+  audit passes: every transform fitted inside its fold. Reproduce with
+  <code>python3 src/03_model.py &amp;&amp; src/04_evaluate.py &amp;&amp; src/05_interpret.py &amp;&amp; src/06_sensitivity.py</code>.
+</footer>
+</div>

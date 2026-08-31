@@ -1,0 +1,56 @@
+{
+ "reserved_codes_converted": {
+  "2011-2012": {
+   "DMDEDUC2": 4,
+   "SMQ020": 1,
+   "SMQ040": 0,
+   "ALQ101": 3,
+   "ALQ120Q": 3,
+   "ALQ130": 1,
+   "MCQ160F": 3,
+   "DIQ010": 1,
+   "BPQ020": 3,
+   "BPQ080": 16,
+   "DPQ010": 4,
+   "DPQ020": 3,
+   "DPQ030": 2,
+   "DPQ040": 2,
+   "DPQ050": 2,
+   "DPQ060": 5,
+   "DPQ070": 3,
+   "DPQ080": 3,
+   "DPQ090": 1
+  },
+  "2013-2014": {
+   "DMDEDUC2": 3,
+   "SMQ020": 2,
+   "SMQ040": 0,
+   "ALQ101": 4,
+   "ALQ120Q": 3,
+   "ALQ130": 2,
+   "MCQ160F": 4,
+   "DIQ010": 1,
+   "BPQ020": 4,
+   "BPQ080": 17,
+   "DPQ010": 4,
+   "DPQ020": 5,
+   "DPQ030": 1,
+   "DPQ040": 1,
+   "DPQ050": 1,
+   "DPQ060": 4,
+   "DPQ070": 3,
+   "DPQ080": 1,
+   "DPQ090": 1
+  }
+ },
+ "pct_below_lod": {
+  "LBXBPB": 0.0,
+  "LBXBCD": 5.2,
+  "LBXTHG": 5.7,
+  "LBXBSE": 0.0,
+  "LBXBMN": 0.0
+ },
+ "weighted_population_60plus": 59659563.999138504,
+ "n_rows": 3472,
+ "n_columns": 94
+}

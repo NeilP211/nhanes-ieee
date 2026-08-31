@@ -1,0 +1,498 @@
+<title>NHANES Variable Lock Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --ground:#F4F7F6; --surface:#FFFFFF; --surface-2:#EDF2F0;
+  --ink:#15201E; --ink-2:#44514E; --ink-3:#6D7A77;
+  --rule:#D9E2DF; --rule-2:#C3D0CC;
+  --accent:#0E6A62; --accent-soft:#E0EEEB; --accent-line:#9CC7C0;
+  --flag:#9A5A0B; --flag-soft:#F7EDDE; --flag-line:#DCBB86;
+  --alert:#933024; --alert-soft:#F6E5E2; --alert-line:#D9A79F;
+  --shadow:0 1px 2px rgba(18,40,36,.05),0 8px 24px -12px rgba(18,40,36,.16);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1413; --surface:#151D1B; --surface-2:#1B2523;
+    --ink:#E5ECE9; --ink-2:#A1AEAA; --ink-3:#7A8784;
+    --rule:#26312E; --rule-2:#334240;
+    --accent:#54C1B0; --accent-soft:#123430; --accent-line:#2A5F58;
+    --flag:#D9973F; --flag-soft:#33260F; --flag-line:#5C441C;
+    --alert:#DB7B6D; --alert-soft:#331A16; --alert-line:#5E2F28;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1413; --surface:#151D1B; --surface-2:#1B2523;
+  --ink:#E5ECE9; --ink-2:#A1AEAA; --ink-3:#7A8784;
+  --rule:#26312E; --rule-2:#334240;
+  --accent:#54C1B0; --accent-soft:#123430; --accent-line:#2A5F58;
+  --flag:#D9973F; --flag-soft:#33260F; --flag-line:#5C441C;
+  --alert:#DB7B6D; --alert-soft:#331A16; --alert-line:#5E2F28;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Source Sans 3",ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px 96px}
+.col{max-width:72ch}
+h1,h2,h3,h4{font-family:"Zilla Slab",Georgia,serif;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.1rem,4.6vw,3.1rem);font-weight:700;line-height:1.08;letter-spacing:-.015em}
+h2{font-size:1.62rem;font-weight:600;line-height:1.2;letter-spacing:-.008em}
+h3{font-size:1.16rem;font-weight:600;line-height:1.3}
+h4{font-size:1rem;font-weight:600}
+p{margin:0}
+a{color:var(--accent)}
+code,.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+
+/* header */
+header{padding:64px 0 40px;border-bottom:1px solid var(--rule)}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+  display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:20px;
+}
+.eyebrow span:not(:first-child)::before{content:"/";margin-right:14px;color:var(--rule-2)}
+.lede{margin-top:20px;font-size:1.14rem;color:var(--ink-2);max-width:66ch}
+.stat-row{display:flex;flex-wrap:wrap;gap:0;margin-top:36px;border:1px solid var(--rule);border-radius:3px;overflow:hidden;background:var(--surface)}
+.stat{flex:1 1 150px;padding:16px 20px;border-right:1px solid var(--rule)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:"Zilla Slab",serif;font-size:1.7rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.stat .l{font-size:.79rem;color:var(--ink-3);margin-top:6px;line-height:1.35}
+
+/* sections */
+section{margin-top:72px;scroll-margin-top:24px}
+.sec-head{display:flex;gap:16px;align-items:baseline;margin-bottom:10px}
+.sec-num{
+  font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:500;color:var(--accent);
+  border:1px solid var(--accent-line);border-radius:2px;padding:2px 7px;flex:none;
+  background:var(--accent-soft);
+}
+.sec-sub{color:var(--ink-2);margin-top:8px;max-width:70ch}
+.stack{display:flex;flex-direction:column;gap:18px}
+.stack-lg{display:flex;flex-direction:column;gap:30px}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface);margin-top:20px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:660px}
+th{
+  text-align:left;font-family:"IBM Plex Mono",monospace;font-size:.68rem;font-weight:500;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);
+  padding:11px 14px;border-bottom:1px solid var(--rule-2);background:var(--surface-2);
+  white-space:nowrap;
+}
+td{padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+td.v{white-space:nowrap}
+td .desc{color:var(--ink-2);font-size:.88rem}
+.grp td{
+  background:var(--surface-2);font-family:"Zilla Slab",serif;font-weight:600;font-size:.94rem;
+  letter-spacing:.01em;
+}
+.grp td .file{font-family:"IBM Plex Mono",monospace;font-weight:400;font-size:.78rem;color:var(--ink-3);margin-left:10px;letter-spacing:0}
+var,.var{
+  font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:.84rem;font-weight:500;
+  background:var(--surface-2);border:1px solid var(--rule);border-radius:2px;padding:1px 5px;
+  white-space:nowrap;
+}
+tr.hl td{background:var(--flag-soft)}
+tr.hl var{background:transparent;border-color:var(--flag-line)}
+
+/* provenance chip */
+.pv{
+  font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.05em;
+  text-transform:uppercase;padding:2px 6px;border-radius:2px;white-space:nowrap;display:inline-block;
+}
+.pv-x{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-line)}
+.pv-c{background:transparent;color:var(--ink-3);border:1px solid var(--rule-2)}
+
+/* callouts */
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:22px 24px;box-shadow:var(--shadow)}
+.dec{border-left:3px solid var(--flag)}
+.dec .dec-top{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.dec-n{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--flag);letter-spacing:.1em;text-transform:uppercase}
+.rec{
+  margin-top:16px;padding:12px 16px;background:var(--accent-soft);
+  border-radius:2px;font-size:.93rem;border:1px solid var(--accent-line);
+}
+.rec b{font-family:"Zilla Slab",serif;color:var(--accent);letter-spacing:.01em}
+.wl{display:flex;flex-direction:column;gap:9px;margin:14px 0 0;padding:0;list-style:none}
+.wl li{display:flex;gap:11px;font-size:.94rem;color:var(--ink-2);line-height:1.5}
+.wl li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--rule-2);margin-top:.6em}
+.wl li b{color:var(--ink);font-weight:600}
+
+/* corrections */
+.corr{border-left:3px solid var(--alert)}
+.corr-item{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.corr-item:last-child{border-bottom:none;padding-bottom:0}
+.corr-item:first-child{padding-top:0}
+.corr-n{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--alert);padding-top:.22em}
+.corr-b{font-size:.92rem;color:var(--ink-2)}
+.corr-b b{color:var(--ink);font-weight:600;font-size:.96rem;display:block;margin-bottom:2px}
+
+/* phases */
+.phase{display:grid;grid-template-columns:118px 1fr;gap:0;border:1px solid var(--rule);border-radius:3px;background:var(--surface);overflow:hidden;box-shadow:var(--shadow)}
+.phase-rail{background:var(--surface-2);padding:18px 16px;border-right:1px solid var(--rule)}
+.phase-rail .p{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.phase-rail .s{font-family:"Zilla Slab",serif;font-size:1.05rem;font-weight:600;margin-top:5px;line-height:1.2}
+.phase-body{padding:18px 22px}
+.phase-body .files{font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--ink-3);margin-bottom:7px}
+.chain{
+  display:flex;align-items:center;gap:12px;padding:9px 20px;margin:0;
+  font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--accent);
+}
+.chain::before,.chain::after{content:"";height:1px;background:var(--accent-line);flex:1}
+.gate{border:1px solid var(--flag-line);background:var(--flag-soft);border-radius:3px;padding:20px 24px}
+.gate .g-lab{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--flag)}
+.gate h3{margin-top:7px}
+.gate p{margin-top:9px;font-size:.95rem;color:var(--ink-2)}
+
+.note{font-size:.88rem;color:var(--ink-3);margin-top:14px;max-width:70ch}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:.82rem;color:var(--ink-3);align-items:center}
+hr{border:none;border-top:1px solid var(--rule);margin:0}
+footer{margin-top:80px;padding-top:26px;border-top:1px solid var(--rule);font-size:.86rem;color:var(--ink-3)}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 18px 72px}
+  .phase{grid-template-columns:1fr}
+  .phase-rail{border-right:none;border-bottom:1px solid var(--rule);display:flex;gap:12px;align-items:baseline}
+  .phase-rail .s{margin-top:0}
+}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">
+    <span>Phase 0 complete</span><span>Awaiting sign-off</span><span>2026-08-30</span>
+  </div>
+  <h1>NHANES Variable Lock Sheet</h1>
+  <p class="lede">
+    Every variable proposed for the analysis, with its verification provenance. Three decisions
+    need you and your co-author before Phase 1 can start, and one file is missing from the brief
+    entirely. Below the list: a revised phase plan that cuts seven review stops down to two.
+  </p>
+  <div class="stat-row">
+    <div class="stat"><div class="n">23</div><div class="l">files, up from 22 in the brief</div></div>
+    <div class="stat"><div class="n">2,120</div><div class="l">analytic n, cognition + metals + B12</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">decisions blocking Phase 1</div></div>
+    <div class="stat"><div class="n">8</div><div class="l">corrections to the brief</div></div>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>The variable list</h2></div>
+  <p class="sec-sub col">
+    Nothing here is from memory. Each row carries a provenance chip saying how the name was
+    confirmed, because that distinction is what the earlier <code>HSCRP</code> and
+    <code>FOLATE</code> errors turned on.
+  </p>
+  <div class="legend">
+    <span class="pv pv-x">xpt</span> read from the downloaded file's actual columns
+    <span class="pv pv-c">codebook</span> read from the CDC codebook page, not yet opened as a file
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Variable</th><th>Meaning</th><th>Source</th></tr>
+      </thead>
+      <tbody>
+        <tr class="grp"><td colspan="3">Survey design <span class="file">DEMO_G / DEMO_H</span></td></tr>
+        <tr><td class="v"><var>SEQN</var></td><td class="desc">Join key, every file</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>WTMEC2YR</var></td><td class="desc">MEC exam weight. <b>Halve when pooling cycles.</b> Zero is stored as 5.4e-79, not 0</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>SDMVSTRA</var> <var>SDMVPSU</var></td><td class="desc">Variance strata and PSU. Carry through every merge</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>SDDSRVYR</var></td><td class="desc">Cycle indicator, needed to model cycle effects</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>RIDSTATR</var></td><td class="desc">Interview vs MEC status. Filter on this, not on the weight</td><td><span class="pv pv-x">xpt</span></td></tr>
+
+        <tr class="grp"><td colspan="3">Block 1: demographics, the M0 baseline <span class="file">DEMO_G / DEMO_H</span></td></tr>
+        <tr><td class="v"><var>RIDAGEYR</var></td><td class="desc">Age in years. Top-coded at 80 (363 and 352 participants sit at exactly 80)</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>RIAGENDR</var></td><td class="desc">Sex</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>RIDRETH3</var></td><td class="desc">Race and Hispanic origin, 6 categories</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>DMDEDUC2</var></td><td class="desc">Education, adults 20+</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>INDFMPIR</var></td><td class="desc">Family income to poverty ratio. Missingness here hits every delta-AUC</td><td><span class="pv pv-x">xpt</span></td></tr>
+
+        <tr class="grp"><td colspan="3">Outcome: cognitive tests <span class="file">CFQ_G / CFQ_H</span></td></tr>
+        <tr><td class="v"><var>CFDCST1</var> <var>CFDCST2</var> <var>CFDCST3</var></td><td class="desc">CERAD word list trials 1 to 3. Sum = immediate recall, 0 to 30</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>CFDCSR</var></td><td class="desc">CERAD delayed recall, 0 to 10</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>CFDAST</var></td><td class="desc">Animal fluency total</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>CFDDS</var></td><td class="desc">Digit symbol substitution. Observed max 100 and 105, not 133</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>CFASTAT</var></td><td class="desc">Status. Counts <b>three</b> instruments, not four: CERAD is one administration</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>CFALANG</var></td><td class="desc">Test language. Three categories: English, Spanish, <b>Asian language</b></td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>CFDCRNC</var> <var>CFDARNC</var> <var>CFDDRNC</var></td><td class="desc">Reason not completed, per instrument. Drives the DSST sensitivity analysis</td><td><span class="pv pv-x">xpt</span></td></tr>
+
+        <tr class="grp"><td colspan="3">Block 2: blood metals <span class="file">PBCD_G / PBCD_H</span></td></tr>
+        <tr><td class="v"><var>LBXBPB</var></td><td class="desc">Lead, ug/dL. 0% below LOD</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>LBXBCD</var></td><td class="desc">Cadmium, ug/L. 29% below LOD</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>LBXTHG</var></td><td class="desc">Total mercury, ug/L. 26% below LOD</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>LBXBSE</var></td><td class="desc">Selenium, ug/L, whole blood. 0% below LOD</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>LBXBMN</var></td><td class="desc">Manganese, ug/L. 0% below LOD</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>LBDBPBLC</var> <var>LBDBCDLC</var> <var>LBDTHGLC</var> <var>LBDBSELC</var> <var>LBDBMNLC</var></td><td class="desc">Below-LOD flags, 0 or 1. Report imputed fraction per analyte</td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr class="hl"><td class="v"><var>WTSH2YR</var></td><td class="desc"><b>_H only.</b> Blood-metal subsample weight. Its existence is why the 2013-2014 metals n is 806, not 1,600</td><td><span class="pv pv-x">xpt</span></td></tr>
+
+        <tr class="grp"><td colspan="3">Block 3: nutritional biomarkers</td></tr>
+        <tr class="hl"><td class="v"><var>LBXB12</var> / <var>LBDB12</var></td><td class="desc"><b>Renamed between cycles.</b> <code>LBXB12</code> in _G, <code>LBDB12</code> in _H, both pg/mL. Use <var>LBDB12SI</var> (pmol/L), present in both under one name <span class="file">VITB12</span></td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>LBXMMASI</var></td><td class="desc">Methylmalonic acid, nmol/L. <b>No conventional-unit variable exists</b>, SI only <span class="file">MMA</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>LBDFOT</var></td><td class="desc">Serum total folate, ng/mL. Six individual forms also available as <code>LBXSF1SI</code> to <code>LBXSF6SI</code> <span class="file">FOLFMS</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>LBDRFO</var></td><td class="desc">RBC folate, ng/mL, long-term folate status <span class="file">FOLATE</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>LBXVIDMS</var></td><td class="desc">25OHD2 + 25OHD3, nmol/L, total vitamin D <span class="file">VID</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr class="hl"><td class="v"><var>LBXSCU</var> <var>LBXSSE</var> <var>LBXSZN</var></td><td class="desc">Serum copper, selenium, zinc. <b>One-third subsample, both cycles.</b> See decision 1 <span class="file">CUSEZN</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>LBXWBCSI</var> <var>LBDNENO</var> <var>LBDLYMNO</var> <var>LBDMONO</var> <var>LBXPLTSI</var></td><td class="desc">Counts for NLR, PLR and SII inflammation indices <span class="file">CBC</span></td><td><span class="pv pv-x">xpt</span></td></tr>
+        <tr><td class="v"><var>LBXSAL</var> <var>LBXSCR</var></td><td class="desc">Albumin and creatinine, the latter for eGFR <span class="file">BIOPRO</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>LBXGH</var></td><td class="desc">Glycohemoglobin, %. Full sample, confirmed in the analytic notes <span class="file">GHB</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>LBDHDD</var></td><td class="desc">Direct HDL cholesterol, mg/dL. Full sample <span class="file">HDL</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>LBXTC</var></td><td class="desc">Total cholesterol, mg/dL. Full sample <span class="file">TCHOL</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr class="hl"><td class="v"><var>LBXTR</var> <var>LBDLDL</var></td><td class="desc">Triglycerides and LDL. <b>Fasting subsample, both cycles.</b> See decision 2 <span class="file">TRIGLY</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+
+        <tr class="grp"><td colspan="3">Covariates</td></tr>
+        <tr><td class="v"><var>BMXBMI</var></td><td class="desc">Body mass index <span class="file">BMX</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>SMQ020</var> <var>SMQ040</var></td><td class="desc">Smoked 100+ in life, and current smoking. Drives the cadmium gradient <span class="file">SMQ</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>ALQ101</var> <var>ALQ130</var></td><td class="desc">Any drinking in past year, average drinks per day <span class="file">ALQ</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>MCQ160F</var></td><td class="desc">Ever told had a stroke. Optionally <code>MCQ160B</code> and <code>MCQ160C</code> for heart failure and CHD <span class="file">MCQ</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr class="hl"><td class="v"><var>DIQ010</var></td><td class="desc"><b>File missing from the brief.</b> Diabetes is in DIQ, not MCQ. See decision 3 <span class="file">DIQ</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>DPQ010</var> to <var>DPQ090</var></td><td class="desc">PHQ-9 items, summed to a depression score. Identical in both cycles <span class="file">DPQ</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+        <tr><td class="v"><var>BPQ020</var> <var>BPQ080</var></td><td class="desc">Told had high blood pressure, told had high cholesterol <span class="file">BPQ</span></td><td><span class="pv pv-c">codebook</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">
+    I diffed variable names between cycles for all 22 files. Every Block 3 biomarker file is
+    name-identical across cycles: <code>MMA</code>, <code>FOLFMS</code>, <code>FOLATE</code>,
+    <code>VID</code>, <code>CUSEZN</code>, <code>CBC</code>, <code>BIOPRO</code>,
+    <code>GHB</code>, <code>HDL</code>, <code>TCHOL</code>, <code>TRIGLY</code>,
+    <code>BMX</code>, <code>DPQ</code> and <code>CFQ</code> all match exactly.
+    <b>B12 is the only file where the same measurement is renamed.</b> The questionnaire files
+    differ, but every covariate we actually need is present in both cycles under one name.
+  </p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">02</span><h2>Three decisions</h2></div>
+  <p class="sec-sub col">
+    These are yours and your co-author's to make, not mine, because each trades sample size
+    against construct coverage. My recommendation is on each, with the reasoning that would
+    change it.
+  </p>
+
+  <div class="stack-lg" style="margin-top:26px">
+
+    <div class="card dec">
+      <div class="dec-top">
+        <span class="dec-n">Decision 1</span>
+        <h3>Keep or drop <code>CUSEZN</code>, the serum trace minerals</h3>
+      </div>
+      <ul class="wl">
+        <li><b>The problem.</b> Serum copper, selenium and zinc were measured in a one-third subsample of ages 6+, in <em>both</em> cycles, requiring the <code>WTSA2YR</code> weight. The brief lists it as an ordinary Block 3 file. Requiring it would cut the analytic n to roughly a third.</li>
+        <li><b>What dropping it actually costs.</b> Only copper and zinc. <b>Selenium is already in Block 2</b> as whole-blood <code>LBXBSE</code>, on the full sample. So the trace-mineral construct is not lost, it is thinned.</li>
+        <li><b>What keeping it costs.</b> An analytic n near 700 instead of 2,100. At that size the brief's own guidance says drop MLP and KNN, and the delta-AUC confidence intervals widen enough that a modest true effect becomes undetectable.</li>
+      </ul>
+      <div class="rec">
+        <b>Recommend: drop from the main analysis, keep as a supplement.</b> Run M0 to M3 on the
+        full sample without copper and zinc, then repeat on the <code>CUSEZN</code> subsample as
+        a secondary analysis. You get the headline n and the trace-mineral question, reported
+        honestly as two different samples. Reverse this only if copper and zinc are central to
+        your co-author's literature framing.
+      </div>
+    </div>
+
+    <div class="card dec">
+      <div class="dec-top">
+        <span class="dec-n">Decision 2</span>
+        <h3>Keep or drop <code>TRIGLY</code>, the triglycerides and LDL file</h3>
+      </div>
+      <ul class="wl">
+        <li><b>The problem.</b> Measured in a fasting subsample of ages 12+, weight <code>WTSAF2YR</code>. This is exactly the objection the brief uses to exclude the serum fatty acids file, so including <code>TRIGLY</code> is internally inconsistent.</li>
+        <li><b>There is a clean workaround.</b> <code>BIOPRO</code> carries triglycerides as <code>LBXSTR</code> on the full sample. Total cholesterol is in <code>TCHOL</code> and HDL in <code>HDL</code>, both full sample. So dropping <code>TRIGLY</code> costs only LDL.</li>
+        <li><b>And LDL is derived anyway.</b> NHANES computes it by Friedewald from total cholesterol, HDL and triglycerides, which is only valid fasting. A non-fasting LDL would not be trustworthy even if we could construct it.</li>
+      </ul>
+      <div class="rec">
+        <b>Recommend: drop <code>TRIGLY</code>, take triglycerides from <code>BIOPRO</code>.</b>
+        Net loss is LDL alone, and the lipid block stays on the full sample. This one I would
+        take unless your co-author specifically needs LDL in the discussion.
+      </div>
+    </div>
+
+    <div class="card dec">
+      <div class="dec-top">
+        <span class="dec-n">Decision 3</span>
+        <h3>Add <code>DIQ</code> for diabetes, or drop diabetes as a covariate</h3>
+      </div>
+      <ul class="wl">
+        <li><b>The problem.</b> The brief lists <code>MCQ</code> as covering "stroke, diabetes". Stroke is there, as <code>MCQ160F</code>. <b>Diabetes is not in <code>MCQ</code> at all</b>, it is <code>DIQ010</code> in <code>DIQ_G</code> and <code>DIQ_H</code>, a 23rd file the brief never names.</li>
+        <li><b>The file is cheap.</b> Full sample, both cycles present, 57 and 58 variables, and we only need one or two of them.</li>
+        <li><b>Partial redundancy.</b> We already have HbA1c as <code>LBXGH</code>, which is objective glycemia. <code>DIQ010</code> adds self-reported diagnosis, a genuinely different construct: it captures treatment and awareness, not just glucose control.</li>
+      </ul>
+      <div class="rec">
+        <b>Recommend: add <code>DIQ</code>.</b> The cost is one more merge, and diabetes is too
+        well established a correlate of cognitive performance to leave out on a technicality.
+        I have not downloaded it yet, so its variable names are codebook-verified only.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">03</span><h2>Corrections to the brief</h2></div>
+  <p class="sec-sub col">
+    A running list, so the co-author is not working from the old assumptions. None of these is
+    fatal, and finding them now is exactly what the audit was for.
+  </p>
+  <div class="card corr" style="margin-top:22px">
+    <div class="corr-item"><span class="corr-n">01</span><div class="corr-b"><b>Blood metals are not full-sample in 2013-2014</b>The brief says "full MEC sample, no subsample loss". True for <code>PBCD_G</code> only. <code>PBCD_H</code> is a one-half subsample of ages 12+. Cognition plus metals falls from 1,388 in _G to 806 in _H.</div></div>
+    <div class="corr-item"><span class="corr-n">02</span><div class="corr-b"><b><code>CUSEZN</code> is a one-third subsample</b>Listed as an ordinary Block 3 file. It is not, in either cycle. Decision 1.</div></div>
+    <div class="corr-item"><span class="corr-n">03</span><div class="corr-b"><b><code>TRIGLY</code> is a fasting subsample</b>Included despite the brief excluding the fatty acids file for the same reason. Decision 2.</div></div>
+    <div class="corr-item"><span class="corr-n">04</span><div class="corr-b"><b>Diabetes is in <code>DIQ</code>, not <code>MCQ</code></b>A 23rd file the brief never names. Decision 3.</div></div>
+    <div class="corr-item"><span class="corr-n">05</span><div class="corr-b"><b>Serum iron is not discontinued</b>The brief excludes ferritin and serum iron as "discontinued after 2009-2010". Ferritin is indeed gone, but <b>serum iron is present</b> as <code>LBXSIR</code> in <code>BIOPRO</code>, both cycles, full sample. Worth reconsidering, since iron status is relevant to cognition and it costs nothing extra.</div></div>
+    <div class="corr-item"><span class="corr-n">06</span><div class="corr-b"><b>The B12 variable is renamed across cycles</b><code>LBXB12</code> in _G, <code>LBDB12</code> in _H. A merge on the _G name yields all-missing B12 for 2013-2014 and does not error.</div></div>
+    <div class="corr-item"><span class="corr-n">07</span><div class="corr-b"><b><code>CFASTAT</code> counts three tests, not four</b>CERAD is a single administration producing two of the four scores. A "3 of 4 scores" rule therefore effectively requires CERAD plus one other instrument. Worth a joint decision on whether that is the intended rule.</div></div>
+    <div class="corr-item"><span class="corr-n">08</span><div class="corr-b"><b>Two silent-failure traps</b>Zero MEC weights are stored as 5.4e-79, so <code>WTMEC2YR &gt; 0</code> keeps interview-only participants. And the cognitive score variables have <b>no reserved codes</b>: <code>CFDCST1</code> ranges 0 to 10, so a blanket 7-and-9-to-NaN rule would delete valid scores.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">04</span><h2>Running the phases consecutively</h2></div>
+  <p class="sec-sub col">
+    You asked whether the phases can run without stops. Mostly yes. Two gates are load-bearing
+    and cannot be automated away, but the other five can be collapsed. The honest structure is
+    <b>two stops instead of seven</b>, achieved by front-loading the decisions rather than
+    removing them.
+  </p>
+
+  <div class="stack" style="margin-top:26px">
+
+    <div class="gate">
+      <div class="g-lab">Gate 1 &middot; you are here</div>
+      <h3>Lock the variable list and answer the three decisions</h3>
+      <p>
+        Genuinely blocking. The brief calls re-cleaning after a variable change the most
+        expensive avoidable event in the project, and it is right: a changed variable list
+        invalidates the merge, the outcome, and every model downstream. This is also the joint
+        written sign-off the brief requires. Cost of getting it wrong: about a week.
+      </p>
+    </div>
+
+    <p class="chain">then runs unattended</p>
+
+    <div class="phase">
+      <div class="phase-rail"><div class="p">Phase 1</div><div class="s">Cohort</div></div>
+      <div class="phase-body">
+        <div class="files">src/01_cohort.py</div>
+        Download the remaining files, merge on <code>SEQN</code>, apply per-variable reserved
+        codes, handle below-LOD flags, build the attrition table. Deterministic once the
+        variable list is locked.
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-rail"><div class="p">Phase 2</div><div class="s">Outcome</div></div>
+      <div class="phase-body">
+        <div class="files">src/02_outcome.py</div>
+        Z-score each test within the pooled 60+ sample, average with the 3-of-4 rule, cut the
+        lowest quartile. Emits distributions and an internal consistency check.
+        <b>Safe to chain onto Phase 1</b>: it depends only on the cleaned file, and its outputs
+        are diagnostics you review at the next gate rather than decisions you make during it.
+      </div>
+    </div>
+
+    <div class="gate">
+      <div class="g-lab">Gate 2 &middot; the one that cannot move</div>
+      <h3>Review the diagnostics pack, then date and sign the pre-registration</h3>
+      <p>
+        This gate is scientific, not procedural. The pre-registration must be dated
+        <em>before</em> anyone sees an outcome-predictor relationship, or the pre-specification
+        claim is void. That claim is load-bearing: it is what TRIPOD+AI reporting rests on, and
+        it is the entire defence in section 6 of the brief against searching for a specification
+        that produces a positive result. Chain through this gate and the paper's central
+        methodological argument goes with it.
+      </p>
+      <p>
+        It is also the last cheap moment to catch a cleaning error, before it is baked into
+        every model.
+      </p>
+    </div>
+
+    <p class="chain">then runs unattended to completion</p>
+
+    <div class="phase">
+      <div class="phase-rail"><div class="p">Phase 3</div><div class="s">Model</div></div>
+      <div class="phase-body">
+        <div class="files">src/03_model.py</div>
+        M0 to M3 across penalized logistic, random forest and XGBoost. Stratified 10-fold,
+        repeated 5x, every transform fitted inside the fold.
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-rail"><div class="p">Phase 4</div><div class="s">Evaluate</div></div>
+      <div class="phase-body">
+        <div class="files">src/04_evaluate.py</div>
+        AUC, AUPRC, Brier, calibration, decision curves, and the headline bootstrap delta-AUCs
+        against M0.
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-rail"><div class="p">Phase 5</div><div class="s">Interpret</div></div>
+      <div class="phase-body">
+        <div class="files">src/05_interpret.py</div>
+        Bootstrapped SHAP rankings, partial dependence for selenium and manganese, plus the
+        quantile g-computation benchmark.
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-rail"><div class="p">Phase 6</div><div class="s">Sensitivity</div></div>
+      <div class="phase-body">
+        <div class="files">src/06_sensitivity.py</div>
+        All five pre-specified sensitivity analyses. Pure reruns of a locked pipeline, which is
+        why this is the most chainable stretch in the project.
+      </div>
+    </div>
+
+  </div>
+
+  <h3 style="margin-top:44px">Why phases 3 to 6 chain safely</h3>
+  <p class="col" style="margin-top:10px;color:var(--ink-2)">
+    Once the dataset is locked and the analysis is pre-registered, these four phases contain no
+    decisions, only computation. Every choice they encode was made at Gate 2. The brief budgets
+    the entire modeling and sensitivity workload at under two hours of compute, so this is one
+    unattended run, not a campaign.
+  </p>
+
+  <h3 style="margin-top:34px">What chaining requires in exchange</h3>
+  <p class="col" style="margin-top:10px;color:var(--ink-2)">
+    Removing review stops means errors travel further before anyone sees them. That is a real
+    cost and it is paid up front, in guardrails:
+  </p>
+  <ul class="wl col" style="margin-top:14px">
+    <li><b>Assertions that abort the chain.</b> Row counts after every merge, <code>SEQN</code> uniqueness, no reserved code surviving into a numeric column, no column silently all-missing, weights summing to a plausible population total. A chained pipeline without these is just an unsupervised one.</li>
+    <li><b>The leakage check becomes a test, not a review step.</b> The brief calls leakage the failure mode that silently ruins the project. If nobody is reviewing between phases, that check has to fail the build automatically rather than wait for a human to look.</li>
+    <li><b>Every phase still writes to <code>data/interim/</code>.</b> So a failure at Phase 5 resumes from Phase 4 instead of restarting the merge.</li>
+    <li><b>One diagnostics pack per gate.</b> The point of collapsing stops is fewer, better reviews, not less review. Each gate gets a single document, the way Phase 0 produced one audit.</li>
+    <li><b>One thing to change on your side.</b> <code>CLAUDE.md</code> currently says to stop at the end of every phase and not chain them. If you want this structure, that instruction needs rewriting, otherwise I will keep stopping. Your call, your file.</li>
+  </ul>
+  <p class="note">
+    Net effect on the timeline: the brief budgets 7 to 9 weeks. Consolidating the gates does not
+    speed up the compute, which was never the bottleneck. It removes roughly a week of
+    handoff latency, and it concentrates your review attention into two substantial passes
+    rather than seven shallow ones.
+  </p>
+</section>
+
+<footer>
+  Phase 0 artifacts: <code>output/tables/00_availability_audit.md</code>,
+  <code>data/interim/00_audit.json</code>, <code>data/interim/00_cycle_var_diff.json</code>.
+  Regenerate with <code>python3 src/00_audit.py</code>.
+  Files marked <span class="pv pv-c">codebook</span> above still need their columns confirmed
+  against the downloaded file in Phase 1.
+</footer>
+
+</div>

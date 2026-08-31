@@ -1,0 +1,13 @@
+algo,contrast,delta_auc,ci_low,ci_high,excludes_zero,exceeds_threshold
+logistic,M1 - M0,-0.0015,-0.0052,0.0023,False,False
+logistic,M2 - M0,0.0011,-0.0067,0.01,False,False
+logistic,M3 - M0,-0.0019,-0.0108,0.0071,False,False
+logistic,M3 - M0plus,-0.0158,-0.0295,-0.0033,True,False
+random_forest,M1 - M0,-0.0058,-0.0144,0.0022,False,False
+random_forest,M2 - M0,-0.0028,-0.0155,0.0103,False,False
+random_forest,M3 - M0,-0.0038,-0.0167,0.0095,False,False
+random_forest,M3 - M0plus,-0.0197,-0.0338,-0.0055,True,False
+xgboost,M1 - M0,-0.013,-0.0212,-0.0046,True,False
+xgboost,M2 - M0,-0.0017,-0.0143,0.0113,False,False
+xgboost,M3 - M0,-0.0066,-0.0199,0.0068,False,False
+xgboost,M3 - M0plus,-0.023,-0.0385,-0.0063,True,False

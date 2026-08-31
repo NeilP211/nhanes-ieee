@@ -1,0 +1,106 @@
+{
+ "qgcomp": {
+  "psi": -0.11615657142756991,
+  "cv_auc": 0.7874397874963773,
+  "quantiles": 4,
+  "weights": {
+   "log_LBXBPB": 0.1797474252311743,
+   "log_LBXBCD": 0.8202525747688257,
+   "log_LBXTHG": -0.3758445802487166,
+   "log_LBXBSE": -0.25949246791191544,
+   "log_LBXBMN": -0.36466295183936803
+  },
+  "coefficients": {
+   "log_LBXBPB": 0.017005193719574877,
+   "log_LBXBCD": 0.07760085528337686,
+   "log_LBXTHG": -0.07921398860782898,
+   "log_LBXBSE": -0.054691312519098347,
+   "log_LBXBMN": -0.07685731930359431
+  }
+ },
+ "shap_top10": [
+  {
+   "feature": "DMDEDUC2",
+   "median_rank": 1.0,
+   "rank_p2.5": 1.0,
+   "rank_p97.5": 2.0,
+   "pct_in_top5": 100.0
+  },
+  {
+   "feature": "RIDAGEYR",
+   "median_rank": 2.0,
+   "rank_p2.5": 1.0,
+   "rank_p97.5": 2.0,
+   "pct_in_top5": 100.0
+  },
+  {
+   "feature": "INDFMPIR",
+   "median_rank": 3.0,
+   "rank_p2.5": 3.0,
+   "rank_p97.5": 5.0,
+   "pct_in_top5": 99.0
+  },
+  {
+   "feature": "nlr",
+   "median_rank": 5.0,
+   "rank_p2.5": 3.0,
+   "rank_p97.5": 19.0,
+   "pct_in_top5": 51.0
+  },
+  {
+   "feature": "egfr",
+   "median_rank": 7.0,
+   "rank_p2.5": 4.0,
+   "rank_p97.5": 19.0,
+   "pct_in_top5": 34.0
+  },
+  {
+   "feature": "LBDHDD",
+   "median_rank": 7.0,
+   "rank_p2.5": 4.0,
+   "rank_p97.5": 19.025000000000006,
+   "pct_in_top5": 34.5
+  },
+  {
+   "feature": "log_LBDB12SI",
+   "median_rank": 8.0,
+   "rank_p2.5": 4.0,
+   "rank_p97.5": 19.025000000000006,
+   "pct_in_top5": 25.0
+  },
+  {
+   "feature": "LBXTC",
+   "median_rank": 11.0,
+   "rank_p2.5": 4.0,
+   "rank_p97.5": 22.025000000000006,
+   "pct_in_top5": 11.0
+  },
+  {
+   "feature": "LBXGH",
+   "median_rank": 11.0,
+   "rank_p2.5": 4.9750000000000005,
+   "rank_p97.5": 23.0,
+   "pct_in_top5": 7.5
+  },
+  {
+   "feature": "LBXVIDMS",
+   "median_rank": 13.0,
+   "rank_p2.5": 4.0,
+   "rank_p97.5": 23.0,
+   "pct_in_top5": 9.0
+  }
+ ],
+ "pdp_shape": {
+  "selenium": {
+   "argmin_position": 0.6410256410256411,
+   "argmax_position": 0.05128205128205128,
+   "range": 0.04945680499076843
+  },
+  "manganese": {
+   "argmin_position": 0.9743589743589743,
+   "argmax_position": 0.23076923076923078,
+   "range": 0.04822738468647003
+  }
+ },
+ "n_bootstrap_shap": 200
+}

@@ -1,0 +1,9 @@
+analysis,n,events,auc_m3,auc_m0,delta_auc,ci_low,ci_high,excludes_zero
+primary (reference),1784.0,431.0,0.7863,0.7883,-0.002,-0.0103,0.0066,False
+cutoff at 20th percentile,1784.0,337.0,0.7824,0.7843,-0.0019,-0.013,0.0092,False
+cutoff at 10th percentile,1784.0,164.0,0.7927,0.7951,-0.0023,-0.02,0.0153,False
+DSST unable coded low (n=25),1784.0,441.0,0.7856,0.7876,-0.002,-0.0105,0.0063,False
+English-only administration,1575.0,345.0,0.7771,0.7838,-0.0066,-0.0159,0.0028,False
+MICE on full labelled sample,3124.0,781.0,0.7973,0.7958,0.0015,-0.003,0.0063,False
+"leave-one-block-out, without metals",,,0.7863,0.7892,-0.0028,-0.0051,-0.0004,True
+"leave-one-block-out, without nutritional",,,0.7863,0.7865,-0.0002,-0.0081,0.0078,False

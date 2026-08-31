@@ -1,0 +1,129 @@
+{
+ "DEMO": {
+  "only_g": [
+   "RIDEXAGY"
+  ],
+  "only_h": []
+ },
+ "CFQ": {
+  "only_g": [],
+  "only_h": []
+ },
+ "PBCD": {
+  "only_g": [],
+  "only_h": [
+   "WTSH2YR"
+  ]
+ },
+ "VITB12": {
+  "only_g": [
+   "LBXB12"
+  ],
+  "only_h": [
+   "LBDB12"
+  ]
+ },
+ "MMA": {
+  "only_g": [],
+  "only_h": []
+ },
+ "FOLFMS": {
+  "only_g": [],
+  "only_h": []
+ },
+ "FOLATE": {
+  "only_g": [],
+  "only_h": []
+ },
+ "VID": {
+  "only_g": [],
+  "only_h": []
+ },
+ "CUSEZN": {
+  "only_g": [],
+  "only_h": []
+ },
+ "CBC": {
+  "only_g": [],
+  "only_h": []
+ },
+ "BIOPRO": {
+  "only_g": [],
+  "only_h": []
+ },
+ "GHB": {
+  "only_g": [],
+  "only_h": []
+ },
+ "HDL": {
+  "only_g": [],
+  "only_h": []
+ },
+ "TCHOL": {
+  "only_g": [],
+  "only_h": []
+ },
+ "TRIGLY": {
+  "only_g": [],
+  "only_h": []
+ },
+ "BMX": {
+  "only_g": [],
+  "only_h": []
+ },
+ "SMQ": {
+  "only_g": [
+   "SMQ077",
+   "SMQ660",
+   "SMQ664B",
+   "SMQ664C",
+   "SMQ664M",
+   "SMQ664O",
+   "SMQ664W"
+  ],
+  "only_h": [
+   "SMQ078",
+   "SMQ661",
+   "SMQ665A",
+   "SMQ665B",
+   "SMQ665C",
+   "SMQ665D",
+   "SMQ848",
+   "SMQ852Q",
+   "SMQ852U"
+  ]
+ },
+ "ALQ": {
+  "only_g": [
+   "ALQ155"
+  ],
+  "only_h": [
+   "ALQ154",
+   "ALQ160"
+  ]
+ },
+ "MCQ": {
+  "only_g": [
+   "MCQ051",
+   "MCQ140"
+  ],
+  "only_h": [
+   "AGQ030",
+   "MCQ151",
+   "MCQ160O",
+   "MCQ203",
+   "MCQ206"
+  ]
+ },
+ "DPQ": {
+  "only_g": [],
+  "only_h": []
+ },
+ "BPQ": {
+  "only_g": [
+   "BPQ055",
+   "BPQ057"
+  ],
+  "only_h": []
+ }
+}
