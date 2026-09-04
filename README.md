@@ -15,6 +15,8 @@ rather than merely failing to detect one.
 
 | If you want to | Read |
 |---|---|
+| **Join this project as a co-author** | **`CO_AUTHOR_START_HERE.md`** |
+| Get the whole thing in 12 pages | `WRITING_PACK.pdf` |
 | See the results | `output/results_review.html`, or `output/tables/07_results_summary.md` |
 | Write the paper | `MANUSCRIPT_DRAFT.md`, methods and results in prose |
 | Check what was pre-specified | `PREREGISTRATION.md`, dated before modelling |
@@ -47,6 +49,10 @@ that `00_audit.py` verified and recorded in `data/interim/00_audit.json`.
 ## What is where
 
 ```
+CO_AUTHOR_START_HERE.md     entry point for the clinical lead: what is locked, what is open
+WRITING_PACK.pdf            12-page pack: every number, the venue call, abstract draft,
+                            Intro and Discussion skeletons, reviewer objections answered
+WRITING_PACK.tex            source for the above (tectonic -X compile WRITING_PACK.tex)
 PROJECT_BRIEF.md            the original specification
 VARIABLE_LOCK.md            variable list, locked and dated, with amendments
 PREREGISTRATION.md          hypotheses and analysis plan, dated before modelling
