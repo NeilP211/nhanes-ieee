@@ -249,3 +249,21 @@ repo root. The fonts are macOS system faces, so on another machine swap the thre
    sample, age top-coded at 80, no external validation cohort, no subgroup
    fairness audit, serum copper/zinc excluded, outcome defined against
    pooled-sample quantiles.
+
+## Submission decisions, closed 2026-09-05 pending Neil's confirmation
+
+Decided while Neil is travelling; flagged in `MANUSCRIPT_DRAFT.md` for him
+to confirm or correct, not presented as unchangeable:
+
+- **Authorship:** Shreyan Kancharla and Neil Patel contribute equally and
+  share first authorship.
+- **Corresponding author:** Shreyan Kancharla.
+- **Competing interests / funding:** none to declare, unfunded.
+- **Code availability:** public on submission. **Action needed from
+  Neil** — the GitHub repository (`NeilP211/nhanes-ieee`) is currently
+  private, and changing visibility requires owner/admin access, which this
+  session does not have (write access only). Neil needs to make it public,
+  or grant admin access, before submission.
+
+Still missing and not something to guess: institutional affiliations and
+ORCID for the title page.

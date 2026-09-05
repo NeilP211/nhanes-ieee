@@ -58,18 +58,18 @@ in writing, dated, before any outcome-predictor relationship was examined;
 the pre-registration document is available as a supplementary file and, on
 request, the dated record of its timing.
 
-This manuscript is not under consideration elsewhere. **[State authors'
-competing interests and funding here once finalised in the Declarations
-section of the manuscript, to keep the cover letter consistent with it.]**
-We look forward to your consideration and are happy to suggest reviewers if
-useful.
+This manuscript is not under consideration elsewhere. The authors declare
+no competing interests, and this research received no specific funding
+(both pending Neil's confirmation — see the Declarations section of the
+manuscript). We look forward to your consideration and are happy to
+suggest reviewers if useful.
 
 Sincerely,
 
-**[Corresponding author name, degree, institutional affiliation, address,
-email, ORCID]**
-on behalf of the authors: **[full author list, in the order to appear on
-the manuscript]**
+**Shreyan Kancharla**, corresponding author **[institutional affiliation,
+address, email, ORCID needed]**
+on behalf of the authors: Shreyan Kancharla and Neil Patel, who contributed
+equally to this work and share first authorship.
 
 ---
 

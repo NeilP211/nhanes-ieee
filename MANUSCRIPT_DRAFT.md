@@ -27,6 +27,21 @@ stated title convention of including the study design after a colon (e.g.
 "A versus B in the treatment of C: a randomized controlled trial" — checked
 against the journal's submission guidelines).
 
+## Authors and title page
+
+Shreyan Kancharla¹\*, Neil Patel¹\*
+
+\* These authors contributed equally to this work and share first
+authorship, decided 2026-09-05.
+
+Corresponding author: Shreyan Kancharla, **[institutional affiliation,
+address and email needed]**.
+
+¹ **[Institutional affiliation(s) needed for both authors — DPR's title
+page requires full names and institutional addresses for every author.
+ORCID for the corresponding author is also expected by most Springer-family
+journals; add if available.]**
+
 Two conventions held throughout, both deliberate:
 
 - The outcome is **low cognitive performance**. NHANES contains no clinical
@@ -608,50 +623,47 @@ aggregate statistics on a de-identified public dataset.
 
 ## Availability of data and materials
 
-**[Needs a decision.]** NHANES data are publicly available from the CDC at
-wwwn.cdc.gov and are not redistributed here; `src/00b_download.py` rebuilds
-the raw dataset from the original CDC URLs. What remains open is whether
-the analysis code itself (`src/`, this repository) is made available in a
-public repository (e.g. GitHub, with a DOI via Zenodo) at submission, on
-request, or after acceptance. A public code repository is the stronger
-answer for a paper whose central claim rests on leakage-free, reproducible
-cross-validation — reviewers and readers can verify the pipeline directly
-— but it is your and Neil's call, not one to make unilaterally here.
+NHANES data are publicly available from the CDC at wwwn.cdc.gov and are not
+redistributed here; `src/00b_download.py` rebuilds the raw dataset from the
+original CDC URLs. The analysis code is available at
+https://github.com/NeilP211/nhanes-ieee. **[Decided 2026-09-05: public on
+submission. Action needed from Neil — the repository is currently private
+and visibility can only be changed by its owner/an admin; the account used
+in this session has write access only. Neil needs to either set the
+repository to public himself or grant admin access before submission.]**
 
 ## Competing interests
 
-**[Needs author input.]** State whether either author has any financial or
-non-financial competing interest, or "The authors declare that they have
-no competing interests" if none.
+The authors declare that they have no competing interests. **[Decided
+2026-09-05, pending Neil's confirmation — flag before submission if this is
+not accurate for either author.]**
 
 ## Funding
 
-**[Needs author input.]** State the funding source, if any, and its role
-(or lack of one) in the study design, analysis, or decision to publish. If
-unfunded, state that directly, e.g. "This research received no specific
-grant from any funding agency in the public, commercial, or not-for-profit
-sectors."
+This research received no specific grant from any funding agency in the
+public, commercial, or not-for-profit sectors. **[Decided 2026-09-05,
+pending Neil's confirmation — flag before submission if either author's
+institution or any other source funded this work.]**
 
 ## Authors' contributions
 
-Drafted from the division of labour in `PROJECT_BRIEF.md` section 12 and
-the work actually completed; adjust names/initials and any shared tasks as
-needed.
-
-Neil Patel (NP): conceptualisation, data curation, formal analysis,
-methodology, software, validation, visualisation, writing — original draft
-(Methods, Results). Shreyan Kancharla (SK): conceptualisation, literature
+SK and NP contributed equally to this work and share first authorship, per
+the division of labour in `PROJECT_BRIEF.md` section 12 and the work
+actually completed. Shreyan Kancharla (SK): conceptualisation, literature
 review and verification, project administration, writing — original draft
-(Introduction, Discussion, Abstract), writing — review and editing. Both
-authors jointly decided the analytic sample definition, the nested model
-specification, the pre-registration, and the target journal; both authors
-read and approved the final manuscript.
+(Introduction, Discussion, Abstract), writing — review and editing,
+corresponding author. Neil Patel (NP): conceptualisation, data curation,
+formal analysis, methodology, software, validation, visualisation, writing
+— original draft (Methods, Results). Both authors jointly decided the
+analytic sample definition, the nested model specification, the
+pre-registration, and the target journal; both authors read and approved
+the final manuscript.
 
 ## Acknowledgements
 
-**[Optional — needs author input.]** "Not applicable" if there is no one
-to thank beyond the authors; otherwise name anyone who contributed without
-meeting authorship criteria (e.g. institutional computing support).
+Not applicable. **[Confirm with Neil before submission — update if there is
+anyone to thank who does not meet authorship criteria, e.g. institutional
+computing support.]**
 
 ---
 
