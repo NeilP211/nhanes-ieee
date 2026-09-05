@@ -58,10 +58,10 @@ a demographics-only baseline.
 This is a different question, not a different exposure. Adding one more
 metal or biomarker to an already saturated association literature is
 incremental; asking whether any of it predicts, at the individual level and
-benchmarked against demographics, is categorical. A reviewer cannot say this
-has been done, because on this population it has not — with one recent
-exception that must be addressed directly rather than left for a reader to
-find independently. Ren et al. restricted their sample to NHANES
+benchmarked against demographics, is categorical. To our knowledge, that
+test has not previously been performed on this population, with one recent
+exception addressed directly here rather than left for the reader to find
+independently. Ren et al. restricted their sample to NHANES
 participants aged 60 or older, pooled across the 1999-2000, 2001-2002,
 2011-2012 and 2013-2014 cycles, and trained a gradient-boosted model on
 urinary metals and demographic data to classify what they term "cognitively
