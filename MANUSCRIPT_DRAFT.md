@@ -660,10 +660,10 @@ institution or any other source funded this work.]**
 ## Authors' contributions
 
 S.K. and N.P. conceived the study and jointly decided the analytic sample
-definition, the nested model specification, the pre-registration, and the
-target journal. N.P. acquired and curated the data and developed and ran
-the primary modelling pipeline: cohort construction, outcome construction,
-the nested M0-M3/M0+ models across three algorithms, cross-validated
+definition, the nested model specification, and the pre-registration. S.K.
+acquired the raw data. N.P. curated the data and developed and ran the
+primary modelling pipeline: cohort construction, outcome construction, the
+nested M0-M3/M0+ models across three algorithms, cross-validated
 evaluation, interpretation (SHAP, partial dependence), and the six
 sensitivity analyses. S.K. conducted the literature review and citation
 verification, and conducted the participant flow-diagram, Table 1, and
