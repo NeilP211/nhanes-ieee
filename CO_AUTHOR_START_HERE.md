@@ -70,10 +70,19 @@ This takes two minutes and it is the highest-value thing on the list, because
 every framing claim in the paper depends on that document being agreed by both
 authors.
 
-### 2. Call the venue
+### 2. Call the venue — DECIDED 2026-09-05: Diagnostic and Prognostic Research
 
-This is the real decision, and it gates the writing rather than following it.
-Full argument on page 2 of the PDF. Short version:
+Shreyan and Neil agree: **Diagnostic and Prognostic Research (BMC)** is the
+target venue. J Clin Epi is the fallback reach, PLOS ONE the fast fallback if
+both reject. IEEE Access was considered and set aside — Scenario E (ML did not
+beat penalized logistic) undercuts the computational-contribution case IEEE
+reviewers look for, and retrofitting the paper toward an ML framing after
+seeing that result would risk shaping the Introduction around the venue
+rather than the finding. This closes item 2 below; the Introduction should be
+written for a methodological prediction-research audience.
+
+Original argument, kept for the record. Full version on page 2 of the PDF.
+Short version:
 
 The result landed as **Scenario C** (null on the primary axis) plus **Scenario
 E** (flexible learners did not beat penalized regression). The project brief's
@@ -221,7 +230,10 @@ repo root. The fonts are macOS system faces, so on another machine swap the thre
 
 ## Open questions for you
 
-1. Countersign the pre-registration, or tell us what needs to change first.
-2. DPR, or make the case for IEEE. Either is defensible; we need one.
+1. ~~Countersign the pre-registration, or tell us what needs to change first.~~
+   Done 2026-09-05 — see `PREREGISTRATION.md` section 10. (`VARIABLE_LOCK.md`
+   countersigned the same day.)
+2. ~~DPR, or make the case for IEEE. Either is defensible; we need one.~~
+   Decided 2026-09-05 — Diagnostic and Prognostic Research.
 3. Anything in the seven-study table that already reports predictive metrics.
 4. Any limitation you think we have understated.
