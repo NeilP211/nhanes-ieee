@@ -270,3 +270,32 @@ College, Davidson, NC) and ORCID (0009-0009-8654-110X, verified against
 the public ORCID record) are filled in on the title page and cover letter.
 Still needed and not something to guess: Neil's institutional affiliation
 and ORCID.
+
+## Analysis-side TRIPOD gaps, closed 2026-09-05
+
+The three items `output/TRIPOD_AI_checklist.md` flagged as outstanding
+(originally Neil's side of the division of labour, taken over by Shreyan
+while Neil travels) are now built, each cross-checked rather than assumed:
+
+- **Participant flow diagram** (item 14a) —
+  `output/figures/fig6_participant_flow.png`/`.pdf`. The final step (from
+  n=3,124 to the locked n=1,784) was recomputed independently from
+  `02_outcome.parquet` and matches `02_analytic_seqn.csv` exactly (0 SEQN
+  mismatch).
+- **Table 1** (item 14b) — `output/tables/09_table1.md`. Caught and fixed
+  two bugs before trusting it: "current smoker" was reading 0.0% because
+  the derived smoking variable is categorical, not binary; and several
+  rows mixed mean(SD) for one subgroup with median[IQR] for another
+  because skewness was computed per-subgroup instead of once per
+  variable. Also caught a small stale-number drift in the existing
+  Results text (26.2%/24.1% carried over from the pre-lock n=1,789
+  sample rather than the final n=1,784) and corrected it to 26.1%/24.2%.
+- **Full M3 coefficients** (item 16) — `output/tables/10_m3_coefficients.md`.
+  Refit on the complete analytic sample with 2,000-resample bootstrap
+  CIs; caught a numerical-stability edge case (non-finite coefficients
+  possible at the grid's weakly-regularised end) before trusting the
+  CIs, and verified 0 resamples were actually affected.
+
+The pinned Python 3.12.2 environment (system Python was 3.9.6) was set up
+via Homebrew to run these against the exact versions in
+`requirements.txt`, not mismatched ones.

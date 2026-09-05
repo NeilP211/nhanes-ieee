@@ -85,8 +85,8 @@ Status key: **done** means the substance exists and is locatable now.
 
 | # | Item | Where addressed | Status |
 |---|---|---|---|
-| 13a | Funding and role of funders | To state | manuscript |
-| 13b | Conflicts of interest | To state | manuscript |
+| 13a | Funding and role of funders | `MANUSCRIPT_DRAFT.md` Declarations: unfunded, decided 2026-09-05, pending Neil's confirmation | done |
+| 13b | Conflicts of interest | `MANUSCRIPT_DRAFT.md` Declarations: none declared, decided 2026-09-05, pending Neil's confirmation | done |
 | 13c | Protocol and registration | `PREREGISTRATION.md`, dated 2026-08-31 before any outcome-predictor relationship was examined, with an explicit integrity statement to that effect | done |
 | 13d | Data availability | NHANES is fully public. `src/00b_download.py` reconstructs the raw data from CDC URLs verified in the audit | done |
 | 13e | Code availability | Complete pipeline, `src/00_audit.py` through `src/07_figures.py`, each independently runnable | done |
