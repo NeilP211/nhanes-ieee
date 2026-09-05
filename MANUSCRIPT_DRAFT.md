@@ -21,6 +21,52 @@ Two conventions held throughout, both deliberate:
 
 ---
 
+# Abstract
+
+**Background.** Multiple studies report associations between blood metals,
+nutritional biomarkers and cognitive performance among US adults aged 60 and
+over in NHANES 2011-2014. None isolates the biomarkers' predictive
+contribution beyond demographics, with calibration and decision-curve
+analysis.
+
+**Methods.** We analysed NHANES 2011-2012 and 2013-2014, restricted to
+examined participants aged 60 and over. Low cognitive performance was
+defined as the lowest quartile of a composite z-score from CERAD immediate
+and delayed recall, animal fluency, and the Digit Symbol Substitution Test.
+Four nested specifications were fixed in advance: demographics (M0);
+demographics plus five blood metals (M1); demographics plus fifteen
+nutritional and metabolic biomarkers (M2); and both blocks (M3). A
+pre-specified secondary baseline (M0+) added eight routinely recorded
+clinical covariates. Three algorithms (L2-penalized logistic regression,
+random forest, gradient boosting) were evaluated by stratified 10-fold
+cross-validation repeated five times, with preprocessing and tuning
+performed inside training folds. The pre-specified primary measure was
+delta-AUC(M3 - M0) with a 2,000-sample paired bootstrap interval; a
+difference of 0.02 was declared in advance as the smallest meaningful
+improvement. Reporting follows TRIPOD+AI.
+
+**Results.** Of 3,124 participants with an outcome label, 1,784 had complete
+predictor data, of whom 431 (24.2%) met the definition of low cognitive
+performance. Demographics alone reached an AUC of 0.788. Delta-AUC(M3 - M0)
+was -0.0019 (95% CI -0.0108 to 0.0071), with the upper bound below the
+pre-specified 0.02 threshold; neither biomarker block contributed alone. M3
+performed worse than the clinical baseline M0+ (delta-AUC -0.0158, 95% CI
+-0.0295 to -0.0033) across all three algorithms, and decision-curve analysis
+showed no net benefit at any threshold. Quantile
+g-computation on the metal mixture matched demographics alone (AUC 0.7874).
+The null persisted across all six pre-specified sensitivity analyses,
+including multiple imputation on the full sample (n = 3,124; delta-AUC
+0.0015, 95% CI -0.0030 to 0.0063).
+
+**Conclusions.** Reported biomarker-cognition associations did not translate
+into individual-level predictive utility beyond age, education and income,
+and a twenty-analyte laboratory panel was outperformed by eight items of
+routine clinical history. Because the confidence interval excludes the
+improvement specified in advance as meaningful, this is a precise null
+rather than an inconclusive one.
+
+---
+
 # Introduction
 
 Low cognitive performance in older adults is examined routinely against blood
