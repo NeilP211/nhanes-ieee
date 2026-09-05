@@ -82,6 +82,17 @@ rather than an inconclusive one.
 
 ---
 
+# Keywords
+
+Cognitive performance; biomarkers; blood metals; prediction model;
+NHANES; older adults; TRIPOD+AI; decision-curve analysis; pre-registration;
+machine learning
+
+Eight to ten, per DPR's requirement of three to ten. Open to trimming or
+substitution — flag if any of these do not read as representative.
+
+---
+
 # Introduction
 
 Low cognitive performance in older adults is examined routinely against blood
@@ -570,51 +581,132 @@ draw.
 
 ---
 
+# Declarations
+
+DPR requires all seven sections below in every submission, with "Not
+applicable" where genuinely not relevant. Three are drafted and verified;
+four need author input before submission and are marked accordingly rather
+than left blank or guessed.
+
+## Ethics approval and consent to participate
+
+NHANES protocol and procedures were approved by the National Center for
+Health Statistics (NCHS) Ethics Review Board (formerly the NCHS Research
+Ethics Review Board), and written informed consent was obtained from all
+participants by NCHS prior to data collection. This study is a secondary
+analysis of de-identified, publicly available data and involved no
+additional contact with participants. **[Verify with your own institution
+whether a separate determination letter — e.g. "not human subjects
+research" — is required for secondary analysis of public NHANES data;
+this varies by institution and is not something checked here.]**
+
+## Consent for publication
+
+Not applicable. No individual person's data, images, or identifiable
+information are presented; all results are reported at the level of
+aggregate statistics on a de-identified public dataset.
+
+## Availability of data and materials
+
+**[Needs a decision.]** NHANES data are publicly available from the CDC at
+wwwn.cdc.gov and are not redistributed here; `src/00b_download.py` rebuilds
+the raw dataset from the original CDC URLs. What remains open is whether
+the analysis code itself (`src/`, this repository) is made available in a
+public repository (e.g. GitHub, with a DOI via Zenodo) at submission, on
+request, or after acceptance. A public code repository is the stronger
+answer for a paper whose central claim rests on leakage-free, reproducible
+cross-validation — reviewers and readers can verify the pipeline directly
+— but it is your and Neil's call, not one to make unilaterally here.
+
+## Competing interests
+
+**[Needs author input.]** State whether either author has any financial or
+non-financial competing interest, or "The authors declare that they have
+no competing interests" if none.
+
+## Funding
+
+**[Needs author input.]** State the funding source, if any, and its role
+(or lack of one) in the study design, analysis, or decision to publish. If
+unfunded, state that directly, e.g. "This research received no specific
+grant from any funding agency in the public, commercial, or not-for-profit
+sectors."
+
+## Authors' contributions
+
+Drafted from the division of labour in `PROJECT_BRIEF.md` section 12 and
+the work actually completed; adjust names/initials and any shared tasks as
+needed.
+
+Neil Patel (NP): conceptualisation, data curation, formal analysis,
+methodology, software, validation, visualisation, writing — original draft
+(Methods, Results). Shreyan Kancharla (SK): conceptualisation, literature
+review and verification, project administration, writing — original draft
+(Introduction, Discussion, Abstract), writing — review and editing. Both
+authors jointly decided the analytic sample definition, the nested model
+specification, the pre-registration, and the target journal; both authors
+read and approved the final manuscript.
+
+## Acknowledgements
+
+**[Optional — needs author input.]** "Not applicable" if there is no one
+to thank beyond the authors; otherwise name anyone who contributed without
+meeting authorship criteria (e.g. institutional computing support).
+
+---
+
 # References (Introduction and Discussion)
 
-Every citation below was checked against its source (publisher page, PMC, or
-PubMed) during the literature review of 2026-09-05; see `LITERATURE_REVIEW.md`
-for the verification notes. Numbering matches first appearance in the text
-above.
+Vancouver style, per DPR's submission guidelines: authors listed in full up
+to six, first six followed by "et al." beyond that; journal names not
+italicised; numbered in order of first appearance in the text above. Every
+citation was checked against its source (publisher page, PMC, or PubMed)
+during the literature review of 2026-09-05; see `LITERATURE_REVIEW.md` for
+the verification notes, including the full author lists used to apply the
+six-author rule below.
 
-1. Wang N, Guo L, Shi M, et al. Association of single and combined effects
-   of blood heavy metals with cognitive function in older adults of the
-   United States: a cross-sectional study. *Research Square* preprint
-   rs-4786268/v1; 2024. Not confirmed as peer-reviewed at time of writing —
-   cite as a preprint.
+1. Wang N, Guo L, Shi M, Wang L, Zhou Y, Liu H, et al. Association of single
+   and combined effects of blood heavy metals with cognitive function in
+   older adults of the United States: a cross-sectional study. Research
+   Square [Preprint]. 2024. Not confirmed as peer-reviewed at time of
+   writing — cite as a preprint. Available from:
+   https://www.researchsquare.com/article/rs-4786268/v1
 2. Lu K, Liu T, Wu X, Zhong J, Ou Z, Wu W. Association between serum iron,
    blood lead, cadmium, mercury, selenium, manganese and low cognitive
    performance in old adults from National Health and Nutrition Examination
-   Survey (NHANES): a cross-sectional study. *Br J Nutr*. 2023;130(10):
+   Survey (NHANES): a cross-sectional study. Br J Nutr. 2023;130(10):
    1743-1753. doi:10.1017/S0007114523000740
 3. Tang C, Shen M, Hong H. Uncovering the relationship between trace element
    exposure, cognitive function, and dietary inflammation index in elderly
    Americans from the National Health and Nutrition Examination Survey
-   2011-2014. *BMC Public Health*. 2024;24:2516.
+   2011-2014. BMC Public Health. 2024;24:2516.
    doi:10.1186/s12889-024-20060-4
-4. Fu Z, Xu X, Cao L, et al. Single and joint exposure of Pb, Cd, Hg, Se,
-   Cu, and Zn were associated with cognitive function of older adults. *Sci
-   Rep*. 2024;14:28567. doi:10.1038/s41598-024-79720-5
-5. Song S, Liu N, Wang G, et al. Sex specificity in the mixed effects of
-   blood heavy metals and cognitive function on elderly: evidence from
-   NHANES. *Nutrients*. 2023;15(13):2874. doi:10.3390/nu15132874
-6. Laouali N, Benmarhnia T, Lanphear BP, et al. Association between blood
-   metals mixtures concentrations and cognitive performance, and effect
-   modification by diet in older US adults. *Environ Epidemiol*.
-   2022;6(1):e192. doi:10.1097/EE9.0000000000000192
+4. Fu Z, Xu X, Cao L, Xiang Q, Gao Q, Duan H, et al. Single and joint
+   exposure of Pb, Cd, Hg, Se, Cu, and Zn were associated with cognitive
+   function of older adults. Sci Rep. 2024;14:28567.
+   doi:10.1038/s41598-024-79720-5
+5. Song S, Liu N, Wang G, Wang Y, Zhang X, Zhao X, et al. Sex specificity in
+   the mixed effects of blood heavy metals and cognitive function on
+   elderly: evidence from NHANES. Nutrients. 2023;15(13):2874.
+   doi:10.3390/nu15132874
+6. Laouali N, Benmarhnia T, Lanphear BP, Weuve J, Mascari M,
+   Boutron-Ruault MC, et al. Association between blood metals mixtures
+   concentrations and cognitive performance, and effect modification by
+   diet in older US adults. Environ Epidemiol. 2022;6(1):e192.
+   doi:10.1097/EE9.0000000000000192
 7. Huang G, Ren G. Interaction between omega-6 fatty acids intake and blood
    cadmium on the risk of low cognitive performance in older adults from
    National Health and Nutrition Examination Survey (NHANES) 2011-2014.
-   *BMC Geriatr*. 2022. doi:10.1186/s12877-022-02988-7
+   BMC Geriatr. 2022. doi:10.1186/s12877-022-02988-7
 8. Ren F, Zhao X, Yang Q, Liao H, Zhang Y, Liu X. A machine learning
    framework for predicting cognitive impairment in aging populations using
-   urinary metal and demographic data. *Front Genet*. 2025;16:1631228.
+   urinary metal and demographic data. Front Genet. 2025;16:1631228.
    doi:10.3389/fgene.2025.1631228
 9. Nabavi A, Safari F, Kashkooli M, Nabavizadeh SS, Molavi Vardanjani H.
    Early prediction of cognitive impairment in adults aged 20 years and
    older using machine learning and biomarkers of heavy metal exposure.
-   *Curr Res Toxicol*. 2024;7:100198. doi:10.1016/j.crtox.2024.100198
-10. Collins GS, Moons KGM, Dhiman P, et al. TRIPOD+AI statement: updated
-    guidance for reporting clinical prediction models that use regression
-    or machine learning methods. *BMJ*. 2024;385:e078378.
-    doi:10.1136/bmj-2023-078378
+   Curr Res Toxicol. 2024;7:100198. doi:10.1016/j.crtox.2024.100198
+10. Collins GS, Moons KGM, Dhiman P, Riley RD, Beam AL, Van Calster B, et
+    al. TRIPOD+AI statement: updated guidance for reporting clinical
+    prediction models that use regression or machine learning methods.
+    BMJ. 2024;385:e078378. doi:10.1136/bmj-2023-078378
