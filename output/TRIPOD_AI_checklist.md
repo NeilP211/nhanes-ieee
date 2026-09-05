@@ -98,7 +98,7 @@ Status key: **done** means the substance exists and is locatable now.
 | 14a | Participant flow, ideally a diagram | `output/figures/fig6_participant_flow.png`/`.pdf`, data in `output/tables/08_flow_diagram.md` and `data/interim/08_flow_diagram.json`. Cross-checked: independent recomputation of the final analytic sample from raw predictor completeness matches the locked `02_analytic_seqn.csv` exactly (0 SEQN mismatch) | done |
 | 14b | Participant characteristics, including missingness | `output/tables/09_table1.md` (Table 1a: by outcome status; Table 1b: included vs. excluded, recomputed fresh against the final locked sample -- corrected a stale figure carried over from the pre-lock `02_gate2_diagnostics.md`: 26.1%/24.2% low-cognitive-performance prevalence for excluded/included, not 26.2%/24.1%) | done |
 | 15 | Number of participants and outcome events | 1,784 participants, 431 events, prevalence 0.2416 | done |
-| 16 | Model specification: all coefficients or a means to obtain them | `output/tables/05_qgcomp.csv` holds the mixture coefficients. **Full M3 coefficients still to be tabulated** | manuscript |
+| 16 | Model specification: all coefficients or a means to obtain them | `output/tables/10_m3_coefficients.md` -- full M3 logistic regression refit on the complete analytic sample (n=1,784), standardised coefficients, odds ratios, 2,000-resample bootstrap 95% CIs. `output/tables/05_qgcomp.csv` holds the mixture coefficients separately | done |
 | 17 | Model performance with uncertainty | `output/tables/04_performance.csv`, `04_delta_auc.csv`, figures 1 to 3 | done |
 | 18 | Results of any model updating | None performed | done |
 

@@ -1,0 +1,284 @@
+{
+ "n": 1784,
+ "events": 431,
+ "intercept": -1.1747,
+ "selected_C": 0.1,
+ "n_bootstrap": 2000,
+ "n_bootstrap_valid": 2000,
+ "seed": 20260831,
+ "note": "Numeric features are standardised (z-scored) before fitting, so each coefficient/OR is per one-SD increase, not per raw unit. RIDRETH3 and DMDEDUC2 are one-hot encoded WITHOUT a dropped reference category (matching 03_model.py's pipeline exactly, relying on the L2 penalty rather than a reference contrast), so their coefficients are not standard reference-category log-odds ratios -- do not report them as such in prose.",
+ "coefficients": [
+  {
+   "feature": "RIDAGEYR",
+   "label": "Age, years",
+   "coefficient": 0.572,
+   "odds_ratio": 1.7719,
+   "or_ci_low": 1.5611,
+   "or_ci_high": 2.216
+  },
+  {
+   "feature": "RIAGENDR",
+   "label": "Sex (coded 1=male, 2=female)",
+   "coefficient": -0.18,
+   "odds_ratio": 0.8353,
+   "or_ci_low": 0.7145,
+   "or_ci_high": 0.9668
+  },
+  {
+   "feature": "INDFMPIR",
+   "label": "Income-to-poverty ratio",
+   "coefficient": -0.3108,
+   "odds_ratio": 0.7328,
+   "or_ci_low": 0.6328,
+   "or_ci_high": 0.8908
+  },
+  {
+   "feature": "log_LBXBPB",
+   "label": "Blood lead (log)",
+   "coefficient": 0.0169,
+   "odds_ratio": 1.017,
+   "or_ci_low": 0.8803,
+   "or_ci_high": 1.1725
+  },
+  {
+   "feature": "log_LBXBCD",
+   "label": "Blood cadmium (log)",
+   "coefficient": 0.0555,
+   "odds_ratio": 1.0571,
+   "or_ci_low": 0.9194,
+   "or_ci_high": 1.2129
+  },
+  {
+   "feature": "log_LBXTHG",
+   "label": "Blood total mercury (log)",
+   "coefficient": -0.039,
+   "odds_ratio": 0.9617,
+   "or_ci_low": 0.8316,
+   "or_ci_high": 1.1083
+  },
+  {
+   "feature": "log_LBXBSE",
+   "label": "Blood selenium (log)",
+   "coefficient": -0.0715,
+   "odds_ratio": 0.931,
+   "or_ci_low": 0.8123,
+   "or_ci_high": 1.0752
+  },
+  {
+   "feature": "log_LBXBMN",
+   "label": "Blood manganese (log)",
+   "coefficient": -0.0439,
+   "odds_ratio": 0.9571,
+   "or_ci_low": 0.8412,
+   "or_ci_high": 1.1021
+  },
+  {
+   "feature": "log_LBDB12SI",
+   "label": "Serum vitamin B12 (log)",
+   "coefficient": 0.162,
+   "odds_ratio": 1.1758,
+   "or_ci_low": 1.0302,
+   "or_ci_high": 1.3963
+  },
+  {
+   "feature": "log_LBXMMASI",
+   "label": "Serum methylmalonic acid (log)",
+   "coefficient": 0.0906,
+   "odds_ratio": 1.0948,
+   "or_ci_low": 0.9546,
+   "or_ci_high": 1.269
+  },
+  {
+   "feature": "LBDFOT",
+   "label": "Serum total folate",
+   "coefficient": 0.1277,
+   "odds_ratio": 1.1362,
+   "or_ci_low": 0.9857,
+   "or_ci_high": 1.4515
+  },
+  {
+   "feature": "LBDRFO",
+   "label": "RBC folate",
+   "coefficient": -0.1017,
+   "odds_ratio": 0.9033,
+   "or_ci_low": 0.7279,
+   "or_ci_high": 1.0555
+  },
+  {
+   "feature": "LBXVIDMS",
+   "label": "25-hydroxyvitamin D",
+   "coefficient": -0.1193,
+   "odds_ratio": 0.8875,
+   "or_ci_low": 0.7647,
+   "or_ci_high": 1.0271
+  },
+  {
+   "feature": "LBXGH",
+   "label": "HbA1c",
+   "coefficient": 0.0745,
+   "odds_ratio": 1.0774,
+   "or_ci_low": 0.9449,
+   "or_ci_high": 1.2233
+  },
+  {
+   "feature": "LBDHDD",
+   "label": "HDL cholesterol",
+   "coefficient": 0.0155,
+   "odds_ratio": 1.0157,
+   "or_ci_low": 0.8527,
+   "or_ci_high": 1.2226
+  },
+  {
+   "feature": "LBXTC",
+   "label": "Total cholesterol",
+   "coefficient": -0.0745,
+   "odds_ratio": 0.9282,
+   "or_ci_low": 0.8022,
+   "or_ci_high": 1.0652
+  },
+  {
+   "feature": "LBXSTR",
+   "label": "Triglycerides",
+   "coefficient": 0.0501,
+   "odds_ratio": 1.0514,
+   "or_ci_low": 0.8963,
+   "or_ci_high": 1.2478
+  },
+  {
+   "feature": "LBXSAL",
+   "label": "Serum albumin",
+   "coefficient": -0.0412,
+   "odds_ratio": 0.9597,
+   "or_ci_low": 0.8359,
+   "or_ci_high": 1.1036
+  },
+  {
+   "feature": "LBXSIR",
+   "label": "Serum iron",
+   "coefficient": -0.0939,
+   "odds_ratio": 0.9103,
+   "or_ci_low": 0.7976,
+   "or_ci_high": 1.026
+  },
+  {
+   "feature": "egfr",
+   "label": "eGFR",
+   "coefficient": -0.081,
+   "odds_ratio": 0.9222,
+   "or_ci_low": 0.8026,
+   "or_ci_high": 1.0756
+  },
+  {
+   "feature": "nlr",
+   "label": "Neutrophil-to-lymphocyte ratio",
+   "coefficient": 0.1324,
+   "odds_ratio": 1.1416,
+   "or_ci_low": 0.9793,
+   "or_ci_high": 1.4352
+  },
+  {
+   "feature": "plr",
+   "label": "Platelet-to-lymphocyte ratio",
+   "coefficient": -0.0653,
+   "odds_ratio": 0.9368,
+   "or_ci_low": 0.773,
+   "or_ci_high": 1.1159
+  },
+  {
+   "feature": "log_sii",
+   "label": "Systemic immune-inflammation index (log)",
+   "coefficient": 0.0097,
+   "odds_ratio": 1.0098,
+   "or_ci_low": 0.8069,
+   "or_ci_high": 1.2559
+  },
+  {
+   "feature": "RIDRETH3=Mexican American",
+   "label": "RIDRETH3 = Mexican American",
+   "coefficient": 0.0469,
+   "odds_ratio": 1.048,
+   "or_ci_low": 0.6494,
+   "or_ci_high": 1.4956
+  },
+  {
+   "feature": "RIDRETH3=Other Hispanic",
+   "label": "RIDRETH3 = Other Hispanic",
+   "coefficient": 0.3854,
+   "odds_ratio": 1.4701,
+   "or_ci_low": 1.1422,
+   "or_ci_high": 2.2946
+  },
+  {
+   "feature": "RIDRETH3=Non-Hispanic White",
+   "label": "RIDRETH3 = Non-Hispanic White",
+   "coefficient": -0.3595,
+   "odds_ratio": 0.6981,
+   "or_ci_low": 0.5232,
+   "or_ci_high": 0.919
+  },
+  {
+   "feature": "RIDRETH3=Non-Hispanic Black",
+   "label": "RIDRETH3 = Non-Hispanic Black",
+   "coefficient": 0.1701,
+   "odds_ratio": 1.1855,
+   "or_ci_low": 0.919,
+   "or_ci_high": 1.8108
+  },
+  {
+   "feature": "RIDRETH3=Non-Hispanic Asian",
+   "label": "RIDRETH3 = Non-Hispanic Asian",
+   "coefficient": -0.0677,
+   "odds_ratio": 0.9346,
+   "or_ci_low": 0.5933,
+   "or_ci_high": 1.459
+  },
+  {
+   "feature": "RIDRETH3=Other/multiracial",
+   "label": "RIDRETH3 = Other/multiracial",
+   "coefficient": -0.1833,
+   "odds_ratio": 0.8325,
+   "or_ci_low": 0.1675,
+   "or_ci_high": 1.3136
+  },
+  {
+   "feature": "DMDEDUC2=Less than 9th grade",
+   "label": "DMDEDUC2 = Less than 9th grade",
+   "coefficient": 1.0102,
+   "odds_ratio": 2.7462,
+   "or_ci_low": 2.2624,
+   "or_ci_high": 4.6369
+  },
+  {
+   "feature": "DMDEDUC2=9-11th grade",
+   "label": "DMDEDUC2 = 9-11th grade",
+   "coefficient": 0.2881,
+   "odds_ratio": 1.3339,
+   "or_ci_low": 1.0118,
+   "or_ci_high": 1.8329
+  },
+  {
+   "feature": "DMDEDUC2=High school grad/GED",
+   "label": "DMDEDUC2 = High school grad/GED",
+   "coefficient": -0.0889,
+   "odds_ratio": 0.9149,
+   "or_ci_low": 0.6682,
+   "or_ci_high": 1.1064
+  },
+  {
+   "feature": "DMDEDUC2=Some college/AA degree",
+   "label": "DMDEDUC2 = Some college/AA degree",
+   "coefficient": -0.5367,
+   "odds_ratio": 0.5847,
+   "or_ci_low": 0.3774,
+   "or_ci_high": 0.6851
+  },
+  {
+   "feature": "DMDEDUC2=College graduate or above",
+   "label": "DMDEDUC2 = College graduate or above",
+   "coefficient": -0.6808,
+   "odds_ratio": 0.5062,
+   "or_ci_low": 0.2653,
+   "or_ci_high": 0.6199
+  }
+ ]
+}

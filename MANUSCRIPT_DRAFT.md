@@ -304,6 +304,17 @@ A fifth, pre-specified secondary model **M0+** comprised demographics plus the
 covariates listed above, representing information a clinician could record without
 a laboratory.
 
+The cross-validated performance estimates below come from the nested-CV
+procedure just described, in which each of the 50 folds fits its own
+pipeline; no single coefficient set exists from that procedure. For
+reporting compliance, the identical M3 pipeline was separately refit on
+the complete analytic sample, with the regularisation strength selected
+by the same grid via 10-fold cross-validation on the full sample (which
+selected C=0.1, matching the mode across the original 50 folds).
+Standardised coefficients, odds ratios, and 2,000-resample bootstrap 95%
+CIs from that refit are reported in full in
+`output/tables/10_m3_coefficients.md` (Supplementary Table).
+
 Three algorithms were fitted to each specification: L2-penalized logistic
 regression as the pre-specified primary model class, random forest, and gradient
 boosting (XGBoost). Multilayer perceptron and k-nearest-neighbour models were
