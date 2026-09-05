@@ -211,7 +211,7 @@ scikit-learn 1.8.0, scipy 1.13.0, pyarrow 25.0.1.
 | Role | Name | Date |
 |---|---|---|
 | Data and modeling lead | Neil Patel | 2026-08-31 |
-| Clinical and framing lead | _pending countersign_ | |
+| Clinical and framing lead | Shreyan Kancharla | 2026-09-05 |
 
 Decisions in sections 3 and 4 were taken jointly on 2026-08-31. The M0+
 secondary comparison in section 4 is a specification choice by the modeling lead
