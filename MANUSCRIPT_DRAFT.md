@@ -659,17 +659,19 @@ institution or any other source funded this work.]**
 
 ## Authors' contributions
 
-SK and NP contributed equally to this work and share first authorship, per
-the division of labour in `PROJECT_BRIEF.md` section 12 and the work
-actually completed. Shreyan Kancharla (SK): conceptualisation, literature
-review and verification, project administration, writing — original draft
-(Introduction, Discussion, Abstract), writing — review and editing,
-corresponding author. Neil Patel (NP): conceptualisation, data curation,
-formal analysis, methodology, software, validation, visualisation, writing
-— original draft (Methods, Results). Both authors jointly decided the
-analytic sample definition, the nested model specification, the
-pre-registration, and the target journal; both authors read and approved
-the final manuscript.
+S.K. and N.P. conceived the study and jointly decided the analytic sample
+definition, the nested model specification, the pre-registration, and the
+target journal. N.P. acquired and curated the data and developed and ran
+the primary modelling pipeline: cohort construction, outcome construction,
+the nested M0-M3/M0+ models across three algorithms, cross-validated
+evaluation, interpretation (SHAP, partial dependence), and the six
+sensitivity analyses. S.K. conducted the literature review and citation
+verification, and conducted the participant flow-diagram, Table 1, and
+full model coefficient analyses. N.P. wrote the original draft of the
+Methods and Results; S.K. wrote the original draft of the Abstract,
+Introduction, and Discussion. Both authors reviewed and edited the
+complete manuscript and approved the final version. S.K. and N.P.
+contributed equally to this work and share first authorship.
 
 ## Acknowledgements
 
