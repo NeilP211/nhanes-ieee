@@ -12,6 +12,21 @@ Every number in Methods and Results traces to a file in `output/tables/`.
 Nothing is rounded differently from its source. Every citation in
 Introduction and Discussion is verified in `LITERATURE_REVIEW.md`.
 
+---
+
+# Title
+
+Reported biomarker-cognition associations do not translate into predictive
+utility: a pre-registered analysis of NHANES 2011-2014.
+
+Decided 2026-09-05 by Shreyan Kancharla, from the three options in
+`WRITING_PACK.tex`. Chosen over the alternatives because it is the only
+option naming the population, dataset, cycles and design (pre-registered)
+together, and because it matches Diagnostic and Prognostic Research's own
+stated title convention of including the study design after a colon (e.g.
+"A versus B in the treatment of C: a randomized controlled trial" — checked
+against the journal's submission guidelines).
+
 Two conventions held throughout, both deliberate:
 
 - The outcome is **low cognitive performance**. NHANES contains no clinical

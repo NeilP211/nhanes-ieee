@@ -136,15 +136,17 @@ flag it immediately rather than dropping the row.
 Scope note: restrict to NHANES 2011-2014, adults aged 60 and over. Papers on
 other cycles or other age ranges are context, not the gap claim.
 
-### 4. Draft the Introduction and Discussion
+### 4. ~~Draft the Introduction and Discussion~~
 
-Yours per brief section 12. Skeletons for both are on pages 9 to 11 of the PDF,
-including the argument order for the Introduction, the three findings that lift
-this above a bare null, seven limitations to state plainly, and three misreadings
-to foreclose.
+Done 2026-09-05 — see `MANUSCRIPT_DRAFT.md`. Introduction and Discussion
+drafted from the skeleton, updated for the DPR framing and the Ren et al.
+2025 finding from the literature review; title and structured abstract
+added as well (title checked against DPR's own convention, abstract
+trimmed to the journal's verified 350-word limit, not the brief's ~360
+estimate). The manuscript draft is now complete end to end: title,
+abstract, Introduction, Methods, Results, Discussion, references.
 
-Methods and Results are already drafted and are Neil's. Read them so the voice
-matches, but you should not need to change them.
+Methods and Results are Neil's and were left unchanged.
 
 ---
 
@@ -242,4 +244,8 @@ repo root. The fonts are macOS system faces, so on another machine swap the thre
    demographics-only baseline — gets its own Introduction paragraph) and
    Nabavi et al. 2024 (ages 20+, lower priority). Row 1 of the table is an
    unpublished preprint, cited but flagged as such.
-4. Any limitation you think we have understated.
+4. Any limitation you think we have understated. Current list (in the
+   Discussion): cross-sectional design, mildly non-random complete-case
+   sample, age top-coded at 80, no external validation cohort, no subgroup
+   fairness audit, serum copper/zinc excluded, outcome defined against
+   pooled-sample quantiles.
