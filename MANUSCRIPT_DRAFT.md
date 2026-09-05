@@ -402,8 +402,8 @@ The 2013-2014 cycle contributed proportionally fewer participants (661) than
 random subsample rather than in all examined participants.
 
 Participants excluded for incomplete data were slightly older (mean 70.1 against
-69.4 years) and slightly more likely to meet the outcome definition (26.2% against
-24.1%), with all differences under three percentage points.
+69.4 years) and slightly more likely to meet the outcome definition (26.1% against
+24.2%), with all differences under three percentage points (Table 1b).
 
 ## Discrimination
 

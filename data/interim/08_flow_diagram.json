@@ -1,0 +1,45 @@
+{
+ "stages": [
+  {
+   "stage": "Examined in NHANES 2011-2012 or 2013-2014, all ages",
+   "n": 19931,
+   "source": "output/tables/00_availability_audit.md"
+  },
+  {
+   "stage": "Aged 60 years or older",
+   "n": 3632,
+   "source": "output/tables/00_availability_audit.md",
+   "excluded": 16299
+  },
+  {
+   "stage": "Completed the Mobile Examination Centre visit (RIDSTATR==2)",
+   "n": 3472,
+   "source": "data/interim/01_attrition.csv",
+   "excluded": 160
+  },
+  {
+   "stage": "Received an outcome label (>=3 of 4 cognitive scores)",
+   "n": 3124,
+   "source": "data/interim/02_outcome_report.json",
+   "excluded": 348
+  },
+  {
+   "stage": "Complete data on all Block 1-3 predictors and covariates (final locked analytic sample)",
+   "n": 1784,
+   "source": "data/interim/02_analytic_seqn.csv",
+   "excluded": 1340
+  }
+ ],
+ "exclusion_reasons_at_final_step": {
+  "missing_any_demographic": 275,
+  "missing_any_metal": 930,
+  "missing_any_nutritional_biomarker": 270,
+  "missing_any_covariate": 187,
+  "note": "categories overlap; a participant may be missing more than one block"
+ },
+ "cross_check": {
+  "recomputed_complete_predictor_n": 1784,
+  "locked_file_n": 1784,
+  "mismatch_n": 0
+ }
+}

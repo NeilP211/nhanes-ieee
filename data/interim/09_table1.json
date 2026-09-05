@@ -1,0 +1,317 @@
+{
+ "table1a": [
+  {
+   "characteristic": "n",
+   "Overall": "1784",
+   "Low cognitive performance": "431",
+   "Not low cognitive performance": "1353"
+  },
+  {
+   "characteristic": "Age, years, mean (SD)",
+   "Overall": "69.37 (6.74)",
+   "Low cognitive performance": "72.07 (6.94)",
+   "Not low cognitive performance": "68.52 (6.44)"
+  },
+  {
+   "characteristic": "Income-to-poverty ratio, mean (SD)",
+   "Overall": "2.60 (1.60)",
+   "Low cognitive performance": "1.91 (1.38)",
+   "Not low cognitive performance": "2.82 (1.61)"
+  },
+  {
+   "characteristic": "Blood lead, ug/dL, median [IQR]",
+   "Overall": "1.47 [1.01, 2.19]",
+   "Low cognitive performance": "1.57 [1.03, 2.41]",
+   "Not low cognitive performance": "1.44 [1.01, 2.12]"
+  },
+  {
+   "characteristic": "Blood cadmium, ug/L, median [IQR]",
+   "Overall": "0.38 [0.25, 0.61]",
+   "Low cognitive performance": "0.42 [0.27, 0.69]",
+   "Not low cognitive performance": "0.37 [0.25, 0.58]"
+  },
+  {
+   "characteristic": "Blood total mercury, ug/L, median [IQR]",
+   "Overall": "0.93 [0.49, 1.94]",
+   "Low cognitive performance": "0.75 [0.40, 1.56]",
+   "Not low cognitive performance": "0.99 [0.53, 2.01]"
+  },
+  {
+   "characteristic": "Blood selenium, ug/L, median [IQR]",
+   "Overall": "193.09 [177.40, 208.38]",
+   "Low cognitive performance": "188.35 [173.17, 204.15]",
+   "Not low cognitive performance": "194.23 [179.15, 209.06]"
+  },
+  {
+   "characteristic": "Blood manganese, ug/L, median [IQR]",
+   "Overall": "8.71 [6.90, 11.09]",
+   "Low cognitive performance": "8.35 [6.50, 10.69]",
+   "Not low cognitive performance": "8.80 [7.02, 11.19]"
+  },
+  {
+   "characteristic": "Serum vitamin B12, pmol/L, median [IQR]",
+   "Overall": "410.30 [289.30, 601.45]",
+   "Low cognitive performance": "421.40 [284.50, 621.80]",
+   "Not low cognitive performance": "408.10 [290.00, 599.30]"
+  },
+  {
+   "characteristic": "Serum methylmalonic acid, umol/L, median [IQR]",
+   "Overall": "163.00 [125.75, 227.00]",
+   "Low cognitive performance": "181.00 [131.00, 256.00]",
+   "Not low cognitive performance": "160.00 [124.00, 214.00]"
+  },
+  {
+   "characteristic": "Serum total folate, nmol/L, median [IQR]",
+   "Overall": "20.80 [13.60, 31.42]",
+   "Low cognitive performance": "20.00 [13.05, 32.05]",
+   "Not low cognitive performance": "20.90 [13.70, 31.30]"
+  },
+  {
+   "characteristic": "RBC folate, nmol/L, median [IQR]",
+   "Overall": "543.00 [398.00, 737.00]",
+   "Low cognitive performance": "530.00 [391.00, 748.50]",
+   "Not low cognitive performance": "547.00 [401.00, 733.00]"
+  },
+  {
+   "characteristic": "25-hydroxyvitamin D, nmol/L, mean (SD)",
+   "Overall": "76.31 (30.44)",
+   "Low cognitive performance": "72.68 (30.36)",
+   "Not low cognitive performance": "77.46 (30.39)"
+  },
+  {
+   "characteristic": "HbA1c, %, median [IQR]",
+   "Overall": "5.80 [5.50, 6.30]",
+   "Low cognitive performance": "5.90 [5.50, 6.50]",
+   "Not low cognitive performance": "5.80 [5.50, 6.20]"
+  },
+  {
+   "characteristic": "HDL cholesterol, mg/dL, median [IQR]",
+   "Overall": "52.00 [43.00, 63.00]",
+   "Low cognitive performance": "49.00 [40.00, 60.00]",
+   "Not low cognitive performance": "52.00 [44.00, 63.00]"
+  },
+  {
+   "characteristic": "Total cholesterol, mg/dL, mean (SD)",
+   "Overall": "192.85 (43.15)",
+   "Low cognitive performance": "185.58 (41.41)",
+   "Not low cognitive performance": "195.16 (43.45)"
+  },
+  {
+   "characteristic": "Triglycerides, mg/dL, median [IQR]",
+   "Overall": "126.00 [86.00, 187.25]",
+   "Low cognitive performance": "128.00 [91.00, 182.00]",
+   "Not low cognitive performance": "126.00 [85.00, 189.00]"
+  },
+  {
+   "characteristic": "Serum albumin, g/dL, mean (SD)",
+   "Overall": "4.20 (0.31)",
+   "Low cognitive performance": "4.15 (0.34)",
+   "Not low cognitive performance": "4.21 (0.29)"
+  },
+  {
+   "characteristic": "Serum iron, ug/dL, median [IQR]",
+   "Overall": "80.00 [61.00, 103.00]",
+   "Low cognitive performance": "76.00 [57.00, 96.00]",
+   "Not low cognitive performance": "82.00 [63.00, 104.00]"
+  },
+  {
+   "characteristic": "eGFR, mL/min/1.73m2, mean (SD)",
+   "Overall": "75.64 (19.85)",
+   "Low cognitive performance": "69.95 (22.19)",
+   "Not low cognitive performance": "77.45 (18.69)"
+  },
+  {
+   "characteristic": "Neutrophil-to-lymphocyte ratio, median [IQR]",
+   "Overall": "2.11 [1.55, 2.92]",
+   "Low cognitive performance": "2.35 [1.67, 3.21]",
+   "Not low cognitive performance": "2.05 [1.53, 2.83]"
+  },
+  {
+   "characteristic": "Platelet-to-lymphocyte ratio, median [IQR]",
+   "Overall": "119.80 [94.11, 152.96]",
+   "Low cognitive performance": "119.05 [89.76, 153.87]",
+   "Not low cognitive performance": "120.00 [95.26, 152.50]"
+  },
+  {
+   "characteristic": "Systemic immune-inflammation index, median [IQR]",
+   "Overall": "458.83 [319.14, 664.17]",
+   "Low cognitive performance": "480.65 [322.90, 714.20]",
+   "Not low cognitive performance": "452.00 [315.00, 646.00]"
+  },
+  {
+   "characteristic": "Body mass index, kg/m2, median [IQR]",
+   "Overall": "28.10 [24.77, 32.40]",
+   "Low cognitive performance": "27.60 [24.30, 31.90]",
+   "Not low cognitive performance": "28.20 [24.90, 32.50]"
+  },
+  {
+   "characteristic": "Alcoholic drinks per day, median [IQR]",
+   "Overall": "0.00 [0.00, 1.25]",
+   "Low cognitive performance": "0.00 [0.00, 1.00]",
+   "Not low cognitive performance": "1.00 [0.00, 2.00]"
+  },
+  {
+   "characteristic": "PHQ-9 depression score, median [IQR]",
+   "Overall": "1.00 [0.00, 4.00]",
+   "Low cognitive performance": "2.00 [0.00, 6.50]",
+   "Not low cognitive performance": "1.00 [0.00, 4.00]"
+  },
+  {
+   "characteristic": "RIAGENDR = Male",
+   "Overall": "880 (49.3%)",
+   "Low cognitive performance": "238 (55.2%)",
+   "Not low cognitive performance": "642 (47.5%)"
+  },
+  {
+   "characteristic": "RIAGENDR = Female",
+   "Overall": "904 (50.7%)",
+   "Low cognitive performance": "193 (44.8%)",
+   "Not low cognitive performance": "711 (52.5%)"
+  },
+  {
+   "characteristic": "RIDRETH3 = Mexican American",
+   "Overall": "140 (7.8%)",
+   "Low cognitive performance": "46 (10.7%)",
+   "Not low cognitive performance": "94 (6.9%)"
+  },
+  {
+   "characteristic": "RIDRETH3 = Other Hispanic",
+   "Overall": "182 (10.2%)",
+   "Low cognitive performance": "68 (15.8%)",
+   "Not low cognitive performance": "114 (8.4%)"
+  },
+  {
+   "characteristic": "RIDRETH3 = Non-Hispanic White",
+   "Overall": "863 (48.4%)",
+   "Low cognitive performance": "165 (38.3%)",
+   "Not low cognitive performance": "698 (51.6%)"
+  },
+  {
+   "characteristic": "RIDRETH3 = Non-Hispanic Black",
+   "Overall": "425 (23.8%)",
+   "Low cognitive performance": "120 (27.8%)",
+   "Not low cognitive performance": "305 (22.5%)"
+  },
+  {
+   "characteristic": "RIDRETH3 = Non-Hispanic Asian",
+   "Overall": "144 (8.1%)",
+   "Low cognitive performance": "26 (6.0%)",
+   "Not low cognitive performance": "118 (8.7%)"
+  },
+  {
+   "characteristic": "RIDRETH3 = Other/multiracial",
+   "Overall": "30 (1.7%)",
+   "Low cognitive performance": "6 (1.4%)",
+   "Not low cognitive performance": "24 (1.8%)"
+  },
+  {
+   "characteristic": "DMDEDUC2 = Less than 9th grade",
+   "Overall": "224 (12.6%)",
+   "Low cognitive performance": "137 (31.8%)",
+   "Not low cognitive performance": "87 (6.4%)"
+  },
+  {
+   "characteristic": "DMDEDUC2 = 9-11th grade",
+   "Overall": "219 (12.3%)",
+   "Low cognitive performance": "79 (18.3%)",
+   "Not low cognitive performance": "140 (10.3%)"
+  },
+  {
+   "characteristic": "DMDEDUC2 = High school grad/GED",
+   "Overall": "417 (23.4%)",
+   "Low cognitive performance": "103 (23.9%)",
+   "Not low cognitive performance": "314 (23.2%)"
+  },
+  {
+   "characteristic": "DMDEDUC2 = Some college/AA degree",
+   "Overall": "511 (28.6%)",
+   "Low cognitive performance": "71 (16.5%)",
+   "Not low cognitive performance": "440 (32.5%)"
+  },
+  {
+   "characteristic": "DMDEDUC2 = College graduate or above",
+   "Overall": "413 (23.2%)",
+   "Low cognitive performance": "41 (9.5%)",
+   "Not low cognitive performance": "372 (27.5%)"
+  },
+  {
+   "characteristic": "Smoking status = never",
+   "Overall": "895 (50.2%)",
+   "Low cognitive performance": "210 (48.7%)",
+   "Not low cognitive performance": "685 (50.6%)"
+  },
+  {
+   "characteristic": "Smoking status = former",
+   "Overall": "671 (37.6%)",
+   "Low cognitive performance": "159 (36.9%)",
+   "Not low cognitive performance": "512 (37.8%)"
+  },
+  {
+   "characteristic": "Smoking status = current",
+   "Overall": "218 (12.2%)",
+   "Low cognitive performance": "62 (14.4%)",
+   "Not low cognitive performance": "156 (11.5%)"
+  },
+  {
+   "characteristic": "Ever told had a stroke",
+   "Overall": "125 (7.0%)",
+   "Low cognitive performance": "49 (11.4%)",
+   "Not low cognitive performance": "76 (5.6%)"
+  },
+  {
+   "characteristic": "Ever told had diabetes",
+   "Overall": "490 (27.5%)",
+   "Low cognitive performance": "154 (35.7%)",
+   "Not low cognitive performance": "336 (24.8%)"
+  },
+  {
+   "characteristic": "Ever told had high blood pressure",
+   "Overall": "1111 (62.3%)",
+   "Low cognitive performance": "302 (70.1%)",
+   "Not low cognitive performance": "809 (59.8%)"
+  },
+  {
+   "characteristic": "Ever told had high cholesterol",
+   "Overall": "997 (55.9%)",
+   "Low cognitive performance": "234 (54.3%)",
+   "Not low cognitive performance": "763 (56.4%)"
+  }
+ ],
+ "table1b": [
+  {
+   "characteristic": "n",
+   "Included (n=1,784)": "1784",
+   "Excluded (n=1,340)": "1340"
+  },
+  {
+   "characteristic": "Age, years, mean (SD)",
+   "Included (n=1,784)": "69.37 (6.74)",
+   "Excluded (n=1,340)": "70.10 (6.94)"
+  },
+  {
+   "characteristic": "Income-to-poverty ratio, mean (SD)",
+   "Included (n=1,784)": "2.60 (1.60)",
+   "Excluded (n=1,340)": "2.50 (1.59)"
+  },
+  {
+   "characteristic": "PHQ-9 depression score, median [IQR]",
+   "Included (n=1,784)": "1.00 [0.00, 4.00]",
+   "Excluded (n=1,340)": "2.00 [0.00, 5.00]"
+  },
+  {
+   "characteristic": "Female, %",
+   "Included (n=1,784)": "50.7%",
+   "Excluded (n=1,340)": "52.6%"
+  },
+  {
+   "characteristic": "Low cognitive performance, %",
+   "Included (n=1,784)": "24.2%",
+   "Excluded (n=1,340)": "26.1%"
+  },
+  {
+   "characteristic": "Diabetes, %",
+   "Included (n=1,784)": "27.5%",
+   "Excluded (n=1,340)": "30.0%"
+  }
+ ]
+}
