@@ -235,5 +235,11 @@ repo root. The fonts are macOS system faces, so on another machine swap the thre
    countersigned the same day.)
 2. ~~DPR, or make the case for IEEE. Either is defensible; we need one.~~
    Decided 2026-09-05 — Diagnostic and Prognostic Research.
-3. Anything in the seven-study table that already reports predictive metrics.
+3. ~~Anything in the seven-study table that already reports predictive
+   metrics.~~ Done 2026-09-05 — see `LITERATURE_REVIEW.md`. All seven rows
+   verified, none report predictive metrics. Two new papers found (not in
+   the original table): Ren et al. 2025 (same 60+ population, AUC 0.90, no
+   demographics-only baseline — gets its own Introduction paragraph) and
+   Nabavi et al. 2024 (ages 20+, lower priority). Row 1 of the table is an
+   unpublished preprint, cited but flagged as such.
 4. Any limitation you think we have understated.

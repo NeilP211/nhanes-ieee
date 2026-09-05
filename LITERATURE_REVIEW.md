@@ -24,11 +24,11 @@ row.** Verified n matches the brief for six of seven; row 5's n was previously
 | 6 | Laouali N, Benmarhnia T, Lanphear BP, et al. (2022). "Association between blood metals mixtures concentrations and cognitive performance, and effect modification by diet in older US adults." *Environmental Epidemiology* 6(1):e192. doi:10.1097/EE9.0000000000000192 | 1,777 | Pb, Cd, Mn | Quantile g-computation | None |
 | 7 | Huang G, Ren G (2022). "Interaction between ω-6 fatty acids intake and blood cadmium on the risk of low cognitive performance in older adults from NHANES 2011–2014." *BMC Geriatrics*. doi:10.1186/s12877-022-02988-7 | 1,918 | Cd + ω-6 intake | Logistic regression | None |
 
-**Open item:** row 1 is a preprint. Worth a follow-up check closer to
-submission for whether it has since been published in a journal (search
-engines index preprints and final versions separately and this may resolve
-before manuscript submission). Cite it as a preprint explicitly if it is
-still one; do not upgrade its evidentiary weight in the Introduction.
+**Decided 2026-09-05 (Shreyan Kancharla):** include row 1, flagged explicitly
+as a preprint in the Introduction text (e.g. "in a preprint, Wang et al.
+report..."), not cited with the same evidentiary weight as the six
+peer-reviewed rows. Worth a follow-up check closer to submission for whether
+it has since been published in a journal.
 
 ---
 
@@ -58,15 +58,15 @@ populations using urinary metal and demographic data." *Front Genet*
   cognitive test data — the same terminology error this project's own
   language rules exist to avoid, for the identical reason: NHANES contains
   no clinical diagnosis.
-- **Action:** cite directly in the Introduction. State plainly that a 2025
-  paper on the same population reports strong discrimination (AUC 0.90) for
-  a demographics-plus-metals model, but does not test whether that
-  performance is attributable to the metals or to demographics alone — which
-  is the question this study answers, and the answer is that it is
-  attributable almost entirely to demographics. This is a stronger, more
-  specific novelty claim than "no one has done prediction here," and it is
-  defensible because it is precise about what the other paper did and did
-  not measure.
+- **Decided 2026-09-05 (Shreyan Kancharla): include, with its own paragraph
+  in the Introduction.** State plainly that a 2025 paper on the same
+  population reports strong discrimination (AUC 0.90) for a
+  demographics-plus-metals model, but does not test whether that performance
+  is attributable to the metals or to demographics alone — which is the
+  question this study answers, and the answer is that it is attributable
+  almost entirely to demographics. This is a stronger, more specific novelty
+  claim than "no one has done prediction here," and it is defensible because
+  it is precise about what the other paper did and did not measure.
 
 ### Nabavi A, Safari F, Kashkooli M, Nabavizadeh SS, Molavi Vardanjani H (2024)
 
