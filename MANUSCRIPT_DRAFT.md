@@ -34,7 +34,7 @@ Shreyan Kancharla¹\*, Neil Patel²\*
 \* These authors contributed equally to this work and share first
 authorship, decided 2026-09-05.
 
-Corresponding author: Shreyan Kancharla, shreyansk6@gmail.com,
+Corresponding author: Shreyan Kancharla, shkancharla@davidson.edu,
 ORCID: 0009-0009-8654-110X (verified 2026-09-05).
 
 ¹ Davidson College, Davidson, NC, USA.

@@ -69,7 +69,7 @@ Sincerely,
 
 **Shreyan Kancharla**, corresponding author
 Davidson College, Davidson, NC, USA
-shreyansk6@gmail.com
+shkancharla@davidson.edu
 ORCID: 0009-0009-8654-110X
 on behalf of the authors: Shreyan Kancharla and Neil Patel, who contributed
 equally to this work and share first authorship.
