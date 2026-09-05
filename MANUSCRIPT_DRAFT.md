@@ -39,9 +39,9 @@ ORCID: 0009-0009-8654-110X (verified 2026-09-05).
 
 ¹ Davidson College, Davidson, NC, USA.
 
-² **[Neil's institutional affiliation and ORCID still needed — ask when
-he's back from travel. DPR's title page requires a full institutional
-address for every author.]**
+² University of North Carolina at Chapel Hill, Chapel Hill, NC, USA.
+**[Department/school and ORCID still needed from Neil — DPR's title page
+requires a full institutional address for every author.]**
 
 Two conventions held throughout, both deliberate:
 

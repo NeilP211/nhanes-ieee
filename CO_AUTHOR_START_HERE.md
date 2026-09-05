@@ -268,8 +268,8 @@ to confirm or correct, not presented as unchangeable:
 **Title page, updated 2026-09-05:** Shreyan's affiliation (Davidson
 College, Davidson, NC) and ORCID (0009-0009-8654-110X, verified against
 the public ORCID record) are filled in on the title page and cover letter.
-Still needed and not something to guess: Neil's institutional affiliation
-and ORCID.
+Neil's institution (University of North Carolina at Chapel Hill) is now
+filled in too. Still needed: his department/school and ORCID.
 
 ## Analysis-side TRIPOD gaps, closed 2026-09-05
 
