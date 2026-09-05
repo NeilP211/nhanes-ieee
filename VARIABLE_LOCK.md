@@ -167,4 +167,4 @@ and are confirmed against the actual columns as the first step of Phase 1.
 | Role | Name | Date |
 |---|---|---|
 | Data and modeling lead | Neil Patel | 2026-08-30 |
-| Clinical and framing lead | _pending_ | |
+| Clinical and framing lead | Shreyan Kancharla | 2026-09-05 |
