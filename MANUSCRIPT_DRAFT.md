@@ -29,18 +29,19 @@ against the journal's submission guidelines).
 
 ## Authors and title page
 
-Shreyan Kancharla¹\*, Neil Patel¹\*
+Shreyan Kancharla¹\*, Neil Patel²\*
 
 \* These authors contributed equally to this work and share first
 authorship, decided 2026-09-05.
 
-Corresponding author: Shreyan Kancharla, **[institutional affiliation,
-address and email needed]**.
+Corresponding author: Shreyan Kancharla, shreyansk6@gmail.com,
+ORCID: 0009-0009-8654-110X (verified 2026-09-05).
 
-¹ **[Institutional affiliation(s) needed for both authors — DPR's title
-page requires full names and institutional addresses for every author.
-ORCID for the corresponding author is also expected by most Springer-family
-journals; add if available.]**
+¹ Davidson College, Davidson, NC, USA.
+
+² **[Neil's institutional affiliation and ORCID still needed — ask when
+he's back from travel. DPR's title page requires a full institutional
+address for every author.]**
 
 Two conventions held throughout, both deliberate:
 

@@ -265,5 +265,8 @@ to confirm or correct, not presented as unchangeable:
   session does not have (write access only). Neil needs to make it public,
   or grant admin access, before submission.
 
-Still missing and not something to guess: institutional affiliations and
-ORCID for the title page.
+**Title page, updated 2026-09-05:** Shreyan's affiliation (Davidson
+College, Davidson, NC) and ORCID (0009-0009-8654-110X, verified against
+the public ORCID record) are filled in on the title page and cover letter.
+Still needed and not something to guess: Neil's institutional affiliation
+and ORCID.

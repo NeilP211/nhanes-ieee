@@ -1,8 +1,9 @@
 # Cover letter
 
 Draft, addressed to the Editor-in-Chief, *Diagnostic and Prognostic
-Research*. **[Fill in editor name if known, date, and author contact block
-before submission — placeholders marked below.]**
+Research*. **[Fill in editor name if known, and submission date, before
+sending — author contact block below is now complete for Shreyan; Neil's
+affiliation still needed.]**
 
 ---
 
@@ -66,8 +67,10 @@ suggest reviewers if useful.
 
 Sincerely,
 
-**Shreyan Kancharla**, corresponding author **[institutional affiliation,
-address, email, ORCID needed]**
+**Shreyan Kancharla**, corresponding author
+Davidson College, Davidson, NC, USA
+shreyansk6@gmail.com
+ORCID: 0009-0009-8654-110X
 on behalf of the authors: Shreyan Kancharla and Neil Patel, who contributed
 equally to this work and share first authorship.
 
