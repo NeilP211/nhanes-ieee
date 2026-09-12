@@ -85,8 +85,8 @@ Status key: **done** means the substance exists and is locatable now.
 
 | # | Item | Where addressed | Status |
 |---|---|---|---|
-| 13a | Funding and role of funders | `MANUSCRIPT_DRAFT.md` Declarations: unfunded, decided 2026-09-05, pending Neil's confirmation | done |
-| 13b | Conflicts of interest | `MANUSCRIPT_DRAFT.md` Declarations: none declared, decided 2026-09-05, pending Neil's confirmation | done |
+| 13a | Funding and role of funders | `MANUSCRIPT_DRAFT.md` Declarations: unfunded, decided 2026-09-05, confirmed by both authors 2026-09-12 | done |
+| 13b | Conflicts of interest | `MANUSCRIPT_DRAFT.md` Declarations: none declared, decided 2026-09-05, confirmed by both authors 2026-09-12 | done |
 | 13c | Protocol and registration | `PREREGISTRATION.md`, dated 2026-08-31 before any outcome-predictor relationship was examined, with an explicit integrity statement to that effect | done |
 | 13d | Data availability | NHANES is fully public. `src/00b_download.py` reconstructs the raw data from CDC URLs verified in the audit | done |
 | 13e | Code availability | Complete pipeline, `src/00_audit.py` through `src/07_figures.py`, each independently runnable | done |
@@ -114,12 +114,13 @@ Status key: **done** means the substance exists and is locatable now.
 
 ## Items needing attention before submission
 
-Four gaps, all documentation rather than analysis:
+The participant flow diagram, Table 1, and full M3 coefficient table were
+the three outstanding gaps as of the checklist's first pass; all three were
+closed 2026-09-05 (see items 14a, 14b, and 16 above, and
+`CO_AUTHOR_START_HERE.md` for what was cross-checked along the way). One
+item remains, and it is a reporting choice rather than a gap to fill:
 
-1. **Participant flow diagram.** The numbers exist in the attrition table; the figure does not.
-2. **Table 1, participant characteristics.** The included-versus-excluded comparison exists; a conventional Table 1 does not.
-3. **Full M3 coefficient table.** Item 16 asks for the model specification. Worth reporting the penalized logistic coefficients even though the model adds nothing, because a reader will want to see that no individual biomarker was doing anything either.
-4. **Fairness audit (item A6).** Not pre-specified, so adding one now would be a post-hoc analysis. The honest route is to declare it as a limitation rather than run it and present it as planned.
+1. **Fairness audit (item A6).** Not pre-specified, so adding one now would be a post-hoc analysis. The honest route is to declare it as a limitation rather than run it and present it as planned.
 
 ## Note on why this checklist is worth filing
 

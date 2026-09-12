@@ -3,7 +3,7 @@
 Draft, addressed to the Editor-in-Chief, *Diagnostic and Prognostic
 Research*. **[Fill in editor name if known, and submission date, before
 sending — author contact block below is now complete for Shreyan; Neil's
-affiliation still needed.]**
+department/school on the manuscript title page still needed.]**
 
 ---
 
@@ -61,8 +61,8 @@ request, the dated record of its timing.
 
 This manuscript is not under consideration elsewhere. The authors declare
 no competing interests, and this research received no specific funding
-(both pending Neil's confirmation — see the Declarations section of the
-manuscript). We look forward to your consideration and are happy to
+(confirmed by both authors 2026-09-12 — see the Declarations section of
+the manuscript). We look forward to your consideration and are happy to
 suggest reviewers if useful.
 
 Sincerely,

@@ -250,26 +250,25 @@ repo root. The fonts are macOS system faces, so on another machine swap the thre
    fairness audit, serum copper/zinc excluded, outcome defined against
    pooled-sample quantiles.
 
-## Submission decisions, closed 2026-09-05 pending Neil's confirmation
+## Submission decisions, closed 2026-09-05, confirmed by Neil 2026-09-12
 
-Decided while Neil is travelling; flagged in `MANUSCRIPT_DRAFT.md` for him
-to confirm or correct, not presented as unchangeable:
+Decided while Neil was travelling, flagged in `MANUSCRIPT_DRAFT.md` for him
+to confirm or correct; Neil has now confirmed all four in person:
 
 - **Authorship:** Shreyan Kancharla and Neil Patel contribute equally and
   share first authorship.
 - **Corresponding author:** Shreyan Kancharla.
 - **Competing interests / funding:** none to declare, unfunded.
-- **Code availability:** public on submission. **Action needed from
-  Neil** — the GitHub repository (`NeilP211/nhanes-ieee`) is currently
-  private, and changing visibility requires owner/admin access, which this
-  session does not have (write access only). Neil needs to make it public,
-  or grant admin access, before submission.
+- **Code availability:** public on submission. The GitHub repository
+  (`NeilP211/nhanes-ieee`) was made public by Neil 2026-09-12; closed, no
+  further action needed.
 
 **Title page, updated 2026-09-05:** Shreyan's affiliation (Davidson
 College, Davidson, NC) and ORCID (0009-0009-8654-110X, verified against
 the public ORCID record) are filled in on the title page and cover letter.
 Neil's institution (University of North Carolina at Chapel Hill) is now
-filled in too. Still needed: his department/school and ORCID.
+filled in too. His ORCID (0009-0000-6134-5641) was added and verified
+2026-09-12. Still needed: his department/school.
 
 ## Analysis-side TRIPOD gaps, closed 2026-09-05
 

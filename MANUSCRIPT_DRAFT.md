@@ -40,8 +40,9 @@ ORCID: 0009-0009-8654-110X (verified 2026-09-05).
 ¹ Davidson College, Davidson, NC, USA.
 
 ² University of North Carolina at Chapel Hill, Chapel Hill, NC, USA.
-**[Department/school and ORCID still needed from Neil — DPR's title page
-requires a full institutional address for every author.]**
+ORCID: 0009-0000-6134-5641 (verified 2026-09-12). **[Department/school
+still needed from Neil — DPR's title page requires a full institutional
+address for every author.]**
 
 Two conventions held throughout, both deliberate:
 
@@ -644,15 +645,13 @@ random seed fixed and every package version pinned.
 ## Competing interests
 
 The authors declare that they have no competing interests. **[Decided
-2026-09-05, pending Neil's confirmation — flag before submission if this is
-not accurate for either author.]**
+2026-09-05, confirmed by both authors 2026-09-12.]**
 
 ## Funding
 
 This research received no specific grant from any funding agency in the
 public, commercial, or not-for-profit sectors. **[Decided 2026-09-05,
-pending Neil's confirmation — flag before submission if either author's
-institution or any other source funded this work.]**
+confirmed by both authors 2026-09-12.]**
 
 ## Authors' contributions
 
