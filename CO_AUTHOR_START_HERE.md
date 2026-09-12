@@ -268,7 +268,9 @@ College, Davidson, NC) and ORCID (0009-0009-8654-110X, verified against
 the public ORCID record) are filled in on the title page and cover letter.
 Neil's institution (University of North Carolina at Chapel Hill) is now
 filled in too. His ORCID (0009-0000-6134-5641) was added and verified
-2026-09-12. Still needed: his department/school.
+2026-09-12. Department/school deliberately left off, per Neil 2026-09-12
+(he is a student there, not affiliated with a specific department) —
+institution-level affiliation is complete.
 
 ## Analysis-side TRIPOD gaps, closed 2026-09-05
 
