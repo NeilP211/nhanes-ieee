@@ -19,7 +19,7 @@ Status key: **done** means the substance exists and is locatable now.
 | # | Item | Where addressed | Status |
 |---|---|---|---|
 | 1 | Identify the study as developing a prediction model, specify the target population and outcome | `MANUSCRIPT_DRAFT.md`, Title: "Reported biomarker-cognition associations do not translate into predictive utility: a pre-registered analysis of NHANES 2011-2014" | done |
-| 2 | Structured abstract: objectives, data, participants, outcome, predictors, analysis, results, conclusions | `MANUSCRIPT_DRAFT.md`, Abstract (345 words, Background/Methods/Results/Conclusions) | done |
+| 2 | Structured abstract: objectives, data, participants, outcome, predictors, analysis, results, conclusions | `MANUSCRIPT_DRAFT.md`, Abstract (Background/Methods/Results/Conclusions, under DPR's 350-word limit) | done |
 
 ## Introduction
 
@@ -106,7 +106,7 @@ Status key: **done** means the substance exists and is locatable now.
 
 | # | Item | Where addressed | Status |
 |---|---|---|---|
-| 19 | Limitations | Cross-sectional design; complete-case selection is mildly non-random; age top-coded at 80; no external validation; no fairness audit; `PBCD_H` half-subsample reduces the 2013-2014 contribution | done, to be written up |
+| 19 | Limitations | Cross-sectional design; complete-case selection is mildly non-random; age top-coded at 80; no external validation; no fairness audit; `PBCD_H` half-subsample reduces the 2013-2014 contribution. Written up in full in the manuscript's Discussion | done |
 | 20 | Interpretation, considering objectives and prior evidence | `MANUSCRIPT_DRAFT.md` Discussion; `output/tables/07_results_summary.md` section 9 | done |
 | 21 | Potential clinical use and implications | Decision-curve analysis shows no threshold at which the panel changes a decision | done |
 

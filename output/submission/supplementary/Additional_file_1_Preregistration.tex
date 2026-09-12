@@ -1,0 +1,200 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small, labelfont=bf}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{}
+\date{}
+
+\begin{document}
+
+\begin{center}
+{\large\bfseries Additional file 1: Pre-registration}\\[2pt]
+{\small Reported biomarker--cognition associations do not translate into predictive utility: a pre-registered analysis of NHANES 2011--2014}\\[2pt]
+{\small Shreyan Kancharla, Neil Patel}
+\end{center}
+
+\bigskip
+
+\textbf{Written and dated 2026-08-31}, at Gate 2, before any modeling.
+
+\section*{Integrity statement}
+
+No outcome-predictor relationship has been examined at the time of writing.
+
+Work completed so far covers file availability, variable verification, merging, reserved codes, skip patterns, attrition, outcome construction, internal consistency, and missingness. The only analysis touching the outcome has been its own distribution, its internal consistency, and a comparison of included against excluded participants for selection bias. \textbf{No association or discrimination between any biomarker and the outcome has been computed, viewed, or estimated.} The pre-specification claim below is therefore intact.
+
+If any decision in this document is revised after modeling begins, the revision must be recorded here with its date and reason, and the affected result reported as exploratory.
+
+\section*{1. Question and hypotheses}
+
+\textbf{Primary question.} Among US adults aged 60+, how much predictive value do blood metals and nutritional biomarkers add, beyond demographics, for identifying low cognitive performance?
+
+\begin{longtable}{L{3.2cm}L{11cm}}
+\toprule
+& Statement \\
+\midrule
+\endhead
+\textbf{H1, primary} & M3 achieves higher cross-validated AUC than M0. Operationally, the bootstrap 95\% CI for $\Delta$AUC(M3 $-$ M0) excludes zero. \\
+\textbf{H0, primary null} & $\Delta$AUC(M3 $-$ M0) is not distinguishable from zero. \\
+\textbf{H2, secondary} & Nonlinear learners outperform penalized logistic regression. \\
+\textbf{H3, secondary} & The metals and nutritional blocks contribute non-redundantly: $\Delta$AUC(M3 $-$ M0) exceeds either block alone. \\
+\textbf{H4, exploratory} & Predictive contribution differs across the four cognitive domains. \\
+\bottomrule
+\end{longtable}
+
+A null result on H1 is a publishable finding and will be reported as the headline if it occurs.
+
+\section*{2. Outcome}
+
+Composite of four z-scored tests, averaged where at least 3 of 4 are present, with the lowest quartile taken as the label.
+
+\begin{longtable}{L{5cm}L{9cm}}
+\toprule
+Component & Variable \\
+\midrule
+\endhead
+CERAD immediate recall, 0 to 30 & \texttt{CFDCST1 + CFDCST2 + CFDCST3}, all three trials required \\
+CERAD delayed recall & \texttt{CFDCSR} \\
+Animal fluency & \texttt{CFDAST} \\
+Digit symbol substitution & \texttt{CFDDS} \\
+\bottomrule
+\end{longtable}
+
+\textbf{Terminology is low cognitive performance.} NHANES contains no clinical diagnosis, so the term cognitive impairment is not used anywhere in this project.
+
+\textbf{Eligibility rule.} The pre-specified "$\geq$ 3 of 4 scores" rule is retained. The alternative "$\geq$ 2 of 3 instruments" rule, which reflects that \texttt{CFASTAT} counts CERAD as a single administration, classifies only 13 of 3,124 participants differently and is reported as a footnote rather than adopted.
+
+\textbf{Declared property of the label.} The label is defined against pooled-sample quantiles, so a held-out participant's label depends on the full sample distribution. This is definitional rather than predictive leakage: the outcome is explicitly relative, and defining it per-fold would make the target itself move between folds. Stated here so it is visibly a deliberate choice.
+
+\section*{3. Analytic sample}
+
+\textbf{Option A, decided 2026-08-31 by both authors.} All models are fitted and evaluated on one locked row set: participants with every Block 1 to 3 feature and every covariate observed.
+
+\begin{longtable}{L{7cm}L{6cm}}
+\toprule
+& \\
+\midrule
+\endhead
+$n$ & \textbf{1,784} \\
+Events, low cognitive performance & \textbf{431} \\
+Prevalence & 0.2416 \\
+Events per feature, M3 & 17.2 \\
+Cycle composition & 1,123 from 2011--2012, 661 from 2013--2014 \\
+\bottomrule
+\end{longtable}
+
+The row set is frozen in \texttt{data/interim/02\_analytic\_seqn.csv}. Every model, every sensitivity analysis and every bootstrap uses these rows, so that $\Delta$AUC reflects model content alone and never sample composition.
+
+\textbf{Rationale.} Nothing is imputed, so the primary exposure is never fabricated. The dominant exclusion is the \texttt{PBCD\_H} one-half subsample, which is a random draw and therefore missing-completely-at-random by design.
+
+\textbf{Known selection.} Excluded participants are slightly older and slightly worse off on every measured axis, all differences under 3 percentage points. This is reported in the limitations. Multiple imputation on the full labelled sample ($n = 3{,}124$) is retained as a pre-specified sensitivity analysis and is the formal check on this.
+
+\section*{4. Nested models}
+
+Primary nested comparison uses Blocks 1 to 3 only.
+
+\begin{longtable}{L{3cm}L{7.5cm}L{2.5cm}}
+\toprule
+Model & Features & $n$ features \\
+\midrule
+\endhead
+\textbf{M0} & Demographics & 5 \\
+\textbf{M1} & Demographics + metals & 10 \\
+\textbf{M2} & Demographics + nutritional & 20 \\
+\textbf{M3} & Demographics + metals + nutritional & 25 \\
+\bottomrule
+\end{longtable}
+
+\textbf{Block 1, demographics.} \texttt{RIDAGEYR}, \texttt{RIAGENDR}, \texttt{RIDRETH3}, \texttt{DMDEDUC2}, \texttt{INDFMPIR}.
+
+\textbf{Block 2, metals, log-transformed.} Lead, cadmium, total mercury, selenium, manganese.
+
+\textbf{Block 3, nutritional and metabolic.} B12, methylmalonic acid, serum folate, RBC folate, vitamin D, HbA1c, HDL, total cholesterol, triglycerides, albumin, serum iron, eGFR, NLR, PLR, SII. B12, MMA and SII enter log-transformed.
+
+\textbf{Covariates.} \texttt{BMXBMI}, smoking, drinks per day, PHQ-9, stroke, diabetes, hypertension, high cholesterol. These are \textbf{not} features in the primary nested models, because the primary question is stated against demographics.
+
+\textbf{Pre-specified secondary comparison, M0+.} Demographics plus covariates, 13 features, with $\Delta$AUC(M3 $-$ M0+) reported alongside the primary. This is the more conservative benchmark: it asks whether biomarkers add anything beyond what a clinician could record without a laboratory. Declared here in advance precisely so it cannot later look like a specification search.
+
+\section*{5. Algorithms and evaluation}
+
+\begin{longtable}{L{4.5cm}L{8.5cm}}
+\toprule
+Decision & Value \\
+\midrule
+\endhead
+Primary model class & L2-penalized logistic regression \\
+Secondary & Random forest, XGBoost \\
+Dropped in advance & MLP and KNN, at this $n$ they are not competitive and would only pad the table \\
+CV scheme & Stratified 10-fold, repeated 5 times \\
+\textbf{Primary metric} & \textbf{$\Delta$AUC(M3 $-$ M0), bootstrap 95\% CI} \\
+Meaningful-difference threshold & $\Delta$AUC $\geq$ 0.02, declared in advance \\
+Other metrics & AUC, AUPRC, Brier score, calibration slope and intercept, calibration curve, decision-curve net benefit \\
+Never used for selection & Accuracy. At 24\% prevalence, predicting everyone normal scores 76\% \\
+Master seed & 20260831 \\
+\bottomrule
+\end{longtable}
+
+Mixture-method benchmark: quantile g-computation, reimplemented in Python and validated once against R \texttt{qgcomp} outside the CV loop. BKMR is excluded, on convergence grounds for binary outcomes and on cost. WQS is deferred and will be added only if the biomarker blocks show signal.
+
+\section*{6. Leakage controls}
+
+Data leakage is the failure mode that would silently invalidate every number in this paper. Controls, all pre-specified:
+
+\begin{enumerate}[leftmargin=1.2cm]
+\item Every preprocessing step (imputation, scaling, encoding, feature selection) is fitted \textbf{inside} each training fold, using sklearn \texttt{Pipeline} objects constructed inside the CV loop.
+\item \texttt{.fit()} and \texttt{.fit\_transform()} are never called on the full dataset.
+\item An automated test asserts that no transformer is fitted outside a fold. It fails the run rather than warning, since under the two-gate structure no human reviews between phases.
+\item Row-wise derivations only (log transforms, ratios, eGFR, PHQ-9 sum) were done in Phase 1. These involve no fitted parameters and therefore cannot leak.
+\item After the modeling code is written, it is explicitly audited for leakage and the audit reported.
+\end{enumerate}
+
+\section*{7. Sensitivity analyses, all pre-specified}
+
+\begin{enumerate}[leftmargin=1.2cm]
+\item Outcome cutoff at the 10th and 20th percentiles.
+\item Continuous composite as a regression outcome.
+\item DSST "unable to complete" recoded as low performance. 52 participants in the labelled sample: 27 refused, 18 physical limitation, 6 communication problem, 1 other.
+\item English-only test administration. Note this excludes both Spanish (322) and Asian-language (69) administrations, not Spanish alone.
+\item Complete-case versus multiple imputation on the full labelled sample.
+\item Leave-one-block-out check if $\Delta$AUC is large, to confirm the result is not driven by albumin or eGFR acting as proxies for general illness.
+\end{enumerate}
+
+\section*{8. Inference versus prediction}
+
+Survey-weighted logistic regression using \texttt{WTMEC2YR} (halved for two pooled cycles), \texttt{SDMVSTRA} and \texttt{SDMVPSU} is used for \textbf{association} claims and to reproduce published estimates as a validity check. Unweighted machine learning is used for \textbf{prediction} claims. Every reported result states which it is. Reproducing a published association is a validity check, not a competing result.
+
+\textbf{This is cross-sectional data.} No causal language appears anywhere: not "leads to", "causes", "improves", "protects against", or "reduces risk of". Associations and predictions only.
+
+\section*{9. Environment}
+
+Pinned in \texttt{requirements.txt}. Python 3.12.2, pandas 3.0.3, numpy 2.2.6, scikit-learn 1.8.0, scipy 1.13.0, pyarrow 25.0.1.
+
+\section*{10. Sign-off}
+
+\begin{longtable}{L{5.5cm}L{4cm}L{3cm}}
+\toprule
+Role & Name & Date \\
+\midrule
+\endhead
+Data and modeling lead & Neil Patel & 2026-08-31 \\
+Clinical and framing lead & Shreyan Kancharla & 2026-09-05 \\
+\bottomrule
+\end{longtable}
+
+Decisions in sections 3 and 4 were taken jointly on 2026-08-31. The M0+ secondary comparison in section 4 is a specification choice by the modeling lead, countersigned by the clinical and framing lead on 2026-09-05.
+
+\end{document}

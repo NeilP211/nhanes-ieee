@@ -1,0 +1,118 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small, labelfont=bf}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\title{}
+\date{}
+
+\begin{document}
+
+\begin{center}
+{\large\bfseries Additional file 2: TRIPOD+AI reporting checklist}\\[2pt]
+{\small Reported biomarker--cognition associations do not translate into predictive utility: a pre-registered analysis of NHANES 2011--2014}\\[2pt]
+{\small Shreyan Kancharla, Neil Patel}
+\end{center}
+
+\bigskip
+
+TRIPOD+AI (Collins et al., BMJ 2024) is the reporting standard for prediction-model studies developed with machine learning, extending TRIPOD (2015). The ``Where addressed'' column points to the section of the manuscript, or the repository artifact, that satisfies each item; the analysis code and data referenced throughout are public at \url{https://github.com/NeilP211/nhanes-ieee}.
+
+\footnotesize
+
+\begin{longtable}{C{0.7cm}L{4.3cm}L{9cm}C{1.2cm}}
+\toprule
+\# & Item & Where addressed & Status \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\textit{(continued)}}\\
+\toprule
+\# & Item & Where addressed & Status \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+\multicolumn{4}{l}{\textbf{Title and abstract}} \\
+1 & Identify the study as developing a prediction model, specify the target population and outcome & Title: ``Reported biomarker-cognition associations do not translate into predictive utility: a pre-registered analysis of NHANES 2011-2014'' & done \\
+2 & Structured abstract: objectives, data, participants, outcome, predictors, analysis, results, conclusions & Abstract (Background/Methods/Results/Conclusions, under DPR's 350-word limit) & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Introduction}} \\
+3a & Rationale, including the clinical or scientific gap & Background section; seven studies report associations in this population, none isolating the biomarkers' incremental contribution over demographics; one 2025 study (Ren et al.) reports a combined-model AUC on a related population without that decomposition, addressed directly & done \\
+3b & Objectives, including whether development, validation, or both & Development with internal validation by repeated cross-validation. No external validation set exists & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Methods: data}} \\
+4a & Data source and rationale & NHANES 2011-2012 and 2013-2014, public & done \\
+4b & Dates of data collection, and whether data were split & Two survey cycles, pooled. No train/test split; repeated 10-fold CV instead & done \\
+5a & Eligibility criteria & Aged 60+, MEC examined (\texttt{RIDSTATR == 2}), at least 3 of 4 cognitive scores & done \\
+5b & Setting and recruitment & NHANES complex multistage probability sample of the non-institutionalised US population & done \\
+5c & Details of treatments received, if relevant & Not applicable. Observational, cross-sectional, no intervention & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Methods: outcome}} \\
+6a & Outcome definition and how it was measured & Composite z-score of CERAD immediate, CERAD delayed, animal fluency, DSST; lowest quartile. Additional file 1, section 2 & done \\
+6b & Whether outcome assessors were blinded to predictors & Not applicable. Outcome measured by standardised test administration before any biomarker assay was linked & done \\
+6c & Any actions to blind assessment of the outcome & Not applicable, as above & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Methods: predictors}} \\
+7a & Predictors, including how and when measured & Methods, Predictors subsection. 25 features in three blocks & done \\
+7b & Whether predictor assessors were blinded to the outcome & Laboratory assays performed by CDC contract laboratories with no access to cognitive results & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Methods: sample size and missing data}} \\
+8 & How sample size was arrived at & Not a power calculation: the analytic sample is the whole eligible population. $n=1{,}784$ with 431 events, 17.2 events per feature & done \\
+9 & How missing data were handled & Complete-case on a single locked row set as primary; multiple imputation by chained equations fitted inside each fold as pre-specified sensitivity. Additional file 1, section 3 & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Methods: analytical methods}} \\
+10a & How predictors were handled in the analysis & Log transforms for right-skewed analytes, one-hot for categoricals, standardisation. All fitted inside folds & done \\
+10b & Model type, building procedure, and internal validation & L2-penalized logistic (primary), random forest, XGBoost. Nested CV: inner CV for hyperparameters, outer 10-fold $\times$ 5 repeats & done \\
+10c & How any model updating or recalibration was done & None performed. Calibration reported as observed, not corrected & done \\
+11 & Measures used to assess performance & AUC, AUPRC, Brier, calibration slope and intercept, decision-curve net benefit & done \\
+12 & How heterogeneity or subgroups were handled & Two survey cycles pooled with cycle recorded; English-only administration as a pre-specified sensitivity analysis & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Methods: specific to AI and machine learning}} \\
+A1 & Rationale for the chosen algorithms & Penalized regression as the pre-specified primary, two tree ensembles to test whether flexibility helps at this sample size. Additional file 1, section 5 & done \\
+A2 & Hyperparameter tuning: search space and selection procedure & Grids in the analysis code; selected by inner 3-fold CV on training folds only & done \\
+A3 & How data leakage was prevented & Every transform inside sklearn \texttt{Pipeline} objects fitted per fold. An automated audit refits a fold and asserts the scaler's fitted mean equals the training-fold mean and not the full-sample mean; it fails the run rather than warning, and it passed & done \\
+A4 & Computational resources and reproducibility & Single machine, no GPU, full pipeline under one hour. Master seed 20260831; versions pinned & done \\
+A5 & Model interpretability methods and their limitations & SHAP on the best tree model, with rankings bootstrapped over 200 resamples. The instability of biomarker ranks is reported as a finding, and the limitation of single-run SHAP is stated explicitly (Fig.~5) & done \\
+A6 & Fairness considerations across subgroups & Race and ethnicity included as a predictor; the eGFR equation used is CKD-EPI 2021, which deliberately omits the race coefficient. No subgroup fairness audit was pre-specified. Declared as a limitation in the Discussion & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Open science}} \\
+13a & Funding and role of funders & Declarations: unfunded & done \\
+13b & Conflicts of interest & Declarations: none declared & done \\
+13c & Protocol and registration & Additional file 1, dated 2026-08-31 before any outcome-predictor relationship was examined, with an explicit integrity statement to that effect & done \\
+13d & Data availability & NHANES is fully public; the download script reconstructs the raw data from CDC URLs & done \\
+13e & Code availability & Complete pipeline, independently runnable, public on GitHub & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Results}} \\
+14a & Participant flow, ideally a diagram & Fig.~1 & done \\
+14b & Participant characteristics, including missingness & Table 1 (by outcome status; included vs.\ excluded) & done \\
+15 & Number of participants and outcome events & 1,784 participants, 431 events, prevalence 0.2416 & done \\
+16 & Model specification: all coefficients or a means to obtain them & Additional file 3 (Table S1) -- full M3 logistic regression refit on the complete analytic sample, standardised coefficients, odds ratios, 2,000-resample bootstrap 95\% CIs & done \\
+17 & Model performance with uncertainty & Results (Discrimination, Algorithm comparison); Figs.~2--4 & done \\
+18 & Results of any model updating & None performed & done \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Discussion}} \\
+19 & Limitations & Discussion: cross-sectional design; complete-case selection is mildly non-random; age top-coded at 80; no external validation; no fairness audit; the one-half metals subsample in 2013-2014 & done \\
+20 & Interpretation, considering objectives and prior evidence & Discussion & done \\
+21 & Potential clinical use and implications & Decision-curve analysis (Fig.~4) shows no threshold at which the panel changes a decision & done \\
+\end{longtable}
+
+\bigskip
+
+\textbf{Note on why this checklist is worth filing.} Of the seven comparison studies identified in the Background, none report to TRIPOD or TRIPOD+AI, and none report discrimination, calibration, cross-validation, or decision-curve analysis at all. Items A3 (leakage prevention), 13c (pre-registration) and 11 (performance measures) are where this study differs most sharply from that literature, and they are the items a prediction-model reviewer reads first.
+
+\end{document}
