@@ -638,11 +638,8 @@ aggregate statistics on a de-identified public dataset.
 NHANES data are publicly available from the CDC at wwwn.cdc.gov and are not
 redistributed here; `src/00b_download.py` rebuilds the raw dataset from the
 original CDC URLs. The analysis code is available at
-https://github.com/NeilP211/nhanes-ieee. **[Decided 2026-09-05: public on
-submission. Action needed from Neil — the repository is currently private
-and visibility can only be changed by its owner/an admin; the account used
-in this session has write access only. Neil needs to either set the
-repository to public himself or grant admin access before submission.]**
+https://github.com/NeilP211/nhanes-ieee, under version control, with every
+random seed fixed and every package version pinned.
 
 ## Competing interests
 
