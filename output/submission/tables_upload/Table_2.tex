@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{caption}
+
+\captionsetup{font=small, labelfont=bf}
+\setlength{\parindent}{0pt}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\title{}
+\date{}
+
+\begin{document}
+\pagestyle{empty}
+\setcounter{table}{1}
+
+\begin{longtable}{p{6.0cm}R{3.5cm}R{3.5cm}}
+\caption{Included versus excluded participants, among the 3,124 outcome-eligible participants.}
+\label{tab:t1b}\\
+\toprule
+Characteristic & Included ($n=1{,}784$) & Excluded ($n=1{,}340$) \\
+\midrule
+\endfirsthead
+\toprule
+Characteristic & Included ($n=1{,}784$) & Excluded ($n=1{,}340$) \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Age, years, mean (SD) & 69.37 (6.74) & 70.10 (6.94) \\
+Income-to-poverty ratio, mean (SD) & 2.60 (1.60) & 2.50 (1.59) \\
+PHQ-9 depression score, median [IQR] & 1.00 [0.00, 4.00] & 2.00 [0.00, 5.00] \\
+Female, \% & 50.7\% & 52.6\% \\
+Low cognitive performance, \% & 24.2\% & 26.1\% \\
+Diabetes, \% & 27.5\% & 30.0\% \\
+\end{longtable}
+
+\end{document}
