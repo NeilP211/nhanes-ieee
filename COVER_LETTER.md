@@ -2,8 +2,7 @@
 
 Draft, addressed to the Editor-in-Chief, *Diagnostic and Prognostic
 Research*. **[Fill in editor name if known, and submission date, before
-sending — author contact block below is now complete for Shreyan; Neil's
-department/school on the manuscript title page still needed.]**
+sending — author contact block below is now complete for both authors.]**
 
 ---
 
