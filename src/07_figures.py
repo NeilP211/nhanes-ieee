@@ -194,7 +194,7 @@ def fig3_decision_curve() -> None:
     ax.set_axisbelow(True)
     ax.legend(loc="upper right")
     n_better = int((d.M3 > d.M0).sum())
-    ax.text(0.335, 0.175, f"M3 exceeds M0 at {n_better} of {len(d)} thresholds\n"
+    ax.text(0.35, -0.045, f"M3 exceeds M0 at {n_better} of {len(d)} thresholds\n"
             f"maximum gain {(d.M3 - d.M0).max():+.4f}", fontsize=7.5, color=INK3)
     save(fig, "fig3_decision_curve")
 

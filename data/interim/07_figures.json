@@ -15,6 +15,7 @@
   "fig2_calibration.png",
   "fig3_decision_curve.png",
   "fig4_shap_rank_stability.png",
-  "fig5_partial_dependence.png"
+  "fig5_partial_dependence.png",
+  "fig6_participant_flow.png"
  ]
 }
