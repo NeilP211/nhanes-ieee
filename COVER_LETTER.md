@@ -60,6 +60,19 @@ in writing, dated, before any outcome-predictor relationship was examined;
 the pre-registration document is available as a supplementary file and, on
 request, the dated record of its timing.
 
+One reference we want to flag rather than have you find unannounced:
+reference 1 (Wang et al.) is a Research Square preprint, not yet peer
+reviewed, and is labelled as such both in the reference list and at its
+first citation in the Background. We understand your submission
+guidelines restrict citable references to articles, clinical trial
+registration records and abstracts that have been published or are in
+press, and we are glad to remove or reposition this citation if your
+editorial policy does not permit preprints — we kept it because it is,
+to our knowledge, the only report of blood-metal associations with
+cognition in this specific population and cycle range beyond the six
+peer-reviewed studies also cited, and dropping it silently seemed worse
+than flagging it for your judgment.
+
 This manuscript is not under consideration elsewhere. The authors declare
 no competing interests, and this research received no specific funding
 (confirmed by both authors 2026-09-12 — see the Declarations section of
