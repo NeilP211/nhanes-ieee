@@ -621,10 +621,10 @@ Health Statistics (NCHS) Ethics Review Board (formerly the NCHS Research
 Ethics Review Board), and written informed consent was obtained from all
 participants by NCHS prior to data collection. This study is a secondary
 analysis of de-identified, publicly available data and involved no
-additional contact with participants. **[Verify with your own institution
-whether a separate determination letter — e.g. "not human subjects
-research" — is required for secondary analysis of public NHANES data;
-this varies by institution and is not something checked here.]**
+additional contact with participants. Both authors confirmed 2026-09-12
+that their institutions (Davidson College and the University of North
+Carolina at Chapel Hill) impose no additional IRB requirement for this
+secondary analysis.
 
 ## Consent for publication
 
