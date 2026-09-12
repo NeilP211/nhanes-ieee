@@ -669,9 +669,8 @@ contributed equally to this work and share first authorship.
 
 ## Acknowledgements
 
-Not applicable. **[Confirm with Neil before submission — update if there is
-anyone to thank who does not meet authorship criteria, e.g. institutional
-computing support.]**
+Not applicable. Confirmed by both authors 2026-09-12 — no one outside the
+authorship list contributed in a way that warrants acknowledgement.
 
 ---
 

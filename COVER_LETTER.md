@@ -1,8 +1,10 @@
 # Cover letter
 
 Draft, addressed to the Editor-in-Chief, *Diagnostic and Prognostic
-Research*. **[Fill in editor name if known, and submission date, before
-sending — author contact block below is now complete for both authors.]**
+Research*. No specific editor name is known to either author, so the
+letter stays addressed generically to the Editor-in-Chief — confirmed
+2026-09-12. **[Fill in the submission date before sending; it cannot be
+set until the day of submission.]**
 
 ---
 
