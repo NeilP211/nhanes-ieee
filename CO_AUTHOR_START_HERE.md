@@ -300,3 +300,38 @@ while Neil travels) are now built, each cross-checked rather than assumed:
 The pinned Python 3.12.2 environment (system Python was 3.9.6) was set up
 via Homebrew to run these against the exact versions in
 `requirements.txt`, not mismatched ones.
+
+## Submission status log
+
+Real-world journal timeline, kept dated for the same reason every other
+decision in this file is dated.
+
+- **2026-09-12** — Submitted to *Diagnostic and Prognostic Research*
+  (Springer Nature/BMC). Submission ID `6b0f095f-9022-4344-ae4f-122a3ff71428`.
+  Both authors opted in to posting via Springer Nature's In Review /
+  Research Square preprint service.
+- **2026-09-12** — Cleared technical check and editorial assignment;
+  editor decided the submission was suitable for peer review.
+- **2026-09-15 to 2026-09-22** — In peer review. Editor invited reviewers
+  in two rounds (2, then 4 total) as some invitations were not accepted;
+  1 reviewer had accepted as of 2026-09-22.
+- **2026-09-16** — Requested an APC hardship waiver (Springer Nature
+  ticket #11783018), since neither author has grant funding and neither
+  institution's Springer Nature open-access agreement covers BMC's fully
+  open-access titles (confirmed by Springer Nature support: Davidson's
+  Carolina Consortium agreement excludes BMC/fully-OA journals; UNC
+  Chapel Hill is not a member of that consortium at all). Supporting
+  documentation: a signed letter from Peter Szanton, Davidson's Director
+  of the Office of Sponsored Programs, confirming no institutional or
+  external funding.
+- **2026-09-17** — Waiver documentation submitted.
+- **2026-09-22** — **Full APC waiver approved.** Applied automatically
+  at the payment stage if the article is accepted; no further action
+  needed.
+- **2026-09-24** — Preprint live on Research Square: RSID `rs-11021863`.
+
+Still open: the peer review decision itself. If *Diagnostic and Prognostic
+Research* rejects, the pre-planned fallback venues (section 7 of
+`PROJECT_BRIEF.md`) are Journal of Clinical Epidemiology, then PLOS ONE —
+chosen specifically because both fit a methodological, null-result framing
+rather than requiring a reframe toward a positive finding.
