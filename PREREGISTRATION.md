@@ -216,3 +216,74 @@ scikit-learn 1.8.0, scipy 1.13.0, pyarrow 25.0.1.
 Decisions in sections 3 and 4 were taken jointly on 2026-08-31. The M0+
 secondary comparison in section 4 is a specification choice by the modeling lead
 and is flagged for countersign.
+
+---
+
+## Amendment 1: revision analyses (2026-11-04, post hoc)
+
+**Written and dated 2026-11-04, after peer review, before any of the analyses
+below were run.** Every analysis in this amendment is post hoc. It was requested
+by the editor or reviewers of *Diagnostic and Prognostic Research* (submission
+`6b0f095f-9022-4344-ae4f-122a3ff71428`), and every result it produces is
+reported as exploratory. Nothing in sections 1 to 9 is changed: the primary
+hypothesis, metric, sample, models and sensitivity analyses stand as written.
+
+**What the original pre-registration did and did not specify.** H1 was a
+superiority test (the 95% CI for delta-AUC(M3 - M0) excludes zero). The 0.02
+threshold in section 5 was declared in advance but no equivalence or
+non-superiority test was specified, and no external justification for 0.02 was
+recorded. The manuscript's description of the primary result as a "precise
+null" therefore went beyond what was pre-registered, and is withdrawn.
+
+**A1. Margin analysis (reviewer 1, comment 1).** For delta-AUC(M3 - M0) in the
+primary analysis and in each pre-specified sensitivity analysis, report the
+paired-bootstrap 90% CI alongside the 95% CI, using the same 2,000 resamples.
+For margins delta in {0.01, 0.015, 0.02}, report (i) a one-sided
+non-superiority decision (upper 90% bound below delta, a one-sided test at
+alpha 0.05 of H0: delta-AUC >= delta), and (ii) a two-sided equivalence
+decision by two one-sided tests (90% CI inside (-delta, delta)). Also report the
+smallest margin each analysis excludes, which is its upper 90% bound. No margin
+is chosen as the answer; all are reported.
+
+**A2. M4, biomarkers added to the clinical baseline (reviewer 1, comment 3).**
+M4 = M0+ plus both biomarker blocks (13 + 20 = 33 features). Fitted with the
+same three algorithms, the same nested CV, seed and locked row set as M0 to
+M0+. The nested contrast is delta-AUC(M4 - M0+).
+
+**A3. All pairwise contrasts (reviewer 1, comment 2).** delta-AUC with 95% and
+90% paired-bootstrap CIs for every pair among M0, M1, M2, M3, M0+ and M4, under
+each algorithm, plus each nonlinear learner against logistic regression within
+every specification. The 0.02 margin is applied symmetrically: a difference in
+either direction whose CI does not extend beyond 0.02 in magnitude is not
+described as meaningful.
+
+**A4. Complete cognitive battery (reviewer 2, comment 3).** Restrict the locked
+rows to participants with all four component scores, keep the primary label,
+and re-estimate delta-AUC(M3 - M0) and delta-AUC(M4 - M0+) with logistic
+regression.
+
+**A5. Demographically adjusted outcome (reviewer 2, comment 2).** Regression-based
+norms derived within the 3,124 labelled participants: ordinary least squares of
+the composite z-score on age, age squared, sex, education (categorical) and
+race and Hispanic origin (categorical). The label is the lowest quartile of the
+residual, read as performance lower than expected for demographic background.
+Like the primary label, it is defined on the pooled labelled sample, not per
+fold. Re-estimate delta-AUC(M3 - M0) and delta-AUC(M4 - M0+) on the locked
+rows with logistic regression. Externally derived norms are not applied, and
+this is stated as a limitation.
+
+**A6. Outcome-construction descriptives (reviewer 2, comment 3 and Table 1).**
+Missingness by cognitive test with the NHANES reason codes (`CFDCRNC`,
+`CFDARNC`, `CFDDRNC`, `CFASTAT`), by demographic group; three-score against
+four-score participants; labelled against unlabelled participants; and the
+cognitive phenotype of the analytic sample (raw scores, composite distribution
+and cutoff, language of administration, number of component scores).
+
+**A7. Interval for the continuous-outcome analysis.** Section 7 item 2 reported
+the change in cross-validated R-squared without an interval. Add a paired
+bootstrap 95% CI over participants, same 2,000 resamples, same predictions.
+
+| Role | Name | Date |
+|---|---|---|
+| Data and modeling lead | Neil Patel | 2026-11-04 |
+| Clinical and framing lead | Shreyan Kancharla | pending countersign |
