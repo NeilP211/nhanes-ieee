@@ -66,81 +66,100 @@ def save(fig, name: str) -> None:
 
 
 def fig1_forest() -> None:
-    """Delta-AUC with bootstrap CIs, primary contrasts and sensitivity."""
-    d = pd.read_csv(TABLES / "04_delta_auc.csv")
-    s = pd.read_csv(TABLES / "06_sensitivity.csv")
-    log = d[d.algo == "logistic"].set_index("contrast")
+    """Delta-AUC with 95% (thin) and 90% (thick) bootstrap CIs.
 
-    rows = [
-        ("Primary nested contrasts", None, None, None),
-        ("M1 - M0   metals", *log.loc["M1 - M0", ["delta_auc", "ci_low", "ci_high"]]),
-        ("M2 - M0   nutritional", *log.loc["M2 - M0", ["delta_auc", "ci_low", "ci_high"]]),
-        ("M3 - M0   both blocks", *log.loc["M3 - M0", ["delta_auc", "ci_low", "ci_high"]]),
-        ("M3 - M0+  vs clinical", *log.loc["M3 - M0+".replace("M0+", "M0plus"),
-                                           ["delta_auc", "ci_low", "ci_high"]]),
-        ("Sensitivity analyses (M3 - M0)", None, None, None),
-    ]
-    keep = ["cutoff at 20th percentile", "cutoff at 10th percentile",
-            "DSST unable coded low (n=25)", "English-only administration",
-            "MICE on full labelled sample"]
-    label = {"cutoff at 20th percentile": "20th percentile cutoff",
-             "cutoff at 10th percentile": "10th percentile cutoff",
-             "DSST unable coded low (n=25)": "DSST unable coded low",
-             "English-only administration": "English-only",
-             "MICE on full labelled sample": "MICE, full sample n=3,124"}
-    si = s.set_index("analysis")
-    for k in keep:
-        rows.append((label[k], *si.loc[k, ["delta_auc", "ci_low", "ci_high"]]))
+    Revised at peer review: reads the phase 13 tables, adds the nested M4 - M0+
+    contrast and the two post hoc sensitivity analyses, and draws the 0.01,
+    0.015 and 0.02 margins on both sides of zero so the reader can apply any of
+    them, in either direction. Run phase 13 before this figure.
+    """
+    pw = pd.read_csv(TABLES / "13_pairwise_delta_auc.csv")
+    mg = pd.read_csv(TABLES / "13_margin_analysis.csv").set_index("analysis")
+    log = pw[pw.algo == "logistic"].set_index("contrast")
+    cols = ["delta_auc", "ci95_low", "ci95_high", "ci90_low", "ci90_high"]
 
-    fig, ax = plt.subplots(figsize=(7.6, 4.6))
-    ypos, labels, ticks = [], [], []
+    rows = [("Biomarkers added (nested)", None)]
+    rows += [(lab, log.loc[key, cols].to_numpy(float)) for lab, key in [
+        ("M1 - M0    metals", "M1 - M0"), ("M2 - M0    nutritional", "M2 - M0"),
+        ("M3 - M0    both blocks, primary", "M3 - M0"),
+        ("M4 - M0+   both blocks, clinical baseline *", "M4 - M0plus")]]
+    rows += [("Clinical covariates", None)]
+    rows += [(lab, log.loc[key, cols].to_numpy(float)) for lab, key in [
+        ("M0+ - M0   added to demographics *", "M0plus - M0"),
+        ("M0+ - M3   substitutes, not nested", "M0plus - M3")]]
+    rows += [("Sensitivity analyses, M3 - M0", None)]
+    rows += [(lab, mg.loc[key, cols].to_numpy(float)) for lab, key in [
+        ("20th percentile cutoff", "20th percentile cutoff"),
+        ("10th percentile cutoff", "10th percentile cutoff"),
+        ("DSST not completed coded low", "DSST not completed coded low"),
+        ("English-language administration", "English-language administration only"),
+        ("Multiple imputation, n = 3,124", "Multiple imputation, full labelled sample")]]
+    for lab, key in [("Complete battery, 4 of 4 scores *", "Complete cognitive battery (4 of 4 scores)"),
+                     ("Demographically adjusted outcome *",
+                      "Demographically adjusted outcome (internal norms)")]:
+        sub = pd.read_csv(TABLES / "13_margin_analysis.csv")
+        r = sub[(sub.analysis == key) & (sub.contrast == "M3 - M0")].iloc[0]
+        rows.append((lab, r[cols].to_numpy(float)))
+
+    fig, ax = plt.subplots(figsize=(8.6, 6.6))
+    ticks, labels = [], []
     y = len(rows)
-    for name, est, lo, hi in rows:
-        if est is None:
-            ax.text(-0.0405, y, name, va="center", ha="left", fontsize=9,
-                    fontweight="600", color=INK)
+    xmin, xmax = -0.03, 0.07
+    lab_x = ax.get_yaxis_transform()
+    for name, vals in rows:
+        if vals is None:
+            ax.text(-0.012, y, name, va="center", ha="right", fontsize=9,
+                    fontweight="600", color=INK, transform=lab_x, clip_on=False)
             y -= 1
             continue
-        sig = lo > 0 or hi < 0
-        c = BRICK if sig else TEAL
-        primary = name.startswith("M3 - M0 ")
-        ax.plot([lo, hi], [y, y], color=c, lw=2, solid_capstyle="butt", zorder=3)
-        for v in (lo, hi):
-            ax.plot([v, v], [y - 0.16, y + 0.16], color=c, lw=2, zorder=3)
-        ax.plot([est], [y], "o", ms=8 if primary else 6.5, color=c,
-                mec="white", mew=1.4, zorder=4)
-        ax.text(0.0322, y, f"{est:+.4f}", va="center", ha="right", fontsize=8,
+        est, lo95, hi95, lo90, hi90 = vals
+        c = BRICK if (lo95 > 0 or hi95 < 0) else TEAL
+        primary = "primary" in name
+        ax.plot([lo95, hi95], [y, y], color=c, lw=1.3, solid_capstyle="butt", zorder=3)
+        for v in (lo95, hi95):
+            ax.plot([v, v], [y - 0.14, y + 0.14], color=c, lw=1.3, zorder=3)
+        ax.plot([lo90, hi90], [y, y], color=c, lw=4.2, solid_capstyle="butt",
+                alpha=0.55, zorder=3)
+        ax.plot([est], [y], "o", ms=7.5 if primary else 6, color=c, mec="white",
+                mew=1.3, zorder=4)
+        ax.text(xmax + 0.012, y, f"{est:+.4f}", va="center", ha="right", fontsize=8,
                 family="monospace", color=INK if primary else INK2, clip_on=False)
-        ypos.append(y)
-        labels.append(name)
         ticks.append(y)
+        labels.append(name)
         y -= 1
 
-    ax.axvspan(THRESHOLD, 0.0235, color="#F7EDDE", zorder=0)
+    for m, ls, lw in [(0.01, (0, (1, 2)), 0.9), (0.015, (0, (2, 2)), 0.9),
+                      (0.02, (0, (4, 3)), 1.1)]:
+        for sgn in (-1, 1):
+            ax.axvline(sgn * m, color="#9A5A0B", lw=lw, ls=ls, zorder=2, alpha=0.8)
+        ax.text(m, len(rows) + 0.7, f"{m:g}", fontsize=7, color="#9A5A0B",
+                ha="center", va="center")
+        ax.text(-m, len(rows) + 0.7, f"-{m:g}", fontsize=7, color="#9A5A0B",
+                ha="center", va="center")
     ax.axvline(0, color=INK3, lw=1.1, zorder=1)
-    ax.axvline(THRESHOLD, color="#9A5A0B", lw=1.1, ls=(0, (4, 3)), zorder=2)
-    ax.text(THRESHOLD + 0.0006, len(rows) + 0.55, "0.02", fontsize=7.5,
-            color="#9A5A0B", va="center")
-    ax.text(0.0322, len(rows) + 0.55, "delta-AUC", fontsize=7.5, color=INK3,
+    ax.text(xmax + 0.012, len(rows) + 0.7, "delta-AUC", fontsize=7.5, color=INK3,
             va="center", ha="right", clip_on=False)
-    ax.text(-0.0012, len(rows) + 0.55, "no difference", fontsize=7.5,
-            color=INK3, va="center", ha="right")
 
     ax.set_yticks(ticks)
-    ax.set_yticklabels(labels, fontsize=8.5, color=INK2)
-    ax.set_ylim(0.2, len(rows) + 1.1)
-    ax.set_xlim(-0.041, 0.0235)
-    ax.set_xlabel("delta-AUC versus baseline (bootstrap 95% CI)")
+    ax.set_yticklabels(labels, fontsize=8.3, color=INK2)
+    ax.set_ylim(0.3, len(rows) + 1.2)
+    ax.set_xlim(xmin, xmax)
+    ax.set_xlabel("delta-AUC (point, thick bar 90% CI, thin bar 95% CI)")
     ax.spines["left"].set_visible(False)
     ax.tick_params(axis="y", length=0)
     ax.grid(axis="x", zorder=0)
     ax.set_axisbelow(True)
 
-    handles = [plt.Line2D([], [], color=TEAL, lw=2, marker="o", ms=6.5, mec="white",
-                          label="CI includes zero"),
-               plt.Line2D([], [], color=BRICK, lw=2, marker="o", ms=6.5, mec="white",
-                          label="CI excludes zero")]
-    ax.legend(handles=handles, loc="lower left", bbox_to_anchor=(0.0, -0.245), ncol=2)
+    handles = [plt.Line2D([], [], color=TEAL, lw=2, marker="o", ms=6, mec="white",
+                          label="95% CI includes zero"),
+               plt.Line2D([], [], color=BRICK, lw=2, marker="o", ms=6, mec="white",
+                          label="95% CI excludes zero"),
+               plt.Line2D([], [], color="#9A5A0B", lw=1, ls=(0, (4, 3)),
+                          label="candidate margins 0.01, 0.015, 0.02")]
+    ax.legend(handles=handles, loc="upper left", bbox_to_anchor=(-0.02, -0.09), ncol=3,
+              fontsize=7.8)
+    ax.text(0.0, -0.2, "* post hoc, added at peer review", fontsize=7.5, color=INK3,
+            transform=ax.transAxes, clip_on=False)
     save(fig, "fig1_delta_auc_forest")
 
 

@@ -330,7 +330,15 @@ decision in this file is dated.
   needed.
 - **2026-09-24** — Preprint live on Research Square: RSID `rs-11021863`.
 
-Still open: the peer review decision itself. If *Diagnostic and Prognostic
+- **2026-11-04**: **Revisions requested** (reviewers 1 and 2; due 2026-11-25).
+  Main asks: justify or drop the 0.02 margin and the "precise null" claim, apply the
+  margin symmetrically, fit nested M0+ plus biomarkers, make the outcome's epidemiologic
+  nature prominent, a demographically normed outcome, missing-data and complete-battery
+  analyses, the cognitive phenotype in Table 1, and a neutral tone. All addressed in
+  `output/revision/` (start with `README_REVISION.md`). Analyses recorded first in
+  `PREREGISTRATION.md` Amendment 1 (countersign pending).
+
+Still open: the editor's decision on the revised submission. If *Diagnostic and Prognostic
 Research* rejects, the pre-planned fallback venues (section 7 of
 `PROJECT_BRIEF.md`) are Journal of Clinical Epidemiology, then PLOS ONE —
 chosen specifically because both fit a methodological, null-result framing

@@ -4,10 +4,19 @@ NHANES 2011-2014, adults aged 60 and over. A pre-registered test of whether
 biomarkers reported as associated with cognition actually predict who has low
 cognitive performance, beyond what age, education and income already tell you.
 
-**Headline: they do not.** delta-AUC(M3 - M0) = **-0.0019**, bootstrap 95% CI
-[-0.0108, 0.0071], n = 1,784, 431 events. The interval's upper bound falls below
-the 0.02 threshold fixed in advance, so this excludes a meaningful improvement
-rather than merely failing to detect one.
+**Headline: they do not, for the pre-specified outcome.** delta-AUC(M3 - M0) =
+**-0.0019**, bootstrap 95% CI [-0.0108, 0.0071], n = 1,784, 431 events, so the
+pre-registered superiority hypothesis was not supported. Adding the same biomarkers to
+demographics plus clinical history (M4 against M0+, added at peer review) is also null:
+-0.0037 [-0.0112, 0.0029]. The study tested superiority and was not designed to exclude
+small improvements: depending on the outcome cutoff, improvements of up to about 0.013
+remain compatible with the data. With an exploratory demographically adjusted outcome,
+the biomarkers did improve on demographics alone (+0.0362 [0.0068, 0.0667]) but not on
+the clinical baseline.
+
+**Status.** Submitted to *Diagnostic and Prognostic Research* 2026-09-12; revisions
+requested 2026-11-04, due 2026-11-25. The revision package is in `output/revision/`
+(start with `output/revision/README_REVISION.md`).
 
 ---
 
@@ -16,6 +25,7 @@ rather than merely failing to detect one.
 | If you want to | Read |
 |---|---|
 | **Join this project as a co-author** | **`CO_AUTHOR_START_HERE.md`** |
+| **Work on the peer-review revision** | **`output/revision/README_REVISION.md`** |
 | Get the whole thing in 12 pages | `WRITING_PACK.pdf` |
 | See the results | `output/results_review.html`, or `output/tables/07_results_summary.md` |
 | Write the paper | `MANUSCRIPT_DRAFT.md`, methods and results in prose |
@@ -35,8 +45,18 @@ python3 src/03_model.py          # nested M0-M3 x 3 algorithms (~25 min)
 python3 src/04_evaluate.py       # delta-AUC, calibration, decision curves
 python3 src/05_interpret.py      # qgcomp, bootstrapped SHAP, partial dependence
 python3 src/06_sensitivity.py    # six pre-specified sensitivity analyses
-python3 src/07_figures.py        # the manuscript figure set
+python3 src/11_revision_models.py    # peer review: M4 = M0+ plus both biomarker blocks
+python3 src/12_revision_outcome.py   # peer review: missingness, 3 vs 4 scores, Table 1 cognitive rows
+python3 src/13_revision_evaluate.py  # peer review: margins, pairwise contrasts, post hoc sensitivity
+python3 src/07_figures.py            # the manuscript figure set (Figure 2 reads phase 13 tables)
+python3 src/14_revision_tables.py    # revision LaTeX tables and numbers.json
+python3 src/15_fill_revision_text.py # fills every number into the revision templates
 ```
+
+Scripts 11 to 15 were added at peer review and are post hoc; they are listed in
+`PREREGISTRATION.md` Amendment 1, dated before they were run. Phase 11 checks that
+refitting M0 reproduces the stored predictions exactly, and phase 13 replays the
+original bootstrap draws and asserts that every published interval reproduces.
 
 Each script is independently runnable and writes to `data/interim/`, so a later
 phase can be re-run without repeating the merge. Every random seed is fixed and

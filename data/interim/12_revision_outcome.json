@@ -1,0 +1,467 @@
+{
+ "amendment": "PREREGISTRATION.md Amendment 1, item A6 (post hoc, descriptive)",
+ "quartile_cut_z": -0.5428222716319666,
+ "table1c": [
+  {
+   "characteristic": "CERAD immediate recall (sum of 3 trials, 0 to 30), mean (SD)",
+   "Overall": "18.52 (4.87)",
+   "Low cognitive performance": "12.88 (3.82)",
+   "Not low cognitive performance": "20.32 (3.63)"
+  },
+  {
+   "characteristic": "   score missing",
+   "Overall": "3 (0.2%)",
+   "Low cognitive performance": "0 (0.0%)",
+   "Not low cognitive performance": "3 (0.2%)"
+  },
+  {
+   "characteristic": "CERAD delayed recall (0 to 10), mean (SD)",
+   "Overall": "5.77 (2.40)",
+   "Low cognitive performance": "3.07 (1.88)",
+   "Not low cognitive performance": "6.62 (1.85)"
+  },
+  {
+   "characteristic": "   score missing",
+   "Overall": "3 (0.2%)",
+   "Low cognitive performance": "2 (0.5%)",
+   "Not low cognitive performance": "1 (0.1%)"
+  },
+  {
+   "characteristic": "Animal fluency (animals named in 60 s), mean (SD)",
+   "Overall": "16.54 (5.52)",
+   "Low cognitive performance": "11.55 (3.51)",
+   "Not low cognitive performance": "18.10 (5.10)"
+  },
+  {
+   "characteristic": "   score missing",
+   "Overall": "20 (1.1%)",
+   "Low cognitive performance": "11 (2.6%)",
+   "Not low cognitive performance": "9 (0.7%)"
+  },
+  {
+   "characteristic": "Digit Symbol Substitution Test (correct symbols), mean (SD)",
+   "Overall": "46.31 (17.24)",
+   "Low cognitive performance": "28.68 (11.27)",
+   "Not low cognitive performance": "51.42 (15.17)"
+  },
+  {
+   "characteristic": "   score missing",
+   "Overall": "64 (3.6%)",
+   "Low cognitive performance": "45 (10.4%)",
+   "Not low cognitive performance": "19 (1.4%)"
+  },
+  {
+   "characteristic": "Composite z-score, mean (SD)",
+   "Overall": "0.01 (0.79)",
+   "Low cognitive performance": "-1.04 (0.41)",
+   "Not low cognitive performance": "0.34 (0.55)"
+  },
+  {
+   "characteristic": "Composite z-score, median [IQR]",
+   "Overall": "0.04 [-0.52, 0.56]",
+   "Low cognitive performance": "-0.93 [-1.26, -0.71]",
+   "Not low cognitive performance": "0.29 [-0.09, 0.71]"
+  },
+  {
+   "characteristic": "Composite z-score, range",
+   "Overall": "-2.43 to 2.45",
+   "Low cognitive performance": "-2.43 to -0.55",
+   "Not low cognitive performance": "-0.54 to 2.45"
+  },
+  {
+   "characteristic": "Language of administration = English",
+   "Overall": "1575 (88.3%)",
+   "Low cognitive performance": "345 (80.0%)",
+   "Not low cognitive performance": "1230 (90.9%)"
+  },
+  {
+   "characteristic": "Language of administration = Spanish",
+   "Overall": "174 (9.8%)",
+   "Low cognitive performance": "79 (18.3%)",
+   "Not low cognitive performance": "95 (7.0%)"
+  },
+  {
+   "characteristic": "Language of administration = Asian language",
+   "Overall": "35 (2.0%)",
+   "Low cognitive performance": "7 (1.6%)",
+   "Not low cognitive performance": "28 (2.1%)"
+  },
+  {
+   "characteristic": "Component scores = 4",
+   "Overall": "1694 (95.0%)",
+   "Low cognitive performance": "373 (86.5%)",
+   "Not low cognitive performance": "1321 (97.6%)"
+  },
+  {
+   "characteristic": "Component scores = 3",
+   "Overall": "90 (5.0%)",
+   "Low cognitive performance": "58 (13.5%)",
+   "Not low cognitive performance": "32 (2.4%)"
+  },
+  {
+   "characteristic": "Outcome cutoff, composite z <= -0.543 (lowest quartile of the 3,124 labelled participants)",
+   "Overall": "",
+   "Low cognitive performance": "",
+   "Not low cognitive performance": ""
+  }
+ ],
+ "s2_missing_by_reason": [
+  {
+   "reason": "Not eligible: proxy respondent",
+   "cerad_immediate": 49,
+   "cerad_delayed": 49,
+   "animal_fluency": 49,
+   "dsst": 49
+  },
+  {
+   "reason": "Not eligible: language not offered",
+   "cerad_immediate": 25,
+   "cerad_delayed": 25,
+   "animal_fluency": 25,
+   "dsst": 25
+  },
+  {
+   "reason": "No cognitive test done",
+   "cerad_immediate": 202,
+   "cerad_delayed": 202,
+   "animal_fluency": 202,
+   "dsst": 202
+  },
+  {
+   "reason": "Did not consent to audio recording",
+   "cerad_immediate": 13,
+   "cerad_delayed": 13,
+   "animal_fluency": 13,
+   "dsst": 0
+  },
+  {
+   "reason": "Communication problem",
+   "cerad_immediate": 6,
+   "cerad_delayed": 6,
+   "animal_fluency": 3,
+   "dsst": 11
+  },
+  {
+   "reason": "Physical limitation",
+   "cerad_immediate": 4,
+   "cerad_delayed": 4,
+   "animal_fluency": 3,
+   "dsst": 22
+  },
+  {
+   "reason": "Quit or gave up",
+   "cerad_immediate": 10,
+   "cerad_delayed": 15,
+   "animal_fluency": 0,
+   "dsst": 0
+  },
+  {
+   "reason": "Refused",
+   "cerad_immediate": 10,
+   "cerad_delayed": 10,
+   "animal_fluency": 10,
+   "dsst": 34
+  },
+  {
+   "reason": "Equipment failure",
+   "cerad_immediate": 22,
+   "cerad_delayed": 22,
+   "animal_fluency": 39,
+   "dsst": 0
+  },
+  {
+   "reason": "Other",
+   "cerad_immediate": 0,
+   "cerad_delayed": 0,
+   "animal_fluency": 0,
+   "dsst": 2
+  },
+  {
+   "reason": "Missing, no reason recorded",
+   "cerad_immediate": 0,
+   "cerad_delayed": 0,
+   "animal_fluency": 18,
+   "dsst": 113
+  },
+  {
+   "reason": "Total missing",
+   "cerad_immediate": 341,
+   "cerad_delayed": 346,
+   "animal_fluency": 362,
+   "dsst": 458
+  },
+  {
+   "reason": "Score present",
+   "cerad_immediate": 3131,
+   "cerad_delayed": 3126,
+   "animal_fluency": 3110,
+   "dsst": 3014
+  }
+ ],
+ "s3_missing_by_group": [
+  {
+   "group": "All examined, aged 60+",
+   "n": 3472,
+   "cerad_immediate": "9.8%",
+   "cerad_delayed": "10.0%",
+   "animal_fluency": "10.4%",
+   "dsst": "13.2%",
+   "fewer_than_3_scores": "10.0%"
+  },
+  {
+   "group": "Age 60 to 69",
+   "n": 1786,
+   "cerad_immediate": "7.7%",
+   "cerad_delayed": "7.8%",
+   "animal_fluency": "8.1%",
+   "dsst": "8.8%",
+   "fewer_than_3_scores": "7.7%"
+  },
+  {
+   "group": "Age 70 to 79",
+   "n": 1028,
+   "cerad_immediate": "8.9%",
+   "cerad_delayed": "9.1%",
+   "animal_fluency": "10.2%",
+   "dsst": "13.0%",
+   "fewer_than_3_scores": "9.2%"
+  },
+  {
+   "group": "Age 80 (top-coded, 80 and over)",
+   "n": 658,
+   "cerad_immediate": "17.0%",
+   "cerad_delayed": "17.2%",
+   "animal_fluency": "17.2%",
+   "dsst": "25.2%",
+   "fewer_than_3_scores": "17.5%"
+  },
+  {
+   "group": "Male",
+   "n": 1687,
+   "cerad_immediate": "10.0%",
+   "cerad_delayed": "10.1%",
+   "animal_fluency": "10.8%",
+   "dsst": "12.9%",
+   "fewer_than_3_scores": "10.2%"
+  },
+  {
+   "group": "Female",
+   "n": 1785,
+   "cerad_immediate": "9.7%",
+   "cerad_delayed": "9.8%",
+   "animal_fluency": "10.1%",
+   "dsst": "13.4%",
+   "fewer_than_3_scores": "9.9%"
+  },
+  {
+   "group": "Mexican American",
+   "n": 325,
+   "cerad_immediate": "11.4%",
+   "cerad_delayed": "11.4%",
+   "animal_fluency": "12.6%",
+   "dsst": "19.1%",
+   "fewer_than_3_scores": "11.7%"
+  },
+  {
+   "group": "Other Hispanic",
+   "n": 346,
+   "cerad_immediate": "7.5%",
+   "cerad_delayed": "8.4%",
+   "animal_fluency": "8.4%",
+   "dsst": "11.6%",
+   "fewer_than_3_scores": "8.4%"
+  },
+  {
+   "group": "Non-Hispanic White",
+   "n": 1580,
+   "cerad_immediate": "8.0%",
+   "cerad_delayed": "8.1%",
+   "animal_fluency": "8.1%",
+   "dsst": "10.1%",
+   "fewer_than_3_scores": "8.1%"
+  },
+  {
+   "group": "Non-Hispanic Black",
+   "n": 837,
+   "cerad_immediate": "8.8%",
+   "cerad_delayed": "8.6%",
+   "animal_fluency": "9.6%",
+   "dsst": "13.6%",
+   "fewer_than_3_scores": "8.7%"
+  },
+  {
+   "group": "Non-Hispanic Asian",
+   "n": 331,
+   "cerad_immediate": "21.5%",
+   "cerad_delayed": "22.1%",
+   "animal_fluency": "23.0%",
+   "dsst": "21.8%",
+   "fewer_than_3_scores": "22.1%"
+  },
+  {
+   "group": "Other/multiracial",
+   "n": 53,
+   "cerad_immediate": "13.2%",
+   "cerad_delayed": "13.2%",
+   "animal_fluency": "15.1%",
+   "dsst": "20.8%",
+   "fewer_than_3_scores": "13.2%"
+  },
+  {
+   "group": "Less than 9th grade",
+   "n": 511,
+   "cerad_immediate": "21.5%",
+   "cerad_delayed": "22.1%",
+   "animal_fluency": "23.3%",
+   "dsst": "32.1%",
+   "fewer_than_3_scores": "22.5%"
+  },
+  {
+   "group": "9-11th grade",
+   "n": 507,
+   "cerad_immediate": "10.8%",
+   "cerad_delayed": "11.0%",
+   "animal_fluency": "11.4%",
+   "dsst": "15.8%",
+   "fewer_than_3_scores": "11.2%"
+  },
+  {
+   "group": "High school grad/GED",
+   "n": 797,
+   "cerad_immediate": "9.4%",
+   "cerad_delayed": "9.7%",
+   "animal_fluency": "9.8%",
+   "dsst": "11.9%",
+   "fewer_than_3_scores": "9.5%"
+  },
+  {
+   "group": "Some college/AA degree",
+   "n": 911,
+   "cerad_immediate": "5.5%",
+   "cerad_delayed": "5.5%",
+   "animal_fluency": "6.4%",
+   "dsst": "7.5%",
+   "fewer_than_3_scores": "5.6%"
+  },
+  {
+   "group": "College graduate or above",
+   "n": 739,
+   "cerad_immediate": "6.5%",
+   "cerad_delayed": "6.4%",
+   "animal_fluency": "6.2%",
+   "dsst": "6.4%",
+   "fewer_than_3_scores": "6.2%"
+  },
+  {
+   "group": "Education missing",
+   "n": 7,
+   "cerad_immediate": "42.9%",
+   "cerad_delayed": "42.9%",
+   "animal_fluency": "42.9%",
+   "dsst": "57.1%",
+   "fewer_than_3_scores": "42.9%"
+  }
+ ],
+ "s4_three_vs_four": {
+  "labelled": {
+   "Four scores": {
+    "n": 2934,
+    "Age, years, mean (SD)": "69.5 (6.8)",
+    "Female": "1506 (51.3%)",
+    "Less than high school education": "746 (25.4%)",
+    "Hispanic (Mexican American or other Hispanic)": "553 (18.8%)",
+    "Non-Hispanic Black": "698 (23.8%)",
+    "Income-to-poverty ratio, mean (SD)": "2.60 (1.60)",
+    "Tested in Spanish or an Asian language": "346 (11.8%)",
+    "Missing score: CERAD immediate recall": "0 (0.0%)",
+    "Missing score: CERAD delayed recall": "0 (0.0%)",
+    "Missing score: animal fluency": "0 (0.0%)",
+    "Missing score: DSST": "0 (0.0%)",
+    "Composite z, mean (SD)": "0.05 (0.76)",
+    "Low cognitive performance": "666 (22.7%)"
+   },
+   "Three scores": {
+    "n": 190,
+    "Age, years, mean (SD)": "72.8 (7.0)",
+    "Female": "103 (54.2%)",
+    "Less than high school education": "100 (52.6%)",
+    "Hispanic (Mexican American or other Hispanic)": "51 (26.8%)",
+    "Non-Hispanic Black": "66 (34.7%)",
+    "Income-to-poverty ratio, mean (SD)": "1.93 (1.42)",
+    "Tested in Spanish or an Asian language": "45 (23.7%)",
+    "Missing score: CERAD immediate recall": "3 (1.6%)",
+    "Missing score: CERAD delayed recall": "3 (1.6%)",
+    "Missing score: animal fluency": "35 (18.4%)",
+    "Missing score: DSST": "149 (78.4%)",
+    "Composite z, mean (SD)": "-0.84 (0.89)",
+    "Low cognitive performance": "115 (60.5%)"
+   }
+  },
+  "analytic": {
+   "Four scores": {
+    "n": 1694,
+    "Age, years, mean (SD)": "69.2 (6.7)",
+    "Female": "859 (50.7%)",
+    "Less than high school education": "396 (23.4%)",
+    "Hispanic (Mexican American or other Hispanic)": "301 (17.8%)",
+    "Non-Hispanic Black": "397 (23.4%)",
+    "Income-to-poverty ratio, mean (SD)": "2.62 (1.61)",
+    "Tested in Spanish or an Asian language": "187 (11.0%)",
+    "Missing score: CERAD immediate recall": "0 (0.0%)",
+    "Missing score: CERAD delayed recall": "0 (0.0%)",
+    "Missing score: animal fluency": "0 (0.0%)",
+    "Missing score: DSST": "0 (0.0%)",
+    "Composite z, mean (SD)": "0.05 (0.76)",
+    "Low cognitive performance": "373 (22.0%)"
+   },
+   "Three scores": {
+    "n": 90,
+    "Age, years, mean (SD)": "72.0 (7.1)",
+    "Female": "45 (50.0%)",
+    "Less than high school education": "47 (52.2%)",
+    "Hispanic (Mexican American or other Hispanic)": "21 (23.3%)",
+    "Non-Hispanic Black": "28 (31.1%)",
+    "Income-to-poverty ratio, mean (SD)": "2.16 (1.49)",
+    "Tested in Spanish or an Asian language": "22 (24.4%)",
+    "Missing score: CERAD immediate recall": "3 (3.3%)",
+    "Missing score: CERAD delayed recall": "3 (3.3%)",
+    "Missing score: animal fluency": "20 (22.2%)",
+    "Missing score: DSST": "64 (71.1%)",
+    "Composite z, mean (SD)": "-0.85 (0.90)",
+    "Low cognitive performance": "58 (64.4%)"
+   }
+  }
+ },
+ "s5_labelled_vs_not": {
+  "Labelled (3 or 4 scores)": {
+   "n": 3124,
+   "Age, years, mean (SD)": "69.7 (6.8)",
+   "Age 80 (top-coded)": "543 (17.4%)",
+   "Female": "1609 (51.5%)",
+   "Less than high school education": "846 (27.1%)",
+   "Hispanic (Mexican American or other Hispanic)": "604 (19.3%)",
+   "Non-Hispanic Black": "764 (24.5%)",
+   "Income-to-poverty ratio, mean (SD)": "2.56 (1.60)",
+   "Ever told had a stroke": "237 (7.6%)",
+   "Ever told had diabetes": "892 (28.6%)",
+   "PHQ-9, median [IQR]": "2.00 [0.00, 4.00]",
+   "Proxy respondent or no test done": "0 (0.0%)",
+   "Not tested: language not offered": "0 (0.0%)"
+  },
+  "Unlabelled (0 to 2 scores)": {
+   "n": 348,
+   "Age, years, mean (SD)": "72.3 (7.4)",
+   "Age 80 (top-coded)": "115 (33.0%)",
+   "Female": "176 (50.6%)",
+   "Less than high school education": "172 (49.4%)",
+   "Hispanic (Mexican American or other Hispanic)": "67 (19.3%)",
+   "Non-Hispanic Black": "73 (21.0%)",
+   "Income-to-poverty ratio, mean (SD)": "1.86 (1.34)",
+   "Ever told had a stroke": "62 (17.8%)",
+   "Ever told had diabetes": "103 (29.6%)",
+   "PHQ-9, median [IQR]": "1.00 [0.00, 5.00]",
+   "Proxy respondent or no test done": "251 (72.1%)",
+   "Not tested: language not offered": "25 (7.2%)"
+  }
+ }
+}

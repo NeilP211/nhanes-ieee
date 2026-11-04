@@ -1,0 +1,300 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage[hidelinks]{hyperref}
+
+\captionsetup{font=small, labelfont=bf}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{table}{1}
+\newcommand{\deltaauc}{$\Delta$AUC}
+
+\begin{document}
+
+\begin{center}
+{\large\bfseries Additional file 4. Supplementary tables added at peer review (Tables S2 to S8)\par}
+\medskip
+{\small Blood metal and nutritional biomarkers did not improve identification of low cognitive performance beyond demographics in older US adults: a pre-registered analysis of NHANES 2011-2014. Kancharla S, Patel N.\par}
+\end{center}
+
+Every analysis in this file was requested at peer review and is post hoc unless marked as pre-specified. All were recorded in a dated amendment to the pre-registration (Additional file 1, Amendment 1, 2026-11-04) before they were run. Tables S2 to S5 are descriptive and involve no predictor-outcome relationship. Tables S6 and S8 report \deltaauc\ with paired-bootstrap intervals from 2,000 resamples of participants; contrasts reported in the original submission reproduce their original resamples exactly, and each new contrast uses its own fixed-seed set of 2,000 resamples. Every number is produced by the scripts \texttt{src/11\_revision\_models.py} to \texttt{src/14\_revision\_tables.py} in the public repository.
+
+\footnotesize
+
+% ------------------------------------------------------------------ S2
+\begin{longtable}{L{5.9cm}R{1.9cm}R{1.9cm}R{1.9cm}R{1.9cm}}
+\caption{Missing cognitive scores by test and by reason, all 3,472 examined participants aged 60 and over. Reasons are the NHANES codes \texttt{CFASTAT} (proxy respondent, language not offered, no test done) and the test-specific reason codes \texttt{CFDCRNC} (CERAD), \texttt{CFDARNC} (animal fluency) and \texttt{CFDDRNC} (DSST), checked against the CDC codebooks for CFQ\_G and CFQ\_H. A CERAD reason applies to both CERAD scores.}\\
+\toprule
+Reason & CERAD immediate & CERAD delayed & Animal fluency & DSST \\
+\midrule
+\endfirsthead
+\toprule
+Reason & CERAD immediate & CERAD delayed & Animal fluency & DSST \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Not eligible: proxy respondent & 49 & 49 & 49 & 49 \\
+Not eligible: language not offered & 25 & 25 & 25 & 25 \\
+No cognitive test done & 202 & 202 & 202 & 202 \\
+Did not consent to audio recording & 13 & 13 & 13 & 0 \\
+Communication problem & 6 & 6 & 3 & 11 \\
+Physical limitation & 4 & 4 & 3 & 22 \\
+Quit or gave up & 10 & 15 & 0 & 0 \\
+Refused & 10 & 10 & 10 & 34 \\
+Equipment failure & 22 & 22 & 39 & 0 \\
+Other & 0 & 0 & 0 & 2 \\
+Missing, no reason recorded & 0 & 0 & 18 & 113 \\
+\textit{Total missing} & 341 & 346 & 362 & 458 \\
+\textit{Score present} & 3131 & 3126 & 3110 & 3014 \\
+\end{longtable}
+
+% ------------------------------------------------------------------ S3
+\begin{longtable}{L{4.2cm}R{0.9cm}R{1.6cm}R{1.6cm}R{1.6cm}R{1.5cm}R{1.8cm}}
+\caption{Percentage of participants missing each cognitive score, and with fewer than three scores (and therefore no outcome label), by demographic group, among the 3,472 examined participants aged 60 and over.}\\
+\toprule
+Group & $n$ & CERAD immediate & CERAD delayed & Animal fluency & DSST & Fewer than 3 scores \\
+\midrule
+\endfirsthead
+\toprule
+Group & $n$ & CERAD immediate & CERAD delayed & Animal fluency & DSST & Fewer than 3 scores \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+All examined, aged 60+ & 3472 & 9.8\% & 10.0\% & 10.4\% & 13.2\% & 10.0\% \\
+Age 60 to 69 & 1786 & 7.7\% & 7.8\% & 8.1\% & 8.8\% & 7.7\% \\
+Age 70 to 79 & 1028 & 8.9\% & 9.1\% & 10.2\% & 13.0\% & 9.2\% \\
+Age 80 (top-coded, 80 and over) & 658 & 17.0\% & 17.2\% & 17.2\% & 25.2\% & 17.5\% \\
+Male & 1687 & 10.0\% & 10.1\% & 10.8\% & 12.9\% & 10.2\% \\
+Female & 1785 & 9.7\% & 9.8\% & 10.1\% & 13.4\% & 9.9\% \\
+Mexican American & 325 & 11.4\% & 11.4\% & 12.6\% & 19.1\% & 11.7\% \\
+Other Hispanic & 346 & 7.5\% & 8.4\% & 8.4\% & 11.6\% & 8.4\% \\
+Non-Hispanic White & 1580 & 8.0\% & 8.1\% & 8.1\% & 10.1\% & 8.1\% \\
+Non-Hispanic Black & 837 & 8.8\% & 8.6\% & 9.6\% & 13.6\% & 8.7\% \\
+Non-Hispanic Asian & 331 & 21.5\% & 22.1\% & 23.0\% & 21.8\% & 22.1\% \\
+Other/multiracial & 53 & 13.2\% & 13.2\% & 15.1\% & 20.8\% & 13.2\% \\
+Less than 9th grade & 511 & 21.5\% & 22.1\% & 23.3\% & 32.1\% & 22.5\% \\
+9-11th grade & 507 & 10.8\% & 11.0\% & 11.4\% & 15.8\% & 11.2\% \\
+High school grad/GED & 797 & 9.4\% & 9.7\% & 9.8\% & 11.9\% & 9.5\% \\
+Some college/AA degree & 911 & 5.5\% & 5.5\% & 6.4\% & 7.5\% & 5.6\% \\
+College graduate or above & 739 & 6.5\% & 6.4\% & 6.2\% & 6.4\% & 6.2\% \\
+Education missing & 7 & 42.9\% & 42.9\% & 42.9\% & 57.1\% & 42.9\% \\
+\end{longtable}
+
+% ------------------------------------------------------------------ S4
+\begin{longtable}{L{5.0cm}R{2.4cm}R{2.4cm}R{2.4cm}R{2.4cm}}
+\caption{Participants with three against four component cognitive scores, in the labelled sample ($n=3{,}124$) and in the analytic sample ($n=1{,}784$). A participant with three scores has a composite built from different content. Values are $n$ (\%) unless stated.}\\
+\toprule
+& \multicolumn{2}{c}{Labelled sample} & \multicolumn{2}{c}{Analytic sample} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Characteristic & Four scores & Three scores & Four scores & Three scores \\
+\midrule
+\endfirsthead
+\toprule
+Characteristic & Four scores & Three scores & Four scores & Three scores \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+n & 2934 & 190 & 1694 & 90 \\
+Age, years, mean (SD) & 69.5 (6.8) & 72.8 (7.0) & 69.2 (6.7) & 72.0 (7.1) \\
+Female & 1506 (51.3\%) & 103 (54.2\%) & 859 (50.7\%) & 45 (50.0\%) \\
+Less than high school education & 746 (25.4\%) & 100 (52.6\%) & 396 (23.4\%) & 47 (52.2\%) \\
+Hispanic (Mexican American or other Hispanic) & 553 (18.8\%) & 51 (26.8\%) & 301 (17.8\%) & 21 (23.3\%) \\
+Non-Hispanic Black & 698 (23.8\%) & 66 (34.7\%) & 397 (23.4\%) & 28 (31.1\%) \\
+Income-to-poverty ratio, mean (SD) & 2.60 (1.60) & 1.93 (1.42) & 2.62 (1.61) & 2.16 (1.49) \\
+Tested in Spanish or an Asian language & 346 (11.8\%) & 45 (23.7\%) & 187 (11.0\%) & 22 (24.4\%) \\
+Missing score: CERAD immediate recall & 0 (0.0\%) & 3 (1.6\%) & 0 (0.0\%) & 3 (3.3\%) \\
+Missing score: CERAD delayed recall & 0 (0.0\%) & 3 (1.6\%) & 0 (0.0\%) & 3 (3.3\%) \\
+Missing score: animal fluency & 0 (0.0\%) & 35 (18.4\%) & 0 (0.0\%) & 20 (22.2\%) \\
+Missing score: DSST & 0 (0.0\%) & 149 (78.4\%) & 0 (0.0\%) & 64 (71.1\%) \\
+Composite z, mean (SD) & 0.05 (0.76) & $-$0.84 (0.89) & 0.05 (0.76) & $-$0.85 (0.90) \\
+Low cognitive performance & 666 (22.7\%) & 115 (60.5\%) & 373 (22.0\%) & 58 (64.4\%) \\
+\end{longtable}
+
+% ------------------------------------------------------------------ S5
+\begin{longtable}{L{7.2cm}R{3.6cm}R{3.6cm}}
+\caption{Participants with an outcome label (three or four scores) against those without one (zero to two scores), among the 3,472 examined participants aged 60 and over. Values are $n$ (\%) unless stated.}\\
+\toprule
+Characteristic & Labelled & Unlabelled \\
+\midrule
+\endfirsthead
+\toprule
+Characteristic & Labelled & Unlabelled \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+n & 3124 & 348 \\
+Age, years, mean (SD) & 69.7 (6.8) & 72.3 (7.4) \\
+Age 80 (top-coded) & 543 (17.4\%) & 115 (33.0\%) \\
+Female & 1609 (51.5\%) & 176 (50.6\%) \\
+Less than high school education & 846 (27.1\%) & 172 (49.4\%) \\
+Hispanic (Mexican American or other Hispanic) & 604 (19.3\%) & 67 (19.3\%) \\
+Non-Hispanic Black & 764 (24.5\%) & 73 (21.0\%) \\
+Income-to-poverty ratio, mean (SD) & 2.56 (1.60) & 1.86 (1.34) \\
+Ever told had a stroke & 237 (7.6\%) & 62 (17.8\%) \\
+Ever told had diabetes & 892 (28.6\%) & 103 (29.6\%) \\
+PHQ-9, median [IQR] & 2.00 [0.00, 4.00] & 1.00 [0.00, 5.00] \\
+Proxy respondent or no test done & 0 (0.0\%) & 251 (72.1\%) \\
+Not tested: language not offered & 0 (0.0\%) & 25 (7.2\%) \\
+\end{longtable}
+
+% ------------------------------------------------------------------ S6
+\begin{landscape}
+{\setlength{\tabcolsep}{5pt}
+\begin{longtable}{L{6.5cm}R{1.5cm}R{1.8cm}R{3.6cm}R{3.6cm}R{2.4cm}}
+\caption{Every pairwise \deltaauc\ contrast among the six models under each algorithm, and each nonlinear learner against logistic regression within each model, on the locked analytic sample ($n=1{,}784$, 431 events). Contrasts are oriented so that the larger or later model comes first. ``Nested'' marks contrasts in which the second model's features are a subset of the first's. The final column applies the 0.02 criterion symmetrically: ``yes'' would mean the 95\% interval lies wholly beyond $\pm 0.02$; no contrast meets it. Contrasts involving M4 and all contrasts not reported in the original submission are post hoc.}\\
+\toprule
+Contrast & Nested & \deltaauc & 95\% CI & 90\% CI & Beyond $\pm$0.02 \\
+\midrule
+\endfirsthead
+\toprule
+Contrast & Nested & \deltaauc & 95\% CI & 90\% CI & Beyond $\pm$0.02 \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\multicolumn{6}{l}{\textit{Logistic}}\\
+M1 $-$ M0 & yes & $-0.0015$ & [$-0.0052$, 0.0023] & [$-0.0047$, 0.0018] & no \\
+M2 $-$ M0 & yes & 0.0011 & [$-0.0067$, 0.0100] & [$-0.0055$, 0.0087] & no \\
+M3 $-$ M0 & yes & $-0.0019$ & [$-0.0108$, 0.0071] & [$-0.0094$, 0.0056] & no \\
+M0+ $-$ M0 & yes & 0.0139 & [0.0026, 0.0255] & [0.0043, 0.0232] & no \\
+M4 $-$ M0 & yes & 0.0102 & [$-0.0030$, 0.0226] & [$-0.0012$, 0.0208] & no \\
+M2 $-$ M1 & no & 0.0027 & [$-0.0061$, 0.0116] & [$-0.0046$, 0.0099] & no \\
+M3 $-$ M1 & yes & $-0.0003$ & [$-0.0086$, 0.0076] & [$-0.0068$, 0.0063] & no \\
+M0+ $-$ M1 & no & 0.0155 & [0.0041, 0.0267] & [0.0058, 0.0251] & no \\
+M4 $-$ M1 & yes & 0.0118 & [$-0.0008$, 0.0247] & [0.0012, 0.0227] & no \\
+M3 $-$ M2 & yes & $-0.0030$ & [$-0.0058$, $-0.0002$] & [$-0.0053$, $-0.0006$] & no \\
+M0+ $-$ M2 & no & 0.0128 & [$-0.0001$, 0.0257] & [0.0017, 0.0237] & no \\
+M4 $-$ M2 & yes & 0.0091 & [$-0.0013$, 0.0200] & [0.0004, 0.0183] & no \\
+M0+ $-$ M3 & no & 0.0158 & [0.0033, 0.0295] & [0.0055, 0.0270] & no \\
+M4 $-$ M3 & yes & 0.0121 & [0.0026, 0.0223] & [0.0037, 0.0209] & no \\
+M4 $-$ M0+ & yes & $-0.0037$ & [$-0.0112$, 0.0029] & [$-0.0100$, 0.0019] & no \\
+\multicolumn{6}{l}{\textit{Random forest}}\\
+M1 $-$ M0 & yes & $-0.0058$ & [$-0.0144$, 0.0022] & [$-0.0131$, 0.0007] & no \\
+M2 $-$ M0 & yes & $-0.0028$ & [$-0.0155$, 0.0103] & [$-0.0131$, 0.0083] & no \\
+M3 $-$ M0 & yes & $-0.0038$ & [$-0.0167$, 0.0095] & [$-0.0145$, 0.0073] & no \\
+M0+ $-$ M0 & yes & 0.0160 & [0.0056, 0.0266] & [0.0073, 0.0249] & no \\
+M4 $-$ M0 & yes & 0.0067 & [$-0.0077$, 0.0212] & [$-0.0053$, 0.0182] & no \\
+M2 $-$ M1 & no & 0.0030 & [$-0.0106$, 0.0154] & [$-0.0085$, 0.0139] & no \\
+M3 $-$ M1 & yes & 0.0021 & [$-0.0088$, 0.0129] & [$-0.0074$, 0.0110] & no \\
+M0+ $-$ M1 & no & 0.0218 & [0.0104, 0.0334] & [0.0122, 0.0314] & no \\
+M4 $-$ M1 & yes & 0.0125 & [0.0003, 0.0251] & [0.0019, 0.0229] & no \\
+M3 $-$ M2 & yes & $-0.0010$ & [$-0.0056$, 0.0038] & [$-0.0049$, 0.0029] & no \\
+M0+ $-$ M2 & no & 0.0188 & [0.0051, 0.0322] & [0.0072, 0.0304] & no \\
+M4 $-$ M2 & yes & 0.0095 & [0.0016, 0.0170] & [0.0030, 0.0159] & no \\
+M0+ $-$ M3 & no & 0.0197 & [0.0055, 0.0338] & [0.0077, 0.0315] & no \\
+M4 $-$ M3 & yes & 0.0104 & [0.0037, 0.0173] & [0.0051, 0.0160] & no \\
+M4 $-$ M0+ & yes & $-0.0093$ & [$-0.0196$, 0.0013] & [$-0.0181$, $-0.0002$] & no \\
+\multicolumn{6}{l}{\textit{Gradient boosting}}\\
+M1 $-$ M0 & yes & $-0.0130$ & [$-0.0212$, $-0.0046$] & [$-0.0198$, $-0.0060$] & no \\
+M2 $-$ M0 & yes & $-0.0017$ & [$-0.0143$, 0.0113] & [$-0.0125$, 0.0094] & no \\
+M3 $-$ M0 & yes & $-0.0066$ & [$-0.0199$, 0.0068] & [$-0.0179$, 0.0048] & no \\
+M0+ $-$ M0 & yes & 0.0164 & [0.0051, 0.0288] & [0.0070, 0.0267] & no \\
+M4 $-$ M0 & yes & 0.0071 & [$-0.0074$, 0.0215] & [$-0.0054$, 0.0196] & no \\
+M2 $-$ M1 & no & 0.0113 & [$-0.0019$, 0.0240] & [$-0.0001$, 0.0217] & no \\
+M3 $-$ M1 & yes & 0.0064 & [$-0.0052$, 0.0173] & [$-0.0033$, 0.0155] & no \\
+M0+ $-$ M1 & no & 0.0294 & [0.0163, 0.0429] & [0.0182, 0.0405] & no \\
+M4 $-$ M1 & yes & 0.0201 & [0.0061, 0.0345] & [0.0087, 0.0320] & no \\
+M3 $-$ M2 & yes & $-0.0049$ & [$-0.0094$, $-0.0003$] & [$-0.0087$, $-0.0010$] & no \\
+M0+ $-$ M2 & no & 0.0181 & [0.0021, 0.0325] & [0.0051, 0.0303] & no \\
+M4 $-$ M2 & yes & 0.0088 & [$-0.0006$, 0.0183] & [0.0010, 0.0171] & no \\
+M0+ $-$ M3 & no & 0.0230 & [0.0063, 0.0385] & [0.0096, 0.0359] & no \\
+M4 $-$ M3 & yes & 0.0137 & [0.0051, 0.0227] & [0.0064, 0.0214] & no \\
+M4 $-$ M0+ & yes & $-0.0093$ & [$-0.0201$, 0.0018] & [$-0.0186$, $-0.0001$] & no \\
+\multicolumn{6}{l}{\textit{Random forest vs logistic}}\\
+M0: random forest $-$ logistic & no & $-0.0040$ & [$-0.0122$, 0.0052] & [$-0.0112$, 0.0038] & no \\
+M1: random forest $-$ logistic & no & $-0.0083$ & [$-0.0185$, 0.0017] & [$-0.0168$, 0.0002] & no \\
+M2: random forest $-$ logistic & no & $-0.0079$ & [$-0.0197$, 0.0030] & [$-0.0180$, 0.0015] & no \\
+M3: random forest $-$ logistic & no & $-0.0059$ & [$-0.0175$, 0.0060] & [$-0.0158$, 0.0038] & no \\
+M0+: random forest $-$ logistic & no & $-0.0020$ & [$-0.0127$, 0.0079] & [$-0.0114$, 0.0064] & no \\
+M4: random forest $-$ logistic & no & $-0.0076$ & [$-0.0194$, 0.0048] & [$-0.0179$, 0.0027] & no \\
+\multicolumn{6}{l}{\textit{Gradient boosting vs logistic}}\\
+M0: gradient boosting $-$ logistic & no & $-0.0039$ & [$-0.0126$, 0.0051] & [$-0.0113$, 0.0034] & no \\
+M1: gradient boosting $-$ logistic & no & $-0.0153$ & [$-0.0246$, $-0.0061$] & [$-0.0232$, $-0.0078$] & no \\
+M2: gradient boosting $-$ logistic & no & $-0.0067$ & [$-0.0161$, 0.0033] & [$-0.0149$, 0.0016] & no \\
+M3: gradient boosting $-$ logistic & no & $-0.0086$ & [$-0.0187$, 0.0007] & [$-0.0171$, $-0.0004$] & no \\
+M0+: gradient boosting $-$ logistic & no & $-0.0014$ & [$-0.0106$, 0.0076] & [$-0.0091$, 0.0061] & no \\
+M4: gradient boosting $-$ logistic & no & $-0.0070$ & [$-0.0176$, 0.0030] & [$-0.0160$, 0.0016] & no \\
+\end{longtable}
+}
+\end{landscape}
+
+% ------------------------------------------------------------------ S7
+\begin{longtable}{L{1.4cm}L{3.2cm}R{1.6cm}R{1.6cm}R{1.6cm}R{2.0cm}R{2.4cm}}
+\caption{Out-of-fold discrimination and calibration for every model and algorithm, including M4 (post hoc), on the locked analytic sample. Calibration intercept is calibration-in-the-large from the offset model.}\\
+\toprule
+Model & Algorithm & AUC & AUPRC & Brier & Calibration slope & Calibration intercept \\
+\midrule
+\endfirsthead
+\toprule
+Model & Algorithm & AUC & AUPRC & Brier & Calibration slope & Calibration intercept \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+M0 & Logistic & 0.7884 & 0.5471 & 0.1459 & 1.088 & 0.0012 \\
+M0 & Random forest & 0.7843 & 0.5363 & 0.1466 & 1.148 & 0.0037 \\
+M0 & Gradient boosting & 0.7845 & 0.5399 & 0.1470 & 0.898 & 0.0041 \\
+M1 & Logistic & 0.7868 & 0.5456 & 0.1465 & 1.069 & 0.0015 \\
+M1 & Random forest & 0.7785 & 0.5290 & 0.1491 & 1.193 & $-0.0040$ \\
+M1 & Gradient boosting & 0.7715 & 0.5212 & 0.1506 & 0.883 & 0.0087 \\
+M2 & Logistic & 0.7895 & 0.5420 & 0.1461 & 1.026 & 0.0021 \\
+M2 & Random forest & 0.7815 & 0.5471 & 0.1488 & 1.321 & $-0.0110$ \\
+M2 & Gradient boosting & 0.7828 & 0.5209 & 0.1488 & 0.912 & 0.0201 \\
+M3 & Logistic & 0.7865 & 0.5392 & 0.1470 & 1.004 & 0.0015 \\
+M3 & Random forest & 0.7806 & 0.5384 & 0.1501 & 1.410 & $-0.0118$ \\
+M3 & Gradient boosting & 0.7779 & 0.5201 & 0.1497 & 0.904 & 0.0241 \\
+M0+ & Logistic & 0.8023 & 0.5618 & 0.1423 & 1.042 & 0.0027 \\
+M0+ & Random forest & 0.8003 & 0.5525 & 0.1448 & 1.383 & 0.0037 \\
+M0+ & Gradient boosting & 0.8009 & 0.5428 & 0.1438 & 0.914 & 0.0098 \\
+M4 & Logistic & 0.7986 & 0.5537 & 0.1441 & 0.984 & 0.0017 \\
+M4 & Random forest & 0.7910 & 0.5477 & 0.1486 & 1.527 & $-0.0118$ \\
+M4 & Gradient boosting & 0.7916 & 0.5305 & 0.1466 & 0.933 & 0.0270 \\
+\end{longtable}
+
+% ------------------------------------------------------------------ S8
+\begin{landscape}
+{\setlength{\tabcolsep}{4pt}
+\begin{longtable}{L{5.8cm}L{1.9cm}R{1.0cm}R{1.1cm}R{1.5cm}R{3.1cm}R{3.1cm}R{1.6cm}R{1.6cm}}
+\caption{Margin analysis for every pre-specified and post hoc sensitivity analysis. ``Excluded above'' is the upper bound of the 90\% interval: improvements larger than this are excluded at the one-sided 5\% level. ``TOST margin'' is the narrowest symmetric margin $\delta$ for which equivalence within $\pm\delta$ is shown by two one-sided tests at $\alpha = 0.05$, i.e.\ the larger of the absolute 90\% bounds. Pre-specified sensitivity analyses used L2-penalized logistic regression with a fixed penalty ($C=1$), as in the original submission; the primary analysis, M4 and the post hoc analyses used the tuned primary pipeline. For the demographically adjusted outcome, AUC was 0.56 to 0.62 for every model, so its increments are on a different baseline from the others.}\\
+\toprule
+Analysis & Contrast & $n$ & Events & \deltaauc & 95\% CI & 90\% CI & Excluded above & TOST margin \\
+\midrule
+\endfirsthead
+\toprule
+Analysis & Contrast & $n$ & Events & \deltaauc & 95\% CI & 90\% CI & Excluded above & TOST margin \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Primary analysis (pre-specified) & M3 $-$ M0 & 1784 & 431 & $-0.0019$ & [$-0.0108$, 0.0071] & [$-0.0094$, 0.0056] & 0.0056 & 0.0094 \\
+Biomarkers added to the clinical baseline (post hoc) & M4 $-$ M0+ & 1784 & 431 & $-0.0037$ & [$-0.0112$, 0.0029] & [$-0.0100$, 0.0019] & 0.0019 & 0.0100 \\
+Primary specification, phase 6 pipeline (pre-specified) & M3 $-$ M0 & 1784 & 431 & $-0.0020$ & [$-0.0103$, 0.0066] & [$-0.0090$, 0.0055] & 0.0055 & 0.0090 \\
+20th percentile cutoff (pre-specified) & M3 $-$ M0 & 1784 & 337 & $-0.0019$ & [$-0.0130$, 0.0092] & [$-0.0109$, 0.0076] & 0.0076 & 0.0109 \\
+10th percentile cutoff (pre-specified) & M3 $-$ M0 & 1784 & 164 & $-0.0023$ & [$-0.0200$, 0.0153] & [$-0.0170$, 0.0132] & 0.0132 & 0.0170 \\
+DSST not completed coded low (pre-specified) & M3 $-$ M0 & 1784 & 441 & $-0.0020$ & [$-0.0105$, 0.0063] & [$-0.0093$, 0.0049] & 0.0049 & 0.0093 \\
+English-language administration only (pre-specified) & M3 $-$ M0 & 1575 & 345 & $-0.0066$ & [$-0.0159$, 0.0028] & [$-0.0144$, 0.0015] & 0.0015 & 0.0144 \\
+Multiple imputation, full labelled sample (pre-specified) & M3 $-$ M0 & 3124 & 781 & 0.0015 & [$-0.0030$, 0.0063] & [$-0.0024$, 0.0057] & 0.0057 & 0.0057 \\
+Complete cognitive battery (4 of 4 scores) (post hoc) & M3 $-$ M0 & 1694 & 373 & $-0.0045$ & [$-0.0144$, 0.0054] & [$-0.0127$, 0.0038] & 0.0038 & 0.0127 \\
+Complete cognitive battery (4 of 4 scores) (post hoc) & M4 $-$ M0+ & 1694 & 373 & $-0.0062$ & [$-0.0140$, 0.0019] & [$-0.0127$, 0.0005] & 0.0005 & 0.0127 \\
+Demographically adjusted outcome (internal norms) (post hoc) & M3 $-$ M0 & 1784 & 450 & 0.0362 & [0.0068, 0.0667] & [0.0109, 0.0615] & 0.0615 & 0.0615 \\
+Demographically adjusted outcome (internal norms) (post hoc) & M4 $-$ M0+ & 1784 & 450 & 0.0093 & [$-0.0109$, 0.0284] & [$-0.0075$, 0.0255] & 0.0255 & 0.0255 \\
+\end{longtable}
+}
+\end{landscape}
+
+\end{document}

@@ -1,0 +1,1294 @@
+{
+ "continuous": {
+  "r2_M0": 0.3824954717333554,
+  "r2_M3": 0.3908172798177304,
+  "delta_r2": 0.008321808084374993,
+  "ci95_low": -0.004120850641440915,
+  "ci95_high": 0.020292907494782447
+ },
+ "dca": {
+  "M3 vs M0": {
+   "thresholds": 56,
+   "n_thresholds_a_exceeds_b": 21,
+   "max_gain": 0.005929903233419895,
+   "min_gain": -0.009342301943198808
+  },
+  "M0plus vs M0": {
+   "thresholds": 56,
+   "n_thresholds_a_exceeds_b": 52,
+   "max_gain": 0.012892376681614345,
+   "min_gain": -0.003082959641255611
+  },
+  "M4 vs M0plus": {
+   "thresholds": 56,
+   "n_thresholds_a_exceeds_b": 12,
+   "max_gain": 0.006152247621130924,
+   "min_gain": -0.010563987581924797
+  },
+  "M4 vs M0": {
+   "thresholds": 56,
+   "n_thresholds_a_exceeds_b": 37,
+   "max_gain": 0.0117713004484305,
+   "min_gain": -0.007006726457399113
+  }
+ },
+ "norms": {
+  "n_norm_sample": 3120,
+  "norm_model_r2": 0.3885259514911368,
+  "residual_quartile_cut": -0.3736200616941188,
+  "terms": [
+   "intercept",
+   "age_c",
+   "age_c2",
+   "female",
+   "educ_2",
+   "educ_3",
+   "educ_4",
+   "educ_5",
+   "race_2",
+   "race_3",
+   "race_4",
+   "race_6",
+   "race_7"
+  ],
+  "coefficients": {
+   "intercept": -0.6993,
+   "age_c": -0.0452,
+   "age_c2": -0.0014,
+   "female": 0.211,
+   "educ_2": 0.3377,
+   "educ_3": 0.5803,
+   "educ_4": 0.8023,
+   "educ_5": 0.989,
+   "race_2": -0.2213,
+   "race_3": 0.1999,
+   "race_4": -0.2156,
+   "race_6": -0.0902,
+   "race_7": -0.0724
+  }
+ },
+ "demadj_prevalence": 0.2522421524663677,
+ "complete_battery": {
+  "n": 1694,
+  "events": 373
+ },
+ "pw|logistic|M1 - M0": {
+  "delta_auc": -0.0015,
+  "ci95_low": -0.0052,
+  "ci95_high": 0.0023,
+  "ci90_low": -0.0047,
+  "ci90_high": 0.0018
+ },
+ "pw|logistic|M2 - M0": {
+  "delta_auc": 0.0011,
+  "ci95_low": -0.0067,
+  "ci95_high": 0.01,
+  "ci90_low": -0.0055,
+  "ci90_high": 0.0087
+ },
+ "pw|logistic|M3 - M0": {
+  "delta_auc": -0.0019,
+  "ci95_low": -0.0108,
+  "ci95_high": 0.0071,
+  "ci90_low": -0.0094,
+  "ci90_high": 0.0056
+ },
+ "pw|logistic|M0plus - M0": {
+  "delta_auc": 0.0139,
+  "ci95_low": 0.0026,
+  "ci95_high": 0.0255,
+  "ci90_low": 0.0043,
+  "ci90_high": 0.0232
+ },
+ "pw|logistic|M4 - M0": {
+  "delta_auc": 0.0102,
+  "ci95_low": -0.003,
+  "ci95_high": 0.0226,
+  "ci90_low": -0.0012,
+  "ci90_high": 0.0208
+ },
+ "pw|logistic|M2 - M1": {
+  "delta_auc": 0.0027,
+  "ci95_low": -0.0061,
+  "ci95_high": 0.0116,
+  "ci90_low": -0.0046,
+  "ci90_high": 0.0099
+ },
+ "pw|logistic|M3 - M1": {
+  "delta_auc": -0.0003,
+  "ci95_low": -0.0086,
+  "ci95_high": 0.0076,
+  "ci90_low": -0.0068,
+  "ci90_high": 0.0063
+ },
+ "pw|logistic|M0plus - M1": {
+  "delta_auc": 0.0155,
+  "ci95_low": 0.0041,
+  "ci95_high": 0.0267,
+  "ci90_low": 0.0058,
+  "ci90_high": 0.0251
+ },
+ "pw|logistic|M4 - M1": {
+  "delta_auc": 0.0118,
+  "ci95_low": -0.0008,
+  "ci95_high": 0.0247,
+  "ci90_low": 0.0012,
+  "ci90_high": 0.0227
+ },
+ "pw|logistic|M3 - M2": {
+  "delta_auc": -0.003,
+  "ci95_low": -0.0058,
+  "ci95_high": -0.0002,
+  "ci90_low": -0.0053,
+  "ci90_high": -0.0006
+ },
+ "pw|logistic|M0plus - M2": {
+  "delta_auc": 0.0128,
+  "ci95_low": -0.0001,
+  "ci95_high": 0.0257,
+  "ci90_low": 0.0017,
+  "ci90_high": 0.0237
+ },
+ "pw|logistic|M4 - M2": {
+  "delta_auc": 0.0091,
+  "ci95_low": -0.0013,
+  "ci95_high": 0.02,
+  "ci90_low": 0.0004,
+  "ci90_high": 0.0183
+ },
+ "pw|logistic|M0plus - M3": {
+  "delta_auc": 0.0158,
+  "ci95_low": 0.0033,
+  "ci95_high": 0.0295,
+  "ci90_low": 0.0055,
+  "ci90_high": 0.027
+ },
+ "pw|logistic|M4 - M3": {
+  "delta_auc": 0.0121,
+  "ci95_low": 0.0026,
+  "ci95_high": 0.0223,
+  "ci90_low": 0.0037,
+  "ci90_high": 0.0209
+ },
+ "pw|logistic|M4 - M0plus": {
+  "delta_auc": -0.0037,
+  "ci95_low": -0.0112,
+  "ci95_high": 0.0029,
+  "ci90_low": -0.01,
+  "ci90_high": 0.0019
+ },
+ "pw|random_forest|M1 - M0": {
+  "delta_auc": -0.0058,
+  "ci95_low": -0.0144,
+  "ci95_high": 0.0022,
+  "ci90_low": -0.0131,
+  "ci90_high": 0.0007
+ },
+ "pw|random_forest|M2 - M0": {
+  "delta_auc": -0.0028,
+  "ci95_low": -0.0155,
+  "ci95_high": 0.0103,
+  "ci90_low": -0.0131,
+  "ci90_high": 0.0083
+ },
+ "pw|random_forest|M3 - M0": {
+  "delta_auc": -0.0038,
+  "ci95_low": -0.0167,
+  "ci95_high": 0.0095,
+  "ci90_low": -0.0145,
+  "ci90_high": 0.0073
+ },
+ "pw|random_forest|M0plus - M0": {
+  "delta_auc": 0.016,
+  "ci95_low": 0.0056,
+  "ci95_high": 0.0266,
+  "ci90_low": 0.0073,
+  "ci90_high": 0.0249
+ },
+ "pw|random_forest|M4 - M0": {
+  "delta_auc": 0.0067,
+  "ci95_low": -0.0077,
+  "ci95_high": 0.0212,
+  "ci90_low": -0.0053,
+  "ci90_high": 0.0182
+ },
+ "pw|random_forest|M2 - M1": {
+  "delta_auc": 0.003,
+  "ci95_low": -0.0106,
+  "ci95_high": 0.0154,
+  "ci90_low": -0.0085,
+  "ci90_high": 0.0139
+ },
+ "pw|random_forest|M3 - M1": {
+  "delta_auc": 0.0021,
+  "ci95_low": -0.0088,
+  "ci95_high": 0.0129,
+  "ci90_low": -0.0074,
+  "ci90_high": 0.011
+ },
+ "pw|random_forest|M0plus - M1": {
+  "delta_auc": 0.0218,
+  "ci95_low": 0.0104,
+  "ci95_high": 0.0334,
+  "ci90_low": 0.0122,
+  "ci90_high": 0.0314
+ },
+ "pw|random_forest|M4 - M1": {
+  "delta_auc": 0.0125,
+  "ci95_low": 0.0003,
+  "ci95_high": 0.0251,
+  "ci90_low": 0.0019,
+  "ci90_high": 0.0229
+ },
+ "pw|random_forest|M3 - M2": {
+  "delta_auc": -0.001,
+  "ci95_low": -0.0056,
+  "ci95_high": 0.0038,
+  "ci90_low": -0.0049,
+  "ci90_high": 0.0029
+ },
+ "pw|random_forest|M0plus - M2": {
+  "delta_auc": 0.0188,
+  "ci95_low": 0.0051,
+  "ci95_high": 0.0322,
+  "ci90_low": 0.0072,
+  "ci90_high": 0.0304
+ },
+ "pw|random_forest|M4 - M2": {
+  "delta_auc": 0.0095,
+  "ci95_low": 0.0016,
+  "ci95_high": 0.017,
+  "ci90_low": 0.003,
+  "ci90_high": 0.0159
+ },
+ "pw|random_forest|M0plus - M3": {
+  "delta_auc": 0.0197,
+  "ci95_low": 0.0055,
+  "ci95_high": 0.0338,
+  "ci90_low": 0.0077,
+  "ci90_high": 0.0315
+ },
+ "pw|random_forest|M4 - M3": {
+  "delta_auc": 0.0104,
+  "ci95_low": 0.0037,
+  "ci95_high": 0.0173,
+  "ci90_low": 0.0051,
+  "ci90_high": 0.016
+ },
+ "pw|random_forest|M4 - M0plus": {
+  "delta_auc": -0.0093,
+  "ci95_low": -0.0196,
+  "ci95_high": 0.0013,
+  "ci90_low": -0.0181,
+  "ci90_high": -0.0002
+ },
+ "pw|xgboost|M1 - M0": {
+  "delta_auc": -0.013,
+  "ci95_low": -0.0212,
+  "ci95_high": -0.0046,
+  "ci90_low": -0.0198,
+  "ci90_high": -0.006
+ },
+ "pw|xgboost|M2 - M0": {
+  "delta_auc": -0.0017,
+  "ci95_low": -0.0143,
+  "ci95_high": 0.0113,
+  "ci90_low": -0.0125,
+  "ci90_high": 0.0094
+ },
+ "pw|xgboost|M3 - M0": {
+  "delta_auc": -0.0066,
+  "ci95_low": -0.0199,
+  "ci95_high": 0.0068,
+  "ci90_low": -0.0179,
+  "ci90_high": 0.0048
+ },
+ "pw|xgboost|M0plus - M0": {
+  "delta_auc": 0.0164,
+  "ci95_low": 0.0051,
+  "ci95_high": 0.0288,
+  "ci90_low": 0.007,
+  "ci90_high": 0.0267
+ },
+ "pw|xgboost|M4 - M0": {
+  "delta_auc": 0.0071,
+  "ci95_low": -0.0074,
+  "ci95_high": 0.0215,
+  "ci90_low": -0.0054,
+  "ci90_high": 0.0196
+ },
+ "pw|xgboost|M2 - M1": {
+  "delta_auc": 0.0113,
+  "ci95_low": -0.0019,
+  "ci95_high": 0.024,
+  "ci90_low": -0.0001,
+  "ci90_high": 0.0217
+ },
+ "pw|xgboost|M3 - M1": {
+  "delta_auc": 0.0064,
+  "ci95_low": -0.0052,
+  "ci95_high": 0.0173,
+  "ci90_low": -0.0033,
+  "ci90_high": 0.0155
+ },
+ "pw|xgboost|M0plus - M1": {
+  "delta_auc": 0.0294,
+  "ci95_low": 0.0163,
+  "ci95_high": 0.0429,
+  "ci90_low": 0.0182,
+  "ci90_high": 0.0405
+ },
+ "pw|xgboost|M4 - M1": {
+  "delta_auc": 0.0201,
+  "ci95_low": 0.0061,
+  "ci95_high": 0.0345,
+  "ci90_low": 0.0087,
+  "ci90_high": 0.032
+ },
+ "pw|xgboost|M3 - M2": {
+  "delta_auc": -0.0049,
+  "ci95_low": -0.0094,
+  "ci95_high": -0.0003,
+  "ci90_low": -0.0087,
+  "ci90_high": -0.001
+ },
+ "pw|xgboost|M0plus - M2": {
+  "delta_auc": 0.0181,
+  "ci95_low": 0.0021,
+  "ci95_high": 0.0325,
+  "ci90_low": 0.0051,
+  "ci90_high": 0.0303
+ },
+ "pw|xgboost|M4 - M2": {
+  "delta_auc": 0.0088,
+  "ci95_low": -0.0006,
+  "ci95_high": 0.0183,
+  "ci90_low": 0.001,
+  "ci90_high": 0.0171
+ },
+ "pw|xgboost|M0plus - M3": {
+  "delta_auc": 0.023,
+  "ci95_low": 0.0063,
+  "ci95_high": 0.0385,
+  "ci90_low": 0.0096,
+  "ci90_high": 0.0359
+ },
+ "pw|xgboost|M4 - M3": {
+  "delta_auc": 0.0137,
+  "ci95_low": 0.0051,
+  "ci95_high": 0.0227,
+  "ci90_low": 0.0064,
+  "ci90_high": 0.0214
+ },
+ "pw|xgboost|M4 - M0plus": {
+  "delta_auc": -0.0093,
+  "ci95_low": -0.0201,
+  "ci95_high": 0.0018,
+  "ci90_low": -0.0186,
+  "ci90_high": -0.0001
+ },
+ "pw|random_forest vs logistic|M0: random_forest - logistic": {
+  "delta_auc": -0.004,
+  "ci95_low": -0.0122,
+  "ci95_high": 0.0052,
+  "ci90_low": -0.0112,
+  "ci90_high": 0.0038
+ },
+ "pw|xgboost vs logistic|M0: xgboost - logistic": {
+  "delta_auc": -0.0039,
+  "ci95_low": -0.0126,
+  "ci95_high": 0.0051,
+  "ci90_low": -0.0113,
+  "ci90_high": 0.0034
+ },
+ "pw|random_forest vs logistic|M1: random_forest - logistic": {
+  "delta_auc": -0.0083,
+  "ci95_low": -0.0185,
+  "ci95_high": 0.0017,
+  "ci90_low": -0.0168,
+  "ci90_high": 0.0002
+ },
+ "pw|xgboost vs logistic|M1: xgboost - logistic": {
+  "delta_auc": -0.0153,
+  "ci95_low": -0.0246,
+  "ci95_high": -0.0061,
+  "ci90_low": -0.0232,
+  "ci90_high": -0.0078
+ },
+ "pw|random_forest vs logistic|M2: random_forest - logistic": {
+  "delta_auc": -0.0079,
+  "ci95_low": -0.0197,
+  "ci95_high": 0.003,
+  "ci90_low": -0.018,
+  "ci90_high": 0.0015
+ },
+ "pw|xgboost vs logistic|M2: xgboost - logistic": {
+  "delta_auc": -0.0067,
+  "ci95_low": -0.0161,
+  "ci95_high": 0.0033,
+  "ci90_low": -0.0149,
+  "ci90_high": 0.0016
+ },
+ "pw|random_forest vs logistic|M3: random_forest - logistic": {
+  "delta_auc": -0.0059,
+  "ci95_low": -0.0175,
+  "ci95_high": 0.006,
+  "ci90_low": -0.0158,
+  "ci90_high": 0.0038
+ },
+ "pw|xgboost vs logistic|M3: xgboost - logistic": {
+  "delta_auc": -0.0086,
+  "ci95_low": -0.0187,
+  "ci95_high": 0.0007,
+  "ci90_low": -0.0171,
+  "ci90_high": -0.0004
+ },
+ "pw|random_forest vs logistic|M0plus: random_forest - logistic": {
+  "delta_auc": -0.002,
+  "ci95_low": -0.0127,
+  "ci95_high": 0.0079,
+  "ci90_low": -0.0114,
+  "ci90_high": 0.0064
+ },
+ "pw|xgboost vs logistic|M0plus: xgboost - logistic": {
+  "delta_auc": -0.0014,
+  "ci95_low": -0.0106,
+  "ci95_high": 0.0076,
+  "ci90_low": -0.0091,
+  "ci90_high": 0.0061
+ },
+ "pw|random_forest vs logistic|M4: random_forest - logistic": {
+  "delta_auc": -0.0076,
+  "ci95_low": -0.0194,
+  "ci95_high": 0.0048,
+  "ci90_low": -0.0179,
+  "ci90_high": 0.0027
+ },
+ "pw|xgboost vs logistic|M4: xgboost - logistic": {
+  "delta_auc": -0.007,
+  "ci95_low": -0.0176,
+  "ci95_high": 0.003,
+  "ci90_low": -0.016,
+  "ci90_high": 0.0016
+ },
+ "mg|Primary analysis|M3 - M0": {
+  "delta_auc": -0.0019,
+  "ci95_low": -0.0108,
+  "ci95_high": 0.0071,
+  "ci90_low": -0.0094,
+  "ci90_high": 0.0056,
+  "smallest_margin_excluded_one_sided": 0.0056,
+  "smallest_equivalence_margin": 0.0094,
+  "n": 1784,
+  "events": 431,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": true,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|Biomarkers added to the clinical baseline|M4 - M0plus": {
+  "delta_auc": -0.0037,
+  "ci95_low": -0.0112,
+  "ci95_high": 0.0029,
+  "ci90_low": -0.01,
+  "ci90_high": 0.0019,
+  "smallest_margin_excluded_one_sided": 0.0019,
+  "smallest_equivalence_margin": 0.01,
+  "n": 1784,
+  "events": 431,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": true,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|Primary specification, phase 6 pipeline|M3 - M0": {
+  "delta_auc": -0.002,
+  "ci95_low": -0.0103,
+  "ci95_high": 0.0066,
+  "ci90_low": -0.009,
+  "ci90_high": 0.0055,
+  "smallest_margin_excluded_one_sided": 0.0055,
+  "smallest_equivalence_margin": 0.009,
+  "n": 1784,
+  "events": 431,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": true,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|20th percentile cutoff|M3 - M0": {
+  "delta_auc": -0.0019,
+  "ci95_low": -0.013,
+  "ci95_high": 0.0092,
+  "ci90_low": -0.0109,
+  "ci90_high": 0.0076,
+  "smallest_margin_excluded_one_sided": 0.0076,
+  "smallest_equivalence_margin": 0.0109,
+  "n": 1784,
+  "events": 337,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": false,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|10th percentile cutoff|M3 - M0": {
+  "delta_auc": -0.0023,
+  "ci95_low": -0.02,
+  "ci95_high": 0.0153,
+  "ci90_low": -0.017,
+  "ci90_high": 0.0132,
+  "smallest_margin_excluded_one_sided": 0.0132,
+  "smallest_equivalence_margin": 0.017,
+  "n": 1784,
+  "events": 164,
+  "ns_0.01": false,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": false,
+  "eq_0.015": false,
+  "eq_0.02": true
+ },
+ "mg|DSST not completed coded low|M3 - M0": {
+  "delta_auc": -0.002,
+  "ci95_low": -0.0105,
+  "ci95_high": 0.0063,
+  "ci90_low": -0.0093,
+  "ci90_high": 0.0049,
+  "smallest_margin_excluded_one_sided": 0.0049,
+  "smallest_equivalence_margin": 0.0093,
+  "n": 1784,
+  "events": 441,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": true,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|English-language administration only|M3 - M0": {
+  "delta_auc": -0.0066,
+  "ci95_low": -0.0159,
+  "ci95_high": 0.0028,
+  "ci90_low": -0.0144,
+  "ci90_high": 0.0015,
+  "smallest_margin_excluded_one_sided": 0.0015,
+  "smallest_equivalence_margin": 0.0144,
+  "n": 1575,
+  "events": 345,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": false,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|Multiple imputation, full labelled sample|M3 - M0": {
+  "delta_auc": 0.0015,
+  "ci95_low": -0.003,
+  "ci95_high": 0.0063,
+  "ci90_low": -0.0024,
+  "ci90_high": 0.0057,
+  "smallest_margin_excluded_one_sided": 0.0057,
+  "smallest_equivalence_margin": 0.0057,
+  "n": 3124,
+  "events": 781,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": true,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|Leave-one-block-out, M3 versus M3 without metals|M3 - reduced": {
+  "delta_auc": -0.0028,
+  "ci95_low": -0.0051,
+  "ci95_high": -0.0004,
+  "ci90_low": -0.0047,
+  "ci90_high": -0.0008,
+  "smallest_margin_excluded_one_sided": -0.0008,
+  "smallest_equivalence_margin": 0.0047,
+  "n": 1784,
+  "events": 431,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": true,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|Leave-one-block-out, M3 versus M3 without nutritional|M3 - reduced": {
+  "delta_auc": -0.0002,
+  "ci95_low": -0.0081,
+  "ci95_high": 0.0078,
+  "ci90_low": -0.007,
+  "ci90_high": 0.0062,
+  "smallest_margin_excluded_one_sided": 0.0062,
+  "smallest_equivalence_margin": 0.007,
+  "n": 1784,
+  "events": 431,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": true,
+  "eq_0.015": true,
+  "eq_0.02": true
+ },
+ "mg|Complete cognitive battery (4 of 4 scores)|M3 - M0": {
+  "delta_auc": -0.0045,
+  "ci95_low": -0.0144,
+  "ci95_high": 0.0054,
+  "ci90_low": -0.0127,
+  "ci90_high": 0.0038,
+  "smallest_margin_excluded_one_sided": 0.0038,
+  "smallest_equivalence_margin": 0.0127,
+  "n": 1694,
+  "events": 373,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": false,
+  "eq_0.015": true,
+  "eq_0.02": true,
+  "auc_a": 0.7732,
+  "auc_b": 0.7777
+ },
+ "mg|Complete cognitive battery (4 of 4 scores)|M4 - M0plus": {
+  "delta_auc": -0.0062,
+  "ci95_low": -0.014,
+  "ci95_high": 0.0019,
+  "ci90_low": -0.0127,
+  "ci90_high": 0.0005,
+  "smallest_margin_excluded_one_sided": 0.0005,
+  "smallest_equivalence_margin": 0.0127,
+  "n": 1694,
+  "events": 373,
+  "ns_0.01": true,
+  "ns_0.015": true,
+  "ns_0.02": true,
+  "eq_0.01": false,
+  "eq_0.015": true,
+  "eq_0.02": true,
+  "auc_a": 0.7845,
+  "auc_b": 0.7907
+ },
+ "mg|Demographically adjusted outcome (internal norms)|M3 - M0": {
+  "delta_auc": 0.0362,
+  "ci95_low": 0.0068,
+  "ci95_high": 0.0667,
+  "ci90_low": 0.0109,
+  "ci90_high": 0.0615,
+  "smallest_margin_excluded_one_sided": 0.0615,
+  "smallest_equivalence_margin": 0.0615,
+  "n": 1784,
+  "events": 450,
+  "ns_0.01": false,
+  "ns_0.015": false,
+  "ns_0.02": false,
+  "eq_0.01": false,
+  "eq_0.015": false,
+  "eq_0.02": false,
+  "auc_a": 0.5948,
+  "auc_b": 0.5586
+ },
+ "mg|Demographically adjusted outcome (internal norms)|M4 - M0plus": {
+  "delta_auc": 0.0093,
+  "ci95_low": -0.0109,
+  "ci95_high": 0.0284,
+  "ci90_low": -0.0075,
+  "ci90_high": 0.0255,
+  "smallest_margin_excluded_one_sided": 0.0255,
+  "smallest_equivalence_margin": 0.0255,
+  "n": 1784,
+  "events": 450,
+  "ns_0.01": false,
+  "ns_0.015": false,
+  "ns_0.02": false,
+  "eq_0.01": false,
+  "eq_0.015": false,
+  "eq_0.02": false,
+  "auc_a": 0.6163,
+  "auc_b": 0.607
+ },
+ "desc": {
+  "t1c": {
+   "CERAD immediate recall (sum of 3 trials, 0 to 30), mean (SD)": {
+    "characteristic": "CERAD immediate recall (sum of 3 trials, 0 to 30), mean (SD)",
+    "Overall": "18.52 (4.87)",
+    "Low cognitive performance": "12.88 (3.82)",
+    "Not low cognitive performance": "20.32 (3.63)"
+   },
+   "score missing": {
+    "characteristic": "   score missing",
+    "Overall": "64 (3.6%)",
+    "Low cognitive performance": "45 (10.4%)",
+    "Not low cognitive performance": "19 (1.4%)"
+   },
+   "CERAD delayed recall (0 to 10), mean (SD)": {
+    "characteristic": "CERAD delayed recall (0 to 10), mean (SD)",
+    "Overall": "5.77 (2.40)",
+    "Low cognitive performance": "3.07 (1.88)",
+    "Not low cognitive performance": "6.62 (1.85)"
+   },
+   "Animal fluency (animals named in 60 s), mean (SD)": {
+    "characteristic": "Animal fluency (animals named in 60 s), mean (SD)",
+    "Overall": "16.54 (5.52)",
+    "Low cognitive performance": "11.55 (3.51)",
+    "Not low cognitive performance": "18.10 (5.10)"
+   },
+   "Digit Symbol Substitution Test (correct symbols), mean (SD)": {
+    "characteristic": "Digit Symbol Substitution Test (correct symbols), mean (SD)",
+    "Overall": "46.31 (17.24)",
+    "Low cognitive performance": "28.68 (11.27)",
+    "Not low cognitive performance": "51.42 (15.17)"
+   },
+   "Composite z-score, mean (SD)": {
+    "characteristic": "Composite z-score, mean (SD)",
+    "Overall": "0.01 (0.79)",
+    "Low cognitive performance": "-1.04 (0.41)",
+    "Not low cognitive performance": "0.34 (0.55)"
+   },
+   "Composite z-score, median [IQR]": {
+    "characteristic": "Composite z-score, median [IQR]",
+    "Overall": "0.04 [-0.52, 0.56]",
+    "Low cognitive performance": "-0.93 [-1.26, -0.71]",
+    "Not low cognitive performance": "0.29 [-0.09, 0.71]"
+   },
+   "Composite z-score, range": {
+    "characteristic": "Composite z-score, range",
+    "Overall": "-2.43 to 2.45",
+    "Low cognitive performance": "-2.43 to -0.55",
+    "Not low cognitive performance": "-0.54 to 2.45"
+   },
+   "Language of administration = English": {
+    "characteristic": "Language of administration = English",
+    "Overall": "1575 (88.3%)",
+    "Low cognitive performance": "345 (80.0%)",
+    "Not low cognitive performance": "1230 (90.9%)"
+   },
+   "Language of administration = Spanish": {
+    "characteristic": "Language of administration = Spanish",
+    "Overall": "174 (9.8%)",
+    "Low cognitive performance": "79 (18.3%)",
+    "Not low cognitive performance": "95 (7.0%)"
+   },
+   "Language of administration = Asian language": {
+    "characteristic": "Language of administration = Asian language",
+    "Overall": "35 (2.0%)",
+    "Low cognitive performance": "7 (1.6%)",
+    "Not low cognitive performance": "28 (2.1%)"
+   },
+   "Component scores = 4": {
+    "characteristic": "Component scores = 4",
+    "Overall": "1694 (95.0%)",
+    "Low cognitive performance": "373 (86.5%)",
+    "Not low cognitive performance": "1321 (97.6%)"
+   },
+   "Component scores = 3": {
+    "characteristic": "Component scores = 3",
+    "Overall": "90 (5.0%)",
+    "Low cognitive performance": "58 (13.5%)",
+    "Not low cognitive performance": "32 (2.4%)"
+   },
+   "Outcome cutoff, composite z <= -0.543 (lowest quartile of the 3,124 labelled participants)": {
+    "characteristic": "Outcome cutoff, composite z <= -0.543 (lowest quartile of the 3,124 labelled participants)",
+    "Overall": "",
+    "Low cognitive performance": "",
+    "Not low cognitive performance": ""
+   }
+  },
+  "s2": {
+   "Not eligible: proxy respondent": {
+    "reason": "Not eligible: proxy respondent",
+    "cerad_immediate": 49,
+    "cerad_delayed": 49,
+    "animal_fluency": 49,
+    "dsst": 49
+   },
+   "Not eligible: language not offered": {
+    "reason": "Not eligible: language not offered",
+    "cerad_immediate": 25,
+    "cerad_delayed": 25,
+    "animal_fluency": 25,
+    "dsst": 25
+   },
+   "No cognitive test done": {
+    "reason": "No cognitive test done",
+    "cerad_immediate": 202,
+    "cerad_delayed": 202,
+    "animal_fluency": 202,
+    "dsst": 202
+   },
+   "Did not consent to audio recording": {
+    "reason": "Did not consent to audio recording",
+    "cerad_immediate": 13,
+    "cerad_delayed": 13,
+    "animal_fluency": 13,
+    "dsst": 0
+   },
+   "Communication problem": {
+    "reason": "Communication problem",
+    "cerad_immediate": 6,
+    "cerad_delayed": 6,
+    "animal_fluency": 3,
+    "dsst": 11
+   },
+   "Physical limitation": {
+    "reason": "Physical limitation",
+    "cerad_immediate": 4,
+    "cerad_delayed": 4,
+    "animal_fluency": 3,
+    "dsst": 22
+   },
+   "Quit or gave up": {
+    "reason": "Quit or gave up",
+    "cerad_immediate": 10,
+    "cerad_delayed": 15,
+    "animal_fluency": 0,
+    "dsst": 0
+   },
+   "Refused": {
+    "reason": "Refused",
+    "cerad_immediate": 10,
+    "cerad_delayed": 10,
+    "animal_fluency": 10,
+    "dsst": 34
+   },
+   "Equipment failure": {
+    "reason": "Equipment failure",
+    "cerad_immediate": 22,
+    "cerad_delayed": 22,
+    "animal_fluency": 39,
+    "dsst": 0
+   },
+   "Other": {
+    "reason": "Other",
+    "cerad_immediate": 0,
+    "cerad_delayed": 0,
+    "animal_fluency": 0,
+    "dsst": 2
+   },
+   "Missing, no reason recorded": {
+    "reason": "Missing, no reason recorded",
+    "cerad_immediate": 0,
+    "cerad_delayed": 0,
+    "animal_fluency": 18,
+    "dsst": 113
+   },
+   "Total missing": {
+    "reason": "Total missing",
+    "cerad_immediate": 341,
+    "cerad_delayed": 346,
+    "animal_fluency": 362,
+    "dsst": 458
+   },
+   "Score present": {
+    "reason": "Score present",
+    "cerad_immediate": 3131,
+    "cerad_delayed": 3126,
+    "animal_fluency": 3110,
+    "dsst": 3014
+   }
+  },
+  "s3": {
+   "All examined, aged 60+": {
+    "group": "All examined, aged 60+",
+    "n": 3472,
+    "cerad_immediate": "9.8%",
+    "cerad_delayed": "10.0%",
+    "animal_fluency": "10.4%",
+    "dsst": "13.2%",
+    "fewer_than_3_scores": "10.0%"
+   },
+   "Age 60 to 69": {
+    "group": "Age 60 to 69",
+    "n": 1786,
+    "cerad_immediate": "7.7%",
+    "cerad_delayed": "7.8%",
+    "animal_fluency": "8.1%",
+    "dsst": "8.8%",
+    "fewer_than_3_scores": "7.7%"
+   },
+   "Age 70 to 79": {
+    "group": "Age 70 to 79",
+    "n": 1028,
+    "cerad_immediate": "8.9%",
+    "cerad_delayed": "9.1%",
+    "animal_fluency": "10.2%",
+    "dsst": "13.0%",
+    "fewer_than_3_scores": "9.2%"
+   },
+   "Age 80 (top-coded, 80 and over)": {
+    "group": "Age 80 (top-coded, 80 and over)",
+    "n": 658,
+    "cerad_immediate": "17.0%",
+    "cerad_delayed": "17.2%",
+    "animal_fluency": "17.2%",
+    "dsst": "25.2%",
+    "fewer_than_3_scores": "17.5%"
+   },
+   "Male": {
+    "group": "Male",
+    "n": 1687,
+    "cerad_immediate": "10.0%",
+    "cerad_delayed": "10.1%",
+    "animal_fluency": "10.8%",
+    "dsst": "12.9%",
+    "fewer_than_3_scores": "10.2%"
+   },
+   "Female": {
+    "group": "Female",
+    "n": 1785,
+    "cerad_immediate": "9.7%",
+    "cerad_delayed": "9.8%",
+    "animal_fluency": "10.1%",
+    "dsst": "13.4%",
+    "fewer_than_3_scores": "9.9%"
+   },
+   "Mexican American": {
+    "group": "Mexican American",
+    "n": 325,
+    "cerad_immediate": "11.4%",
+    "cerad_delayed": "11.4%",
+    "animal_fluency": "12.6%",
+    "dsst": "19.1%",
+    "fewer_than_3_scores": "11.7%"
+   },
+   "Other Hispanic": {
+    "group": "Other Hispanic",
+    "n": 346,
+    "cerad_immediate": "7.5%",
+    "cerad_delayed": "8.4%",
+    "animal_fluency": "8.4%",
+    "dsst": "11.6%",
+    "fewer_than_3_scores": "8.4%"
+   },
+   "Non-Hispanic White": {
+    "group": "Non-Hispanic White",
+    "n": 1580,
+    "cerad_immediate": "8.0%",
+    "cerad_delayed": "8.1%",
+    "animal_fluency": "8.1%",
+    "dsst": "10.1%",
+    "fewer_than_3_scores": "8.1%"
+   },
+   "Non-Hispanic Black": {
+    "group": "Non-Hispanic Black",
+    "n": 837,
+    "cerad_immediate": "8.8%",
+    "cerad_delayed": "8.6%",
+    "animal_fluency": "9.6%",
+    "dsst": "13.6%",
+    "fewer_than_3_scores": "8.7%"
+   },
+   "Non-Hispanic Asian": {
+    "group": "Non-Hispanic Asian",
+    "n": 331,
+    "cerad_immediate": "21.5%",
+    "cerad_delayed": "22.1%",
+    "animal_fluency": "23.0%",
+    "dsst": "21.8%",
+    "fewer_than_3_scores": "22.1%"
+   },
+   "Other/multiracial": {
+    "group": "Other/multiracial",
+    "n": 53,
+    "cerad_immediate": "13.2%",
+    "cerad_delayed": "13.2%",
+    "animal_fluency": "15.1%",
+    "dsst": "20.8%",
+    "fewer_than_3_scores": "13.2%"
+   },
+   "Less than 9th grade": {
+    "group": "Less than 9th grade",
+    "n": 511,
+    "cerad_immediate": "21.5%",
+    "cerad_delayed": "22.1%",
+    "animal_fluency": "23.3%",
+    "dsst": "32.1%",
+    "fewer_than_3_scores": "22.5%"
+   },
+   "9-11th grade": {
+    "group": "9-11th grade",
+    "n": 507,
+    "cerad_immediate": "10.8%",
+    "cerad_delayed": "11.0%",
+    "animal_fluency": "11.4%",
+    "dsst": "15.8%",
+    "fewer_than_3_scores": "11.2%"
+   },
+   "High school grad/GED": {
+    "group": "High school grad/GED",
+    "n": 797,
+    "cerad_immediate": "9.4%",
+    "cerad_delayed": "9.7%",
+    "animal_fluency": "9.8%",
+    "dsst": "11.9%",
+    "fewer_than_3_scores": "9.5%"
+   },
+   "Some college/AA degree": {
+    "group": "Some college/AA degree",
+    "n": 911,
+    "cerad_immediate": "5.5%",
+    "cerad_delayed": "5.5%",
+    "animal_fluency": "6.4%",
+    "dsst": "7.5%",
+    "fewer_than_3_scores": "5.6%"
+   },
+   "College graduate or above": {
+    "group": "College graduate or above",
+    "n": 739,
+    "cerad_immediate": "6.5%",
+    "cerad_delayed": "6.4%",
+    "animal_fluency": "6.2%",
+    "dsst": "6.4%",
+    "fewer_than_3_scores": "6.2%"
+   },
+   "Education missing": {
+    "group": "Education missing",
+    "n": 7,
+    "cerad_immediate": "42.9%",
+    "cerad_delayed": "42.9%",
+    "animal_fluency": "42.9%",
+    "dsst": "57.1%",
+    "fewer_than_3_scores": "42.9%"
+   }
+  },
+  "s4": {
+   "labelled": {
+    "Four scores": {
+     "n": 2934,
+     "Age, years, mean (SD)": "69.5 (6.8)",
+     "Female": "1506 (51.3%)",
+     "Less than high school education": "746 (25.4%)",
+     "Hispanic (Mexican American or other Hispanic)": "553 (18.8%)",
+     "Non-Hispanic Black": "698 (23.8%)",
+     "Income-to-poverty ratio, mean (SD)": "2.60 (1.60)",
+     "Tested in Spanish or an Asian language": "346 (11.8%)",
+     "Missing score: CERAD immediate recall": "0 (0.0%)",
+     "Missing score: CERAD delayed recall": "0 (0.0%)",
+     "Missing score: animal fluency": "0 (0.0%)",
+     "Missing score: DSST": "0 (0.0%)",
+     "Composite z, mean (SD)": "0.05 (0.76)",
+     "Low cognitive performance": "666 (22.7%)"
+    },
+    "Three scores": {
+     "n": 190,
+     "Age, years, mean (SD)": "72.8 (7.0)",
+     "Female": "103 (54.2%)",
+     "Less than high school education": "100 (52.6%)",
+     "Hispanic (Mexican American or other Hispanic)": "51 (26.8%)",
+     "Non-Hispanic Black": "66 (34.7%)",
+     "Income-to-poverty ratio, mean (SD)": "1.93 (1.42)",
+     "Tested in Spanish or an Asian language": "45 (23.7%)",
+     "Missing score: CERAD immediate recall": "3 (1.6%)",
+     "Missing score: CERAD delayed recall": "3 (1.6%)",
+     "Missing score: animal fluency": "35 (18.4%)",
+     "Missing score: DSST": "149 (78.4%)",
+     "Composite z, mean (SD)": "-0.84 (0.89)",
+     "Low cognitive performance": "115 (60.5%)"
+    }
+   },
+   "analytic": {
+    "Four scores": {
+     "n": 1694,
+     "Age, years, mean (SD)": "69.2 (6.7)",
+     "Female": "859 (50.7%)",
+     "Less than high school education": "396 (23.4%)",
+     "Hispanic (Mexican American or other Hispanic)": "301 (17.8%)",
+     "Non-Hispanic Black": "397 (23.4%)",
+     "Income-to-poverty ratio, mean (SD)": "2.62 (1.61)",
+     "Tested in Spanish or an Asian language": "187 (11.0%)",
+     "Missing score: CERAD immediate recall": "0 (0.0%)",
+     "Missing score: CERAD delayed recall": "0 (0.0%)",
+     "Missing score: animal fluency": "0 (0.0%)",
+     "Missing score: DSST": "0 (0.0%)",
+     "Composite z, mean (SD)": "0.05 (0.76)",
+     "Low cognitive performance": "373 (22.0%)"
+    },
+    "Three scores": {
+     "n": 90,
+     "Age, years, mean (SD)": "72.0 (7.1)",
+     "Female": "45 (50.0%)",
+     "Less than high school education": "47 (52.2%)",
+     "Hispanic (Mexican American or other Hispanic)": "21 (23.3%)",
+     "Non-Hispanic Black": "28 (31.1%)",
+     "Income-to-poverty ratio, mean (SD)": "2.16 (1.49)",
+     "Tested in Spanish or an Asian language": "22 (24.4%)",
+     "Missing score: CERAD immediate recall": "3 (3.3%)",
+     "Missing score: CERAD delayed recall": "3 (3.3%)",
+     "Missing score: animal fluency": "20 (22.2%)",
+     "Missing score: DSST": "64 (71.1%)",
+     "Composite z, mean (SD)": "-0.85 (0.90)",
+     "Low cognitive performance": "58 (64.4%)"
+    }
+   }
+  },
+  "s5": {
+   "Labelled (3 or 4 scores)": {
+    "n": 3124,
+    "Age, years, mean (SD)": "69.7 (6.8)",
+    "Age 80 (top-coded)": "543 (17.4%)",
+    "Female": "1609 (51.5%)",
+    "Less than high school education": "846 (27.1%)",
+    "Hispanic (Mexican American or other Hispanic)": "604 (19.3%)",
+    "Non-Hispanic Black": "764 (24.5%)",
+    "Income-to-poverty ratio, mean (SD)": "2.56 (1.60)",
+    "Ever told had a stroke": "237 (7.6%)",
+    "Ever told had diabetes": "892 (28.6%)",
+    "PHQ-9, median [IQR]": "2.00 [0.00, 4.00]",
+    "Proxy respondent or no test done": "0 (0.0%)",
+    "Not tested: language not offered": "0 (0.0%)"
+   },
+   "Unlabelled (0 to 2 scores)": {
+    "n": 348,
+    "Age, years, mean (SD)": "72.3 (7.4)",
+    "Age 80 (top-coded)": "115 (33.0%)",
+    "Female": "176 (50.6%)",
+    "Less than high school education": "172 (49.4%)",
+    "Hispanic (Mexican American or other Hispanic)": "67 (19.3%)",
+    "Non-Hispanic Black": "73 (21.0%)",
+    "Income-to-poverty ratio, mean (SD)": "1.86 (1.34)",
+    "Ever told had a stroke": "62 (17.8%)",
+    "Ever told had diabetes": "103 (29.6%)",
+    "PHQ-9, median [IQR]": "1.00 [0.00, 5.00]",
+    "Proxy respondent or no test done": "251 (72.1%)",
+    "Not tested: language not offered": "25 (7.2%)"
+   }
+  },
+  "cut": -0.5428222716319666
+ },
+ "perf|M0|logistic": {
+  "auc": 0.7884,
+  "auprc": 0.5471,
+  "brier": 0.1459,
+  "calib_slope": 1.0881,
+  "calib_intercept": 0.0012
+ },
+ "perf|M0|random_forest": {
+  "auc": 0.7843,
+  "auprc": 0.5363,
+  "brier": 0.1466,
+  "calib_slope": 1.1477,
+  "calib_intercept": 0.0037
+ },
+ "perf|M0|xgboost": {
+  "auc": 0.7845,
+  "auprc": 0.5399,
+  "brier": 0.147,
+  "calib_slope": 0.8981,
+  "calib_intercept": 0.0041
+ },
+ "perf|M1|logistic": {
+  "auc": 0.7868,
+  "auprc": 0.5456,
+  "brier": 0.1465,
+  "calib_slope": 1.0689,
+  "calib_intercept": 0.0015
+ },
+ "perf|M1|random_forest": {
+  "auc": 0.7785,
+  "auprc": 0.529,
+  "brier": 0.1491,
+  "calib_slope": 1.1926,
+  "calib_intercept": -0.004
+ },
+ "perf|M1|xgboost": {
+  "auc": 0.7715,
+  "auprc": 0.5212,
+  "brier": 0.1506,
+  "calib_slope": 0.8826,
+  "calib_intercept": 0.0087
+ },
+ "perf|M2|logistic": {
+  "auc": 0.7895,
+  "auprc": 0.542,
+  "brier": 0.1461,
+  "calib_slope": 1.0263,
+  "calib_intercept": 0.0021
+ },
+ "perf|M2|random_forest": {
+  "auc": 0.7815,
+  "auprc": 0.5471,
+  "brier": 0.1488,
+  "calib_slope": 1.3206,
+  "calib_intercept": -0.011
+ },
+ "perf|M2|xgboost": {
+  "auc": 0.7828,
+  "auprc": 0.5209,
+  "brier": 0.1488,
+  "calib_slope": 0.9122,
+  "calib_intercept": 0.0201
+ },
+ "perf|M3|logistic": {
+  "auc": 0.7865,
+  "auprc": 0.5392,
+  "brier": 0.147,
+  "calib_slope": 1.0039,
+  "calib_intercept": 0.0015
+ },
+ "perf|M3|random_forest": {
+  "auc": 0.7806,
+  "auprc": 0.5384,
+  "brier": 0.1501,
+  "calib_slope": 1.4101,
+  "calib_intercept": -0.0118
+ },
+ "perf|M3|xgboost": {
+  "auc": 0.7779,
+  "auprc": 0.5201,
+  "brier": 0.1497,
+  "calib_slope": 0.9039,
+  "calib_intercept": 0.0241
+ },
+ "perf|M0plus|logistic": {
+  "auc": 0.8023,
+  "auprc": 0.5618,
+  "brier": 0.1423,
+  "calib_slope": 1.0422,
+  "calib_intercept": 0.0027
+ },
+ "perf|M0plus|random_forest": {
+  "auc": 0.8003,
+  "auprc": 0.5525,
+  "brier": 0.1448,
+  "calib_slope": 1.3826,
+  "calib_intercept": 0.0037
+ },
+ "perf|M0plus|xgboost": {
+  "auc": 0.8009,
+  "auprc": 0.5428,
+  "brier": 0.1438,
+  "calib_slope": 0.9139,
+  "calib_intercept": 0.0098
+ },
+ "perf|M4|logistic": {
+  "auc": 0.7986,
+  "auprc": 0.5537,
+  "brier": 0.1441,
+  "calib_slope": 0.9838,
+  "calib_intercept": 0.0017
+ },
+ "perf|M4|random_forest": {
+  "auc": 0.791,
+  "auprc": 0.5477,
+  "brier": 0.1486,
+  "calib_slope": 1.5266,
+  "calib_intercept": -0.0118
+ },
+ "perf|M4|xgboost": {
+  "auc": 0.7916,
+  "auprc": 0.5305,
+  "brier": 0.1466,
+  "calib_slope": 0.9333,
+  "calib_intercept": 0.027
+ }
+}

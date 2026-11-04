@@ -287,3 +287,24 @@ bootstrap 95% CI over participants, same 2,000 resamples, same predictions.
 |---|---|---|
 | Data and modeling lead | Neil Patel | 2026-11-04 |
 | Clinical and framing lead | Shreyan Kancharla | pending countersign |
+
+### Note added after running Amendment 1 (2026-11-04)
+
+Recorded so that every difference between the amendment above, which was committed
+before any of its analyses ran, and what was actually run is visible.
+
+- **A5 sample.** The norm model was fitted on the 3,120 labelled participants with
+  complete education data, not all 3,124 (4 have missing education). Age entered
+  centred at 70, with its square. Income was not included, so M0 (which contains
+  income) keeps some discrimination on the adjusted outcome.
+- **A3 rule.** The manuscript applies the symmetric 0.02 criterion in its stricter
+  form: a difference is not described as meaningful unless its 95% CI lies wholly
+  beyond +/-0.02. This covers intervals that straddle 0.02 as well as those inside it.
+- **A4 and A5 pipeline.** Both used the primary tuned logistic pipeline from
+  `03_model.py`, not the fixed-penalty pipeline from `06_sensitivity.py`.
+- **Also run, not listed above.** Decision curves for M4 against M0+ and M0, and the
+  primary specification under the phase 6 pipeline as a reference row for the
+  sensitivity table. Both are descriptive.
+- **Outcome.** The demographically adjusted analysis gave a different result from the
+  primary one (delta-AUC(M3 - M0) +0.0362, 95% CI 0.0068 to 0.0667). It is reported
+  as exploratory, in the abstract and conclusions, exactly as specified above.

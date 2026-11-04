@@ -1,0 +1,67 @@
+{
+ "amendment": "PREREGISTRATION.md Amendment 1, item A2 (post hoc)",
+ "n": 1784,
+ "events": 431,
+ "M4_features": [
+  "RIDAGEYR",
+  "RIAGENDR",
+  "RIDRETH3",
+  "DMDEDUC2",
+  "INDFMPIR",
+  "BMXBMI",
+  "smoking",
+  "drinks_per_day",
+  "phq9",
+  "stroke",
+  "diabetes",
+  "hypertension",
+  "high_chol",
+  "log_LBXBPB",
+  "log_LBXBCD",
+  "log_LBXTHG",
+  "log_LBXBSE",
+  "log_LBXBMN",
+  "log_LBDB12SI",
+  "log_LBXMMASI",
+  "LBDFOT",
+  "LBDRFO",
+  "LBXVIDMS",
+  "LBXGH",
+  "LBDHDD",
+  "LBXTC",
+  "LBXSTR",
+  "LBXSAL",
+  "LBXSIR",
+  "egfr",
+  "nlr",
+  "plr",
+  "log_sii"
+ ],
+ "n_features": 33,
+ "reproducibility_check_M0_logistic_max_abs_diff": 0.0,
+ "leakage_audit": "pass",
+ "fits": [
+  {
+   "algo": "logistic",
+   "fold_auc_mean": 0.7986,
+   "best_params_counts": {
+    "{\"clf__C\": 0.1}": 50
+   }
+  },
+  {
+   "algo": "random_forest",
+   "fold_auc_mean": 0.7899,
+   "best_params_counts": {
+    "{\"clf__min_samples_leaf\": 10}": 49,
+    "{\"clf__min_samples_leaf\": 5}": 1
+   }
+  },
+  {
+   "algo": "xgboost",
+   "fold_auc_mean": 0.7891,
+   "best_params_counts": {
+    "{\"clf__learning_rate\": 0.05, \"clf__max_depth\": 2}": 50
+   }
+  }
+ ]
+}

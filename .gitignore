@@ -5,3 +5,6 @@ __pycache__/
 .venv/
 .DS_Store
 .venv/
+# Quotes the confidential reviewer reports verbatim; shared directly, not via the public repo
+output/revision/response_to_reviewers.*
+output/revision/DPR_revision_package.zip
