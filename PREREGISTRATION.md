@@ -286,7 +286,7 @@ bootstrap 95% CI over participants, same 2,000 resamples, same predictions.
 | Role | Name | Date |
 |---|---|---|
 | Data and modeling lead | Neil Patel | 2026-11-04 |
-| Clinical and framing lead | Shreyan Kancharla | pending countersign |
+| Clinical and framing lead | Shreyan Kancharla | 2026-11-05 |
 
 ### Note added after running Amendment 1 (2026-11-04)
 
