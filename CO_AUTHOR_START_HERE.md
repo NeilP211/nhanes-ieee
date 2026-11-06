@@ -336,7 +336,21 @@ decision in this file is dated.
   nature prominent, a demographically normed outcome, missing-data and complete-battery
   analyses, the cognitive phenotype in Table 1, and a neutral tone. All addressed in
   `output/revision/` (start with `README_REVISION.md`). Analyses recorded first in
-  `PREREGISTRATION.md` Amendment 1 (countersign pending).
+  `PREREGISTRATION.md` Amendment 1.
+- **2026-11-05**: Amendment 1 countersigned by both authors (Neil 2026-11-04,
+  Shreyan 2026-11-05). Four pre-upload decisions closed: kept the reviewer-responsive
+  title, credited both authors jointly for the peer-review analyses, added the
+  Generative AI assistance disclosure Springer Nature's policy requires, confirmed
+  the rest of Authors'/Declarations needed no changes. Caught and fixed a real
+  compliance gap while preparing the portal fields: the revised abstract ran 354
+  words, over DPR's 350-word limit -- trimmed to 346 without touching any reported
+  number.
+- **2026-11-05**: **Revision submitted.** All 16 files verified against the
+  repository by checksum before upload (manuscript zip, point-by-point response,
+  marked-up manuscript, 6 figures, 3 tables, 4 supplementary files) -- nothing
+  stale from the original submission made it into the final upload, including a
+  near-miss where figures/tables were accidentally duplicated into the
+  supplementary-files slot and caught before submitting.
 
 Still open: the editor's decision on the revised submission. If *Diagnostic and Prognostic
 Research* rejects, the pre-planned fallback venues (section 7 of
